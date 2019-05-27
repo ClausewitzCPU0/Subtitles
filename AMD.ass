@@ -122,7 +122,7 @@ Dialogue: 0,0:04:10.98,0:04:16.83,Default,,0,0,0,,3700X是世界第一款7纳米
 Dialogue: 0,0:04:16.83,0:04:24.00,Default,,0,0,0,,It has 8 cores 16 threads 4.4 gigahertz boost frequency,
 Dialogue: 0,0:04:16.83,0:04:24.00,Default,,0,0,0,,8核16线程，4.4GHz动态加速频率,
 Dialogue: 0,0:04:24.00,0:04:33.06,Default,,0,0,0,,36MB of total cache and all in an amazing 65 watts of TDP.
-Dialogue: 0,0:04:24.00,0:04:33.06,Default,,0,0,0,,36MB缓存，这一切仅需65瓦TDP.
+Dialogue: 0,0:04:24.00,0:04:33.06,Default,,0,0,0,,36MB缓存(4MB L2和32MB L3)，这一切仅需65瓦TDP.
 Dialogue: 0,0:04:33.06,0:04:36.57,Default,,0,0,0,,the second gen Ryzen is a great set of products,
 Dialogue: 0,0:04:33.06,0:04:36.57,Default,,0,0,0,,2代锐龙有一系列产品,
 Dialogue: 0,0:04:36.57,0:04:42.52,Default,,0,0,0,,but what we're seeing with the 3700X is significant double digit performance
@@ -142,7 +142,7 @@ Dialogue: 0,0:05:06.72,0:05:09.42,Default,,0,0,0,,Ryzen7 3800X.
 Dialogue: 0,0:05:09.42,0:05:12.81,Default,,0,0,0,,The boost clock goes up to four point five gigahertz,
 Dialogue: 0,0:05:09.42,0:05:12.81,Default,,0,0,0,,加速频率提升至4.5GHz,
 Dialogue: 0,0:05:12.81,0:05:18.57,Default,,0,0,0,,36MB of total cache, and you see this is now at 105watts.
-Dialogue: 0,0:05:12.81,0:05:18.57,Default,,0,0,0,,36MB缓存，TDP仅为105W.
+Dialogue: 0,0:05:12.81,0:05:18.57,Default,,0,0,0,,36MB缓存(4MB L2和32MB L3)，TDP仅为105W.
 Dialogue: 0,0:05:18.57,0:05:25.58,Default,,0,0,0,,So take a look at the improvements and you can see tremendous double digit performance improvement 
 Dialogue: 0,0:05:18.57,0:05:25.58,Default,,0,0,0,,了解这些改进后，你会发现惊人的两位数性能提升
 Dialogue: 0,0:05:25.68,0:05:33.51,Default,,0,0,0,,because we really believe gaming performance is critical and we designed the 3800X for gaming performance,
@@ -192,7 +192,7 @@ Dialogue: 0,0:07:12.63,0:07:20.76,Default,,0,0,0,,Ryzen9 3900X是完全意义上
 Dialogue: 0,0:07:20.76,0:07:23.88,Default,,0,0,0,,with 12 cores and 24threads.
 Dialogue: 0,0:07:20.76,0:07:23.88,Default,,0,0,0,,拥有12核心24线程
 Dialogue: 0,0:07:23.88,0:07:30.27,Default,,0,0,0,,We have four point six gigahertz boost seventy megabytes of total cash,
-Dialogue: 0,0:07:23.88,0:07:30.27,Default,,0,0,0,,4.6Ghz家族频率，70MB缓存,
+Dialogue: 0,0:07:23.88,0:07:30.27,Default,,0,0,0,,4.6Ghz加速频率，70MB缓存(4MB L2和64MB L3),
 Dialogue: 0,0:07:30.27,0:07:33.39,Default,,0,0,0,,and it's all in one hundred and five watts.
 Dialogue: 0,0:07:30.27,0:07:33.39,Default,,0,0,0,,这一切仅需105瓦功耗.
 Dialogue: 0,0:07:35.04,0:07:41.50,Default,,0,0,0,,This is a $1200 processor on the left versus the AMD Ryzen9 3900X on your right
@@ -225,8 +225,8 @@ Dialogue: 0,0:08:27.57,0:08:29.34,Default,,0,0,0,,the Ryzen9 family.
 Dialogue: 0,0:08:27.57,0:08:29.34,Default,,0,0,0,,Ryzen9系列
 Dialogue: 0,0:08:29.34,0:08:36.14,Default,,0,0,0,,We love this guy because we love that we can bring something to the market that nobody has ever done before
 Dialogue: 0,0:08:29.34,0:08:36.14,Default,,0,0,0,,我们非常喜欢Ryzen9，因为我们热爱将从来没有人做过的产品投入市场
-Dialogue: 0,0:08:36.22,0:08:42.90,Default,,0,0,0,,we compared against our competition, whose device is more than 900$.
-Dialogue: 0,0:08:36.22,0:08:42.90,Default,,0,0,0,,对比竞品，那些超过900$的CPU(i9 9920x淘宝售价过万)
+Dialogue: 0,0:08:36.22,0:08:42.90,Default,,0,0,0,,we compared against our competition, whose device is more than 1100$.
+Dialogue: 0,0:08:36.22,0:08:42.90,Default,,0,0,0,,对比竞品，那些超过1100$的CPU(i9 9920x淘宝售价过万)
 Dialogue: 0,0:08:42.90,0:08:50.37,Default,,0,0,0,,But we believe that we want as many people as possible to have the Ryzen9 3900X.
 Dialogue: 0,0:08:42.90,0:08:50.37,Default,,0,0,0,,我们想要让尽可能更多的人拥有Ryzen9 3900X.
 Dialogue: 0,0:08:50.37,0:08:52.86,Default,,0,0,0,,So when this goes on sale,
