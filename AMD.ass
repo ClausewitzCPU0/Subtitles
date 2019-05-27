@@ -192,7 +192,7 @@ Dialogue: 0,0:07:12.63,0:07:20.76,Default,,0,0,0,,Ryzen9 3900X是完全意义上
 Dialogue: 0,0:07:20.76,0:07:23.88,Default,,0,0,0,,with 12 cores and 24threads.
 Dialogue: 0,0:07:20.76,0:07:23.88,Default,,0,0,0,,拥有12核心24线程
 Dialogue: 0,0:07:23.88,0:07:30.27,Default,,0,0,0,,We have four point six gigahertz boost seventy megabytes of total cash,
-Dialogue: 0,0:07:23.88,0:07:30.27,Default,,0,0,0,,4.6Ghz加速频率，70MB缓存(4MB L2和64MB L3),
+Dialogue: 0,0:07:23.88,0:07:30.27,Default,,0,0,0,,4.6Ghz加速频率，70MB缓存(6MB L2和64MB L3),
 Dialogue: 0,0:07:30.27,0:07:33.39,Default,,0,0,0,,and it's all in one hundred and five watts.
 Dialogue: 0,0:07:30.27,0:07:33.39,Default,,0,0,0,,这一切仅需105瓦功耗.
 Dialogue: 0,0:07:35.04,0:07:41.50,Default,,0,0,0,,This is a $1200 processor on the left versus the AMD Ryzen9 3900X on your right
