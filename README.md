@@ -2,14 +2,22 @@
 
 ### Index：
 
-1. ##### AMD Keynote at Computex 2019
+1. #### AMD Keynote at Computex 2019
 
    source： https://www.youtube.com/watch?v=3qqBijKHuHM
 
-   完成时间：19.5.27
+   完成时间：2019.5.27
 
-   文件名：AMD.ass
+   文件夹名：AMD
 
-2. 
+2. #### *Froggie Went A-Courtin'* - [Woody Guthrie](https://music.163.com/artist?id=84062)
 
- 
+   source：Pecos Pest (1955, Tom and Jerry)
+
+   完成时间：2019.6.1 (仅英文字幕)
+
+   文件名：Pecos Pest
+
+3. 
+
+    
