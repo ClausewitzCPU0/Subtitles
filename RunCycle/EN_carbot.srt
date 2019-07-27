@@ -1,0 +1,1006 @@
+﻿1
+00:00:00,000 --> 00:00:02,040
+大家好！这里是你们的好兄弟Carbot
+
+2
+00:00:02,041 --> 00:00:03,420
+我们刚上架这些新T恤
+
+3
+00:00:03,420 --> 00:00:07,840
+想购买的可以点击下方链接（简介里）
+https://www.teepublic.com/stores/carbotanimation
+
+
+4
+00:00:07,880 --> 00:00:11,010
+其中一件是Zerg Hi，另外一件是为了艾尔
+
+5
+00:00:11,011 --> 00:00:13,680
+如果你没看出来的话——这是T恤上在叉子周围的字
+
+6
+00:00:13,681 --> 00:00:18,210
+还有一件是三个Marine，裂盔哥和补丁哥和医疗兵。
+
+7
+00:00:18,211 --> 00:00:19,791
+等等，我的意思是两个枪兵和医疗兵
+
+8
+00:00:19,791 --> 00:00:23,430
+限时发售，心动不如行动
+
+9
+00:00:23,431 --> 00:00:27,690
+嘿，我是你们的好朋友John Burton，来自Carbot animations.
+
+10
+00:00:27,691 --> 00:00:31,950
+有观众让我多做一些动画教学
+
+11
+00:00:31,951 --> 00:00:33,300
+今天安排上了
+
+12
+00:00:33,301 --> 00:00:39,990
+首先，我们所有的动画都是用Adobe Animate CC
+
+13
+00:00:39,991 --> 00:00:42,750
+你可以在adobe.com上找到
+
+14
+00:00:42,751 --> 00:00:44,250
+这不是恰饭视频
+
+15
+00:00:44,251 --> 00:00:47,460
+因此这完全是用爱发电
+
+16
+00:00:47,461 --> 00:00:49,980
+对我来说这款软件毫无难度
+
+17
+00:00:49,981 --> 00:00:52,440
+今天要做的动画是跑步循环
+
+18
+00:00:52,441 --> 00:00:54,480
+我们将以叉子的跑步动作为例
+
+19
+00:00:54,481 --> 00:00:57,150
+当你在创作跑步循环动画
+
+20
+00:00:57,151 --> 00:01:00,390
+尤其是在用An CC画跑步动作时
+
+21
+00:01:00,391 --> 00:01:02,610
+最重要的就是画出最夸张的姿势
+
+22
+00:01:02,611 --> 00:01:08,190
+比如一条胳膊尽可能靠前，一条腿尽可能向后。
+
+23
+00:01:08,191 --> 00:01:10,140
+画另外一对胳膊腿也是同样的道理
+
+24
+00:01:10,141 --> 00:01:16,290
+当你画完角色跑步的轮廓后
+
+25
+00:01:16,291 --> 00:01:18,510
+就可以进行下一步：把它变成一个元件(symbol)并且命名 (默认快捷键F8）
+
+26
+00:01:18,511 --> 00:01:24,150
+元件有自己的时间线并且会在整个主时间线上不断循环。
+
+27
+00:01:24,151 --> 00:01:28,590
+因此重用这个动作循环非常容易
+
+28
+00:01:28,591 --> 00:01:30,690
+如果角色需要跑过屏幕
+
+29
+00:01:30,691 --> 00:01:32,403
+你不需要重复每个步骤
+
+30
+00:01:32,403 --> 00:01:35,940
+只要你编辑好它的动画，就会一直循环它自己的动作
+
+31
+00:01:35,941 --> 00:01:38,040
+因此我所做的就是用很多图层
+
+32
+00:01:38,041 --> 00:01:39,390
+身体独立为一个图层
+
+33
+00:01:39,391 --> 00:01:40,680
+你画好身体之后
+
+34
+00:01:40,680 --> 00:01:45,880
+你可以创建一个新图层，再画一个从肩膀到身体上方的手臂
+
+35
+00:01:45,940 --> 00:01:47,620
+你就可以看到整个过程
+
+36
+00:01:47,620 --> 00:01:49,680
+完成手臂的绘画和上色工作后
+
+37
+00:01:49,680 --> 00:01:51,760
+我要把这个手臂也转换成元件
+
+38
+00:01:51,840 --> 00:01:54,210
+现在是元件套元件
+
+39
+00:01:54,211 --> 00:01:55,710
+工作有些进展了
+
+40
+00:01:55,711 --> 00:01:57,720
+双击这个元件
+
+41
+00:01:57,721 --> 00:01:59,760
+事实上我们又一次将它变成了元件
+
+42
+00:01:59,761 --> 00:02:04,770
+原因是我们想给这两条手臂加上动画
+
+43
+00:02:04,771 --> 00:02:08,940
+如果你这么做，就会自动将其变为元件
+
+44
+00:02:08,941 --> 00:02:11,760
+我们想确保元件的锚点在肩膀上
+
+45
+00:02:11,761 --> 00:02:13,590
+锚点就是此处的小白点
+
+46
+00:02:13,591 --> 00:02:17,070
+这就是元件的旋转中心点
+
+47
+00:02:17,071 --> 00:02:19,440
+决定了元件如何旋转、变形
+
+48
+00:02:19,441 --> 00:02:27,090
+我们要给元件增加 移动补间(motion tween) ...(作者口误)
+
+49
+00:02:27,091 --> 00:02:32,250
+总的来说就是要让手臂在最前和最后两个位置之间来回摆动
+
+50
+00:02:32,251 --> 00:02:38,340
+完成这步之后，我们就可以返回身体部分做另一只手臂的工作
+
+51
+00:02:38,341 --> 00:02:40,950
+这个循环的时长大概是10帧
+
+52
+00:02:40,951 --> 00:02:46,500
+因此所有动画长度都要是10帧，比如手臂来回摆动也是10帧
+
+53
+00:02:46,501 --> 00:02:47,700
+复制这个手臂
+
+54
+00:02:47,701 --> 00:02:51,150
+把它放到另一层，放置在身体后面
+
+55
+00:02:51,151 --> 00:02:53,250
+因为我们的循环是10帧
+
+56
+00:02:53,250 --> 00:02:56,220
+偏移最大的是第6帧
+
+57
+00:02:56,260 --> 00:03:00,180
+因此反方向手臂的动作从第六帧开始
+
+58
+00:03:00,181 --> 00:03:02,340
+方法是点击属性页面
+
+59
+00:03:02,341 --> 00:03:08,940
+将first选项参数改为6
+
+60
+00:03:08,941 --> 00:03:11,820
+这意味着它将从第六帧开始运动而不是第一帧
+
+61
+00:03:11,821 --> 00:03:13,020
+So I don't want to lose you guys here.
+
+62
+00:03:13,021 --> 00:03:17,400
+从第六帧开始的原因是：这个动作离第一帧最远
+
+63
+00:03:17,401 --> 00:03:19,590
+而不是第十帧离第一帧最远
+
+64
+00:03:19,591 --> 00:03:27,750
+第十帧的下一帧就是第一帧，因为整个过程会循环 
+
+65
+00:03:27,751 --> 00:03:32,400
+第六帧是运动最远的一帧，它是动作过程的中点
+
+66
+00:03:32,401 --> 00:03:37,440
+这就是为什么你想让其中一只手臂从第六帧开始，而另一只从第一帧开始。
+
+67
+00:03:37,441 --> 00:03:42,480
+我会让两条手臂交错前后摆动
+
+68
+00:03:42,480 --> 00:03:45,040
+并循环这个过程
+
+69
+00:03:45,120 --> 00:03:47,490
+还要对两条腿做同样的操作
+
+70
+00:03:47,491 --> 00:03:51,120
+在前面这条腿和身体之间新建图层
+
+71
+00:03:51,121 --> 00:03:54,660
+画一条腿，转换为元件
+
+72
+00:03:54,661 --> 00:03:57,968
+这次，我们要让动画更加生动一些。
+
+73
+00:03:58,440 --> 00:04:01,140
+我们要做逐帧动画
+
+74
+00:04:01,141 --> 00:04:02,910
+这意味着我们要亲手画每一帧
+
+75
+00:04:02,911 --> 00:04:09,090
+这么做的原因是，膝盖和脚掌都会变形
+
+76
+00:04:09,091 --> 00:04:12,900
+因此为腿部做逐帧动画会更好
+
+77
+00:04:12,901 --> 00:04:15,390
+这样看上去就不会太僵硬，像真正在跑步一样。
+
+78
+00:04:15,391 --> 00:04:17,640
+If you do use a symbol which he can,
+
+79
+00:04:17,641 --> 00:04:18,510
+ah,
+
+80
+00:04:18,511 --> 00:04:19,980
+it'll just look a little bit more stiff,
+
+81
+00:04:19,981 --> 00:04:21,480
+which is fine when you're starting out,
+
+82
+00:04:21,481 --> 00:04:25,740
+so feel free to do the exact same thing that we do with the arms of the legs.
+
+83
+00:04:25,741 --> 00:04:27,120
+If you want to make it a little quick.
+
+84
+00:04:27,121 --> 00:04:30,360
+But I'm going to animate each leg frame by frame to show you how it's done,
+
+85
+00:04:30,361 --> 00:04:32,730
+and we're going to start with the key frames of the leg again,
+
+86
+00:04:32,731 --> 00:04:40,740
+that is the most forward frame and the furthest back frame and the most extreme frames are going to land on one and six.
+
+87
+00:04:41,640 --> 00:04:42,810
+So we do those first,
+
+88
+00:04:42,811 --> 00:04:44,070
+and then we do the in between,
+
+89
+00:04:44,071 --> 00:04:46,500
+which is every frame in between the key for,
+
+90
+00:04:46,501 --> 00:04:49,680
+and that's basically joining them slowly moving the way cross.
+
+91
+00:04:49,681 --> 00:04:50,250
+As you see,
+
+92
+00:04:50,251 --> 00:04:54,060
+a kind of the foot can have bends as it moves across the ground,
+
+93
+00:04:54,061 --> 00:04:55,890
+and the whole life changed a little bit of form.
+
+94
+00:04:55,891 --> 00:05:05,250
+So once we call it that we're actually going to exit the symbol and then we're going to copy that leg and make a new layer in between the body and the arm that is behind the body at this point,
+
+95
+00:05:05,251 --> 00:05:05,700
+if you press,
+
+96
+00:05:05,701 --> 00:05:06,930
+play back and you,
+
+97
+00:05:06,931 --> 00:05:12,180
+you've tasted the leg and you know it's going to look like the zealot is hopping on two feet.
+
+98
+00:05:12,181 --> 00:05:15,660
+This is what happens when you have an alternate alternated,
+
+99
+00:05:15,661 --> 00:05:20,880
+the animation and start one of the legs on the six frame and not the first.
+
+100
+00:05:20,881 --> 00:05:24,360
+So we're going to keep one leg on the first frame and the other leg.
+
+101
+00:05:24,361 --> 00:05:24,600
+Ah,
+
+102
+00:05:24,601 --> 00:05:26,820
+we're going to start at the six frame again.
+
+103
+00:05:26,821 --> 00:05:28,080
+Going to the properties tab,
+
+104
+00:05:28,081 --> 00:05:31,680
+you ought to make the right arm and the left leg in sync,
+
+105
+00:05:31,681 --> 00:05:35,190
+Meaning the right arms forward and the left leg is forward,
+
+106
+00:05:35,191 --> 00:05:36,330
+and vice versa.
+
+107
+00:05:36,331 --> 00:05:36,990
+With thee,
+
+108
+00:05:36,991 --> 00:05:38,670
+let the left arm,
+
+109
+00:05:38,671 --> 00:05:40,140
+and in the right leg,
+
+110
+00:05:40,141 --> 00:05:41,850
+they're going to be in sync with them,
+
+111
+00:05:41,851 --> 00:05:48,090
+being at the back that way and allow the xcel to run in a proper motion if you do the opposite,
+
+112
+00:05:48,091 --> 00:05:50,610
+if you have the right leg in the right arm forward,
+
+113
+00:05:50,611 --> 00:05:51,930
+it's going to look really,
+
+114
+00:05:51,931 --> 00:05:53,070
+really weird.
+
+115
+00:05:53,071 --> 00:05:53,550
+Ah,
+
+116
+00:05:53,551 --> 00:05:56,910
+and it obviously doesn't make any sense because it's like,
+
+117
+00:05:56,911 --> 00:05:57,420
+yeah,
+
+118
+00:05:57,421 --> 00:06:03,930
+it's like you're pulling your your legs with your arms and it looks not the way you wanted to look Basically,
+
+119
+00:06:03,931 --> 00:06:08,130
+so be sure to cycle the the limbs properly,
+
+120
+00:06:08,131 --> 00:06:10,440
+the opposing the right arm and left leg,
+
+121
+00:06:10,441 --> 00:06:11,760
+and vice versa,
+
+122
+00:06:11,761 --> 00:06:16,080
+starting on differ on the same frames and the other one's on frame.
+
+123
+00:06:16,081 --> 00:06:21,300
+Six If your run cycle is a phrase that it's going to be free from five,
+
+124
+00:06:21,301 --> 00:06:23,280
+if it's twenty frames,
+
+125
+00:06:23,281 --> 00:06:25,080
+then it's going to be framed eleven and so on.
+
+126
+00:06:25,081 --> 00:06:27,360
+That's going to be the middle frame to give this runs,
+
+127
+00:06:27,361 --> 00:06:28,680
+let go a little bit more off.
+
+128
+00:06:28,681 --> 00:06:33,450
+I save the circle of the chest as its own layer,
+
+129
+00:06:33,451 --> 00:06:33,960
+And so we're gonna,
+
+130
+00:06:33,961 --> 00:06:39,090
+make that into a symbol and we're going to squash and stretch it as the torso moves.
+
+131
+00:06:39,091 --> 00:06:41,580
+Ah slightly from left to right,
+
+132
+00:06:41,581 --> 00:06:42,450
+as is running,
+
+133
+00:06:42,451 --> 00:06:43,440
+you don't have to do this.
+
+134
+00:06:43,441 --> 00:06:45,660
+you could just draw the the circle in.
+
+135
+00:06:45,661 --> 00:06:45,960
+Ah,
+
+136
+00:06:45,961 --> 00:06:51,330
+I'm doing this as an additional option of how you can spice up the run.
+
+137
+00:06:51,331 --> 00:06:52,830
+So if you exit the symbol,
+
+138
+00:06:52,831 --> 00:06:55,260
+you can now see the run cycle looks pretty good,
+
+139
+00:06:55,261 --> 00:06:55,590
+You know,
+
+140
+00:06:55,591 --> 00:06:57,510
+it doesn't look too bad.
+
+141
+00:06:57,511 --> 00:06:57,960
+Ah,
+
+142
+00:06:57,961 --> 00:07:03,480
+and we can actually spices up a little more by turning the whole run cycle into another symbol,
+
+143
+00:07:03,481 --> 00:07:04,830
+and he'd call out whatever he wants.
+
+144
+00:07:04,831 --> 00:07:08,190
+The reason why we're going to do this is because right now he's running,
+
+145
+00:07:08,191 --> 00:07:09,210
+and he just is.
+
+146
+00:07:09,211 --> 00:07:10,680
+He's not bouncing whatsoever.
+
+147
+00:07:10,681 --> 00:07:13,260
+He's kind of almost like he's gliding along the ground.
+
+148
+00:07:13,261 --> 00:07:15,600
+It looks fine for a simple animation,
+
+149
+00:07:15,601 --> 00:07:18,960
+but if you do want to make it a little bit nicer,
+
+150
+00:07:18,961 --> 00:07:20,310
+you can do this as well.
+
+151
+00:07:20,311 --> 00:07:24,270
+So once you made the whole run cycle into an additional symbol,
+
+152
+00:07:24,271 --> 00:07:27,660
+we're in a right click and make it into a motion tween,
+
+153
+00:07:27,661 --> 00:07:29,550
+and we're going to make the zealot bounce up,
+
+154
+00:07:29,551 --> 00:07:30,360
+And down,
+
+155
+00:07:30,361 --> 00:07:31,500
+so in this timeline,
+
+156
+00:07:31,501 --> 00:07:37,110
+you want him to bounce up and down twice because there's two legs there that are alternating between the two,
+
+157
+00:07:37,111 --> 00:07:39,990
+so we're going to make the first frame and the last frame.
+
+158
+00:07:39,991 --> 00:07:42,930
+the exact same keefe ranges press at six.
+
+159
+00:07:42,931 --> 00:07:44,310
+I don't move yet.
+
+160
+00:07:44,311 --> 00:07:45,780
+then the middle frame again,
+
+161
+00:07:45,781 --> 00:07:47,340
+this is framed six.
+
+162
+00:07:47,341 --> 00:07:47,610
+Ah,
+
+163
+00:07:47,611 --> 00:07:51,360
+we are going to make that the exact same position as well,
+
+164
+00:07:51,361 --> 00:07:53,880
+so we could have six on the middle frame as well.
+
+165
+00:07:53,881 --> 00:07:57,870
+the frames in between these three dots.
+
+166
+00:07:57,871 --> 00:07:58,140
+Ah,
+
+167
+00:07:58,141 --> 00:07:59,340
+we can actually like.
+
+168
+00:07:59,341 --> 00:08:02,190
+I think it shows the frame three in frame.
+
+169
+00:08:02,191 --> 00:08:05,790
+seven We can drag the symbol down of bits.
+
+170
+00:08:05,791 --> 00:08:06,570
+Ah,
+
+171
+00:08:06,571 --> 00:08:08,760
+on both of those sprained three in frame.
+
+172
+00:08:08,761 --> 00:08:09,510
+seven.
+
+173
+00:08:09,511 --> 00:08:10,770
+If you play it back,
+
+174
+00:08:10,771 --> 00:08:11,760
+you can now see,
+
+175
+00:08:11,761 --> 00:08:14,790
+the zealot is bouncing a bit and even made a bounce forward,
+
+176
+00:08:14,791 --> 00:08:16,530
+not just up in a little bit forward,
+
+177
+00:08:16,531 --> 00:08:17,220
+not too much.
+
+178
+00:08:17,221 --> 00:08:20,370
+You don't want to do too much better than bouncing up as well.
+
+179
+00:08:20,371 --> 00:08:21,270
+Especially so,
+
+180
+00:08:21,271 --> 00:08:22,680
+if he acts of that symbol now,
+
+181
+00:08:22,681 --> 00:08:26,730
+now we have the salt bouncing up and down while he's running again,
+
+182
+00:08:26,731 --> 00:08:28,080
+some most of the time.
+
+183
+00:08:28,081 --> 00:08:28,410
+actually,
+
+184
+00:08:28,411 --> 00:08:31,560
+Almost every time I set it for good animation,
+
+185
+00:08:31,561 --> 00:08:34,230
+you just want to isolate each section,
+
+186
+00:08:34,231 --> 00:08:36,570
+so you're not trying to do everything all at once.
+
+187
+00:08:36,571 --> 00:08:40,560
+You can always adjust and add to the animation later on.
+
+188
+00:08:40,561 --> 00:08:42,180
+Make sure you do the proper planning,
+
+189
+00:08:42,181 --> 00:08:43,170
+so that's it guys.
+
+190
+00:08:43,171 --> 00:08:45,420
+That's how you do a pretty decent,
+
+191
+00:08:45,421 --> 00:08:46,500
+easy run cycle,
+
+192
+00:08:46,501 --> 00:08:48,480
+so run cycles are a little bit difficult,
+
+193
+00:08:48,481 --> 00:08:50,550
+especially when you're first starting animation.
+
+194
+00:08:50,551 --> 00:08:53,340
+It's because the limbs are kind of gone everywhere,
+
+195
+00:08:53,341 --> 00:08:55,230
+there need to be the opposite.
+
+196
+00:08:55,231 --> 00:08:57,330
+and I've seen plenty of people like they.
+
+197
+00:08:57,331 --> 00:08:58,320
+Kind of get confused,
+
+198
+00:08:58,321 --> 00:09:02,550
+of which live is where you can actually darken as I did in this animation,
+
+199
+00:09:02,551 --> 00:09:07,500
+the limbs that are on the behind the body.
+
+200
+00:09:07,501 --> 00:09:07,890
+Ah,
+
+201
+00:09:07,891 --> 00:09:11,250
+you could do that by selecting the symbols that are the lives behind the body,
+
+202
+00:09:11,251 --> 00:09:16,770
+the leg in the arm and going down to two to color,
+
+203
+00:09:16,771 --> 00:09:22,800
+and then clicking the dropdown and going to brightness and and adjusting the brightness to make it a little darker.
+
+204
+00:09:22,801 --> 00:09:24,870
+This will help you follow what the heck is going on,
+
+205
+00:09:24,871 --> 00:09:26,910
+or you can kind of just side here.
+
+206
+00:09:26,911 --> 00:09:28,530
+You change of his ability.
+
+207
+00:09:28,531 --> 00:09:29,670
+One more thing before we go,
+
+208
+00:09:29,671 --> 00:09:31,020
+we can do a bit of a macro.
+
+209
+00:09:31,021 --> 00:09:34,200
+Here is what we do with crowd shots.
+
+210
+00:09:34,201 --> 00:09:42,150
+if we want a lots of characters running it on screen and we don't want to continuously do new motion tweens to make a run across,
+
+211
+00:09:42,151 --> 00:09:46,680
+we can actually again make the zealots another symbol.
+
+212
+00:09:46,681 --> 00:09:47,010
+Ah,
+
+213
+00:09:47,011 --> 00:09:49,260
+his bouncing up and down run cycle,
+
+214
+00:09:49,261 --> 00:09:52,680
+and we can create that into a three second.
+
+215
+00:09:52,681 --> 00:09:53,010
+However,
+
+216
+00:09:53,011 --> 00:09:57,960
+many second now run run run across a screen animation,
+
+217
+00:09:57,961 --> 00:09:59,010
+which is super easy.
+
+218
+00:09:59,011 --> 00:09:59,790
+We just need to right,
+
+219
+00:09:59,791 --> 00:10:04,590
+click and make a motion tween and then go to the furthest frame and drag them across the screen.
+
+220
+00:10:04,591 --> 00:10:05,070
+So now,
+
+221
+00:10:05,071 --> 00:10:08,970
+when you exit out of the air out of that symbol again,
+
+222
+00:10:08,971 --> 00:10:13,260
+we're like inception ising here like crazy when she accepted that symbol,
+
+223
+00:10:13,261 --> 00:10:16,320
+you can now copy and paste that symbol shrink and grow,
+
+224
+00:10:16,321 --> 00:10:18,240
+put it behind in other frames,
+
+225
+00:10:18,241 --> 00:10:21,870
+and you have a beautiful crowd shot with proper perspective,
+
+226
+00:10:21,871 --> 00:10:24,090
+all adults are running the same speed,
+
+227
+00:10:24,091 --> 00:10:29,340
+but now their summer front summer behind and saves you a lot of time again.
+
+228
+00:10:29,341 --> 00:10:35,430
+I getting to know the programs that your animation and using it to your advantage can save you tons of time.
+
+229
+00:10:35,431 --> 00:10:40,950
+I did not do this at first when I first started animating in doing Youtube videos.
+
+230
+00:10:40,951 --> 00:10:42,030
+The more I do it,
+
+231
+00:10:42,031 --> 00:10:46,380
+the more time I save in the more I'm kicking myself that I should have done it before.
+
+232
+00:10:46,381 --> 00:10:47,760
+so that's it guys that thinks,
+
+233
+00:10:47,761 --> 00:10:51,030
+watch and hope you enjoyed the video hope mates heads.
+
+234
+00:10:51,031 --> 00:10:51,360
+Ah,
+
+235
+00:10:51,361 --> 00:10:53,280
+it is very technical.
+
+236
+00:10:53,281 --> 00:11:02,550
+are spending some time and wrapping your head around the technicalities of the program again will really help you understand it and make the program work for you.
+
+237
+00:11:02,551 --> 00:11:04,740
+So that is a basic run cycle.
+
+238
+00:11:04,741 --> 00:11:05,220
+Again,
+
+239
+00:11:05,221 --> 00:11:07,230
+you don't have to do the bouncing up and down thing.
+
+240
+00:11:07,231 --> 00:11:09,000
+He could have stopped halfway through this.
+
+241
+00:11:09,001 --> 00:11:11,940
+But those those two extra things are kind of icing on the cake,
+
+242
+00:11:11,941 --> 00:11:15,600
+making a little bit better and a little bit more effective in your animation,
+
+243
+00:11:15,601 --> 00:11:17,700
+so guys like videos described,
+
+244
+00:11:17,701 --> 00:11:18,990
+you'll like its stuff.
+
+245
+00:11:18,991 --> 00:11:20,250
+hope you enjoy it.
+
+246
+00:11:20,251 --> 00:11:22,950
+I'll let me know what you would like to see animation tutorials,
+
+247
+00:11:22,951 --> 00:11:25,710
+the future on for those who are interested.
+
+248
+00:11:25,711 --> 00:11:27,720
+I OK,
+
+249
+00:11:27,721 --> 00:11:29,730
+I best friend talk to you later.
+
+250
+00:11:29,731 --> 00:11:31,290
+We'll hang out this weekend.
+
+251
+00:11:31,291 --> 00:11:32,010
+Okay, bye-bye.
+

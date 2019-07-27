@@ -26,6 +26,15 @@
 
    文件夹：[Polestar1](https://github.com/ClausewitzCPU0/Subtitles/tree/master/Polestar/Polestar1)
 
-4. 
+4. #### Run Cycle [Animation Tutorial]
+
+   source：<https://www.youtube.com/watch?v=KmH_wmZS2JA>
+
+   完成时间：2019.7.27
+
+   文件夹：[RunCycle](https://github.com/ClausewitzCPU0/Subtitles/tree/master/RunCycle)
+
+5. 
 
     
+
