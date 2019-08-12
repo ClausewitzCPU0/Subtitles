@@ -599,109 +599,109 @@ which is just an integer.
 it's just a file descriptor.
 
 121
-00:09:38,821 --> 00:09:48,780
-我们是否会告诉被选中的人这是一个他们感兴趣的文件号以及我们感兴趣的特定事件
-Are we going to tell the selected that this is a file number they were interested in events on and the specific event that we're interested in.
+00:09:38,820 --> 00:09:44,700
+这将告诉selector，这是一个我们在事件发生时关注的文件号
+And we're going to tell the selector that this is a file number that we're interested in events on 
 
 122
-00:09:48,781 --> 00:09:53,430
-我们想知道什么时候插座是可写的和爱国的吗
-Is we want to know when the socket is writable and patriotic?
+00:09:44,800 --> 00:09:52,723
+我们关注的事件则是套接字何时处于可写状态
+and the specific event that we're interested in is we want to know when the socket is writable
 
 123
-00:09:53,431 --> 00:09:57,840
-可以自动为我们导入那个常数吗
-Can auto import that constant for us and?
+00:09:52,720 --> 00:09:57,040
+pycharm可以自动为我们导入那个常量
+and pycharm can auto import that constant for us.
 
 124
-00:09:59,340 --> 00:10:06,480
-我们要做的下一件事是 到目前为止我们所做的一切都表明我对这个文件描述符感兴趣
-The next thing we do so all we have done so far said I'm interested in this event on this file descriptor.
+00:09:59,340 --> 00:10:00,800
+我们要做的下一件事是 
+The next thing we do
 
 125
-00:10:06,481 --> 00:10:13,080
-然后 如果我们调用select 它会等待我们要求的事件发生
-And then if we call select that will wait for some event that we've asked about to happen.
+00:10:00,880 --> 00:10:06,480
+到目前为止，所做的一切都表明我们关注这个事件中的文件描述符
+so all we have done so far said I'm interested in this event on this file descriptor.
 
 126
+00:10:06,481 --> 00:10:13,080
+如果我们调用select 它会等待我们要求的事件发生
+And then if we call select that will wait for some event that we've asked about to happen.
+
+127
 00:10:14,130 --> 00:10:15,120
 所以
 So,
 
-127
+128
 00:10:15,121 --> 00:10:16,620
 一旦这种情况发生
 once that happens,
 
-128
+129
 00:10:16,621 --> 00:10:20,160
-我们可以不登记文件号码
+我们可以注销文件号
 we can unregistered the file number.
 
-129
+130
 00:10:21,510 --> 00:10:22,830
-在这一点上
+此时
 And by this point.
 
-130
-00:10:24,990 --> 00:10:25,860
-s是合理的
-s is reasonable.
-
 131
-00:10:27,930 --> 00:10:31,560
-这意味着我们可以合法地调用发送
-So that means that we can legally now call send on it.
+00:10:24,990 --> 00:10:25,860
+s(socket)是可写的
+s is writable.
 
 132
+00:10:27,930 --> 00:10:31,560
+这意味着我们可以合法地调用send
+So that means that we can legally now call send on it.
+
+133
 00:10:31,561 --> 00:10:33,000
 如果我现在调用这个
 So if I call this now.
 
-133
+134
 00:10:35,070 --> 00:10:38,040
-你会看到我越过这条线
+你会看到程序已经越过这行
 You'll see that I get past this line,
 
-134
+135
 00:10:38,041 --> 00:10:45,090
-但是现在我们在这里抛出一个异常因为这个套接字是可写的
+但是现在这里抛出一个异常，因为这个套接字是可写的
 but now we're throwing an exception down here because the socket is writable,
 
-135
+136
 00:10:45,091 --> 00:10:52,170
 但是它还没有变得可读 我们还没有等待服务器开始发送它的响应
 but it hasn't become readable yet We haven't waited for the server to start sending its response.
 
-136
+137
 00:10:53,490 --> 00:10:55,140
-所以为了等待
+所以为了等待服务器
 So in order to wait for that,
 
-137
+138
 00:10:55,141 --> 00:10:59,550
-我们必须再做一次同样的舞蹈
+我们必须再做一次同样的操作
 we have to do the same dance again,
 
-138
-00:10:59,551 --> 00:11:01,830
-这一次我们对权利不感兴趣
-and this time we're not interested in right.
-
 139
-00:11:01,831 --> 00:11:04,320
-能力对可读性很感兴趣
-Ability were interested in readability.
+00:10:59,551 --> 00:11:04,320
+这一次我们对可读情况感兴趣而不是可写情况
+and this time we're not interested in write ability we're interested in readability.
 
 140
 00:11:04,321 --> 00:11:08,580
-所以我们有两条石油格言的输入
-So we have two Petro motto inputs that we.
+这里可以用pycharm的自动补全（win: Alt + Enter）
+So we have the pycharm auto inputs that 
 
 141
 00:11:10,170 --> 00:11:12,030
-再等一遍
-Wait for it again,
+再次等待套接字
+We wait for it again,
 
 142
 00:11:12,031 --> 00:11:15,960
@@ -709,24 +709,24 @@ Wait for it again,
 and once this call completes,
 
 143
-00:11:15,961 --> 00:11:17,610
-那我们就没有登记了
-then we'll unregistered.
+00:11:15,961 --> 00:11:20,370
+那我们就注销文件号
+then we'll unregistered the file number,
 
 144
-00:11:18,930 --> 00:11:20,370
-文件号
-The file number,
+00:11:20,370 --> 00:11:22,420
+现在我们可以接收数据了
+and now we're allowed to receive
 
 145
-00:11:20,371 --> 00:11:25,170
-现在我们可以接收到如果我运行这段代码 它就完成了
-and now we're allowed to receive so if I run this code now it completes,
+00:11:22,500 --> 00:11:25,170
+如果我现在运行，它可以正常工作
+so if I run this code now it completes,
 
 146
 00:11:25,171 --> 00:11:29,640
-但我们还没有真正想要的东西还花了两秒钟
-but we haven't really want anything right still took two seconds.
+但我们还没有得到真正想要的效果，程序还是运行了两秒
+but we haven't really won anything right still took two seconds.
 
 147
 00:11:29,641 --> 00:11:33,060
@@ -735,2555 +735,2505 @@ We just kind of made a small mess in our code.
 
 148
 00:11:33,061 --> 00:11:37,590
-但我们还没有获得任何效率提升
+但我们还没有获得任何efficiency提升
 But we haven't gained any efficiency improvements yet.
 
 149
 00:11:43,200 --> 00:11:44,640
-那么下一步是什么呢
+那么下一步做什么呢
 So what's the next step?
 
 150
-00:11:46,410 --> 00:11:47,910
-我们之后的下一步
-The next step after we've.
+00:11:46,410 --> 00:11:51,990
+在使用了非阻塞套接字之后的步骤
+The next step after we've started to use non blocking sockets,
 
 151
-00:11:48,930 --> 00:11:51,990
-开始使用非阻塞套接字
-Started to use non blocking sockets,
-
-152
 00:11:51,991 --> 00:11:53,490
-是回叫
+是回调
 is callbacks.
 
-153
+152
 00:11:55,080 --> 00:11:56,520
 我将解释它是如何工作的
 So I'll explain how that works.
 
-154
+153
 00:11:57,600 --> 00:12:07,410
-回调是一种允许多个操作同时等待眼睛操作的方法
-Callbacks are a way of allowing multiple operations to here waiting concurrently for eye operations.
+回调是一种允许多个操作并发等待I/O操作的方法
+Callbacks are a way of allowing multiple operations to be waiting concurrently for i/o operations.
+
+154
+00:12:11,760 --> 00:12:13,350
+首先以这个get函数为例
+To begin with, this get.
 
 155
-00:12:11,760 --> 00:12:12,540
-首先
-To begin with,
-
-156
-00:12:12,541 --> 00:12:13,350
-这是
-this get.
-
-157
 00:12:14,370 --> 00:12:16,530
-当它开始连接时
+当开始连接时
 When it starts connecting,
 
+156
+00:12:16,531 --> 00:12:23,610
+一旦套接字可写时，注册的回调将被执行
+it needs to register callback to be executed once the socket is writable,
+
+157
+00:12:23,610 --> 00:12:24,920
+之后它需要返回 
+and then it needs to return
+
 158
-00:12:16,531 --> 00:12:17,730
-它需要
-it needs to.
+00:12:24,980 --> 00:12:33,930
+这样当我们在等待连接这个socket的时候，就可以开始获取另一个URL
+so that work can begin on getting the other URL while we're waiting to connect this socket right,
 
 159
-00:12:19,110 --> 00:12:23,610
-一旦套接字可写 注册回调将被执行
-Register callback to be executed once the socket is writable,
-
-160
-00:12:23,611 --> 00:12:33,930
-然后它需要返回 这样工作就可以开始得到另一个欧元当我们在等待连接这个插座的时候
-and then it needs to return so that work can begin on getting the other euro while we're waiting to connect this socket right,
-
-161
 00:12:33,931 --> 00:12:38,460
-为了通过这两秒钟 我们需要某种类型的并发性
+我们需要某种并发手段来优化这两秒的时间
 we need some sort of concurrency in order to get past this two seconds.
 
-162
+160
 00:12:39,870 --> 00:12:41,190
 我们来看看它是如何工作的
 So let's see how that would work.
 
-163
+161
 00:12:42,510 --> 00:12:46,260
-我们可以先写回那个调用的主体
+我们可以先写回调的主体
 We can begin by writing the body of that call back,
 
-164
+162
 00:12:46,261 --> 00:12:47,820
-所以我把它叫做连接
+所以我将它命名为connected函数
 so I'm gonna call it connected.
 
-165
+163
 00:12:47,821 --> 00:12:49,080
 这将会执行
 This is going to execute.
 
-166
+164
 00:12:50,190 --> 00:12:54,810
-一旦套接字连接起来 它就会执行下一步
+一旦套socket已连接，它就会执行下一步
 Once the socket is connected and it's going to do the next step.
 
+165
+00:12:55,980 --> 00:12:58,410
+但问题是
+But the problem is,
+
+166
+00:12:58,411 --> 00:13:01,410
+你可以看到PyCharm有错误提示了
+you can see that right now PyCharm is sort of losing its mind
+
 167
-00:12:55,980 --> 00:12:56,340
-屁股
-Butt.
+00:13:01,411 --> 00:13:10,950
+因为在这个新函数中有两个变量没有声明，因为我们在get函数中创建了它们
+because there's two variables that are not bound in this new function because we created them up here in get.
 
 168
-00:12:57,840 --> 00:12:58,410
-问题是
-The problem is,
-
-169
-00:12:58,411 --> 00:13:01,410
-你可以看到 写得很高的魅力正在失去它的思想
-you can see that written up high charm is sort of losing its mind,
-
-170
-00:13:01,411 --> 00:13:10,950
-因为在这个新函数中有两个变量没有被绑定因为我们在这里创建了它们
-because there's two variables that are not bound in this new function because we created them up here in.
-
-171
 00:13:12,330 --> 00:13:17,400
 这两个变量是s和request
 And the two variables are s and request.
 
-172
+169
 00:13:17,401 --> 00:13:21,360
-假设这些都是通过某种方式传递的
+假设这些变量通过某种方式传递给connected函数
 So let's say that those are passed into connected somehow.
 
-173
+170
 00:13:23,340 --> 00:13:27,240
-这将会是
+解决办法是
 And that somehow is going to be.
 
-174
+171
 00:13:27,241 --> 00:13:33,330
-我们将使用一个登陆器来创建一个闭包来捕获这两个值
-We're going to use a lander to create a closure to capture those two values.
+我们将使用lambda来创建一个闭包来捕获这两个值
+We're going to use a lambda to create a closure to capture those two values.
 
-175
+172
 00:13:33,331 --> 00:13:35,160
-所以我们要创建一个Lambda
+所以我们要创建一个Lambda表达式
 so we'll create a Lambda.
 
-176
+173
 00:13:36,300 --> 00:13:43,440
-我们会说 调用Lambda执行与套接字和请求连接
+这样调用Lambda执行connected函数就可以使用这两个变量了
 And we'll say that calling the Lambda executes connected with the socket and the request,
 
-177
+174
 00:13:43,441 --> 00:13:46,440
-我们把这个叫做诽谤回调
-and we'll call this slander callback.
+我们把这个叫做lambda回调
+and we'll call this lambda callback.
 
-178
+175
 00:13:48,210 --> 00:13:50,520
-现在我们怎么处理这个回叫
+现在我们如何使用这个回调？
 Now what do we do with this callback?
 
-179
+176
 00:13:50,521 --> 00:13:54,060
-选择器国防部寄存器
-Well selector Dod register,
+selector.register
+Well selector.register,
 
-180
-00:13:54,061 --> 00:13:55,350
-它有这个特别的
-it has this special.
+177
+00:13:54,061 --> 00:14:00,870
+它有特别的隐藏参数，有点像*b-side(非主打歌，这些歌通常不会出现在乐队的LP中)
+it has this special hidden argument sort of a b-side,
 
-181
-00:13:56,490 --> 00:13:57,120
-隐藏
-Hidden.
-
-182
-00:13:58,860 --> 00:14:00,870
-而不是B
-Argument instead of a B side,
-
-183
+178
 00:14:00,871 --> 00:14:03,210
-它被称为数据
+它被称为data
 and it's called data,
 
-184
-00:14:03,211 --> 00:14:05,940
-所以我们要把它传递给调用者
-so we're going to pass to the called again.
+179
+00:14:03,210 --> 00:14:06,360
+所以我们要把回调作为data的参数传递给调用者
+so we're going to pass the callback again as data.
 
-185
-00:14:05,941 --> 00:14:08,160
-他的数据 因为这是Python
-his data because this is Python,
+180
+00:14:06,400 --> 00:14:08,160
+因为这是Python(动态语言)
+because this is Python,
 
-186
-00:14:08,161 --> 00:14:08,820
-魁北克
-the Quebec.
-
-187
+181
 00:14:09,750 --> 00:14:15,120
-数据可以是任何东西 所以我们要把亚特兰大作为数据
-The data can be anything so we're going to pass in Atlanta as the data.
+data可以是任何东西，所以我们要把lambda作为data参数传入
+The data can be anything so we're going to pass in our lambda as the data.
 
-188
+182
 00:14:17,370 --> 00:14:17,940
-然后呢
+然后
 And?
 
-189
+183
 00:14:19,950 --> 00:14:24,510
-我们要等到连接被调用 实际上没有注册那个电话号码
-We're going to wait until connected is called to actually unregistered that phone number.
+我们要等到connected被调用时才注销那个文件号
+We're going to wait until connected is called to actually unregistered that file number.
 
-190
+184
 00:14:24,511 --> 00:14:25,470
 现在
 Now,
 
-191
+185
 00:14:25,471 --> 00:14:26,970
 如果我们这样做
 if we do this.
 
-192
+186
 00:14:30,450 --> 00:14:32,130
 不幸的是
 Unfortunately,
 
-193
+187
 00:14:32,131 --> 00:14:33,720
 我们实际上并没有完成任何工作
 we don't actually get any work done.
 
-194
+188
 00:14:34,860 --> 00:14:36,840
 因为我们的回调从来没有真正执行过
 Because our callback is never actually executed.
 
-195
+189
 00:14:37,830 --> 00:14:48,930
-那么我们如何确保这个回调实际上是在它等待的事件被执行的时候运行呢
-So how do we make sure that this callback is actually run once the event that it's waiting for has been executed?
+那么我们如何确保在等待的事件发生的时候，立即执行这个回调呢
+So how do we make sure that this callback is actually run, once the event that it's waiting for has been executed?
 
-196
+190
 00:14:48,931 --> 00:14:53,250
-好吧 我们需要的是各种同步框架的第三部分
-Well for that we need the third part of various sync framework.
+为了解决这个问题，我们需要异步框架的第三部分
+Well for that we need the third part of our async framework.
 
-197
+191
 00:14:53,251 --> 00:14:54,570
-我们需要一个活动
-We need an event.
+我们需要一个事件循环
+We need an event loop.
 
-198
+192
 00:14:56,550 --> 00:14:58,170
-简单地把它切下来
-Simply to cut that down here.
+我在这里把它写出来
+so I'm going to code that down here.
 
-199
+193
 00:15:00,450 --> 00:15:05,130
-Kit将首先运行它会启动一个套接字连接
-Kit is going to run first and it's going to start a socket connecting,
+get函数将首先运行，它会启动一个套接字连接
+get is going to run first and it's going to start a socket connecting,
 
-200
+194
 00:15:05,131 --> 00:15:10,230
 然后它会注册一个回调 当套接字是可写的时候就会执行
 and then it's going to register a callback to be executed when the socket is writable.
 
-201
-00:15:10,231 --> 00:15:12,030
-一旦食物完成了
-and once food has done that,
+195
+00:15:10,231 --> 00:15:14,160
+一旦foo执行完成了，bar也做同样的操作
+and once foo has done that it returns and bar does the same thing.
 
-202
-00:15:12,031 --> 00:15:14,160
-它回来了 邓巴也做了同样的事情
-it returns and Dunbar does the same thing.
-
-203
+196
 00:15:14,161 --> 00:15:19,740
-现在我们要讲的是 非阻塞的套接字是开放的 在连接的过程中
-So now we've got to say non blocking sockets that are open and in the midst of connected,
+现在我们有两个非阻塞的套接字在连接的过程中
+So now we've got to two non blocking sockets that are open and in the midst of connected,
 
-204
+197
 00:15:19,741 --> 00:15:24,450
-它们都已经在选择器中注册了
+它们都已经在selector中注册了
 and they've both been registered with the selector.
 
-205
-00:15:24,451 --> 00:15:25,710
-所以我要跑了
-So I'm going to run.
+198
+00:15:24,451 --> 00:15:29,550
+所以我先运行一个简略的事件循环
+So I'm going to run a *dirt simple little event loop here,
 
-206
-00:15:26,700 --> 00:15:27,480
-泥土
-A dirt,
+199
+00:15:29,551 --> 00:15:33,780
+写下selector.select
+and it's going to say selector dot select.
 
-207
-00:15:27,481 --> 00:15:29,550
-简单的小事件循环
-simple little event loop here,
-
-208
-00:15:29,551 --> 00:15:30,750
-但它会说
-but it's going to say.
-
-209
-00:15:31,770 --> 00:15:33,780
-选择器点选择
-Selector dot select.
-
-210
+200
 00:15:35,130 --> 00:15:41,490
-现在让我们通过这里的deBugger 看看选择实际返回的是什么
-Now let's run this through the de Bugger here and see what select actually returns.
+现在让我们用调试器运行到这里，看看select实际返回的是什么
+Now let's run this through the deBugger here and see what select actually returns.
 
-211
+201
 00:15:41,491 --> 00:15:44,610
 所以我设置了一个断点
 So I set a break point,
 
-212
+202
 00:15:44,611 --> 00:15:47,820
 现在我们有了这个事件列表
 and now we've got this events list,
 
-213
+203
 00:15:47,821 --> 00:15:49,980
-如果我检查一下
+如果我查看这个事件列表
 and if I inspect that,
 
-214
+204
 00:15:49,981 --> 00:15:51,960
 你会看到它是一个列表
 you'll see that it's a list.
 
-215
+205
 00:15:51,961 --> 00:15:53,580
 它有两个元素
 It's got two elements,
 
-216
+206
 00:15:53,581 --> 00:15:56,640
 我们来看看第一个元素是什么
 and let's see what that first element is.
 
-217
+207
 00:15:56,641 --> 00:15:58,260
 它有
 It's got.
 
-218
+208
 00:15:58,261 --> 00:16:00,450
-它是一个有两个值的块茎
-It's a tuber with two values.
+它是一个有两个值的元组
+It's a tuple with two values.
 
-219
+209
 00:16:00,451 --> 00:16:02,130
 第二个值不是很有趣
 A second value isn't very interesting.
 
-220
+210
 00:16:02,131 --> 00:16:06,990
 这只是我们一开始传递的面具
 This is just the mask that we passed in at first,
 
-221
+211
 00:16:06,991 --> 00:16:11,040
 它等于事件的正确值
 and it's equal to the event right value.
 
-222
+212
 00:16:11,041 --> 00:16:15,840
 但我们已经知道了 因为那是我们唯一感兴趣的事情
 but we already knew that because that was the only event that we were interested in.
 
-223
+213
 00:16:15,841 --> 00:16:18,960
 它是小管的第一个元素
 It's this first element of the tubule.
 
-224
+214
 00:16:18,961 --> 00:16:22,530
 这个选择器关键的东西很有趣
 This selector key thing that's really interesting,
 
-225
+215
 00:16:22,531 --> 00:16:28,920
 当我调用寄存器时 你会看到我传递的数据值
 and you'll see that the data value that I passed in when I called register.
 
-226
+216
 00:16:28,921 --> 00:16:37,410
 我们在这个事件列表中得到了这个结果它的内容是我注册为回调的亚特兰大
 We're getting that back out in this events list and its contents is that Atlanta that I registered as the callback so.
 
-227
+217
 00:16:38,670 --> 00:16:39,390
 让我们
 Let's.
 
-228
+218
 00:16:40,950 --> 00:16:41,550
 执行
 Executed?
 
-229
+219
 00:16:43,440 --> 00:16:44,910
 这是四个事件
 So four event.
 
-230
+220
 00:16:46,140 --> 00:16:48,000
 以及掩模事件
 And mask events.
 
-231
+221
 00:16:49,380 --> 00:16:50,940
 面具是我们不关心的东西
 Mask is the thing we don't care about.
 
-232
+222
 00:16:50,941 --> 00:16:51,750
 它也是
 its too.
 
-233
+223
 00:16:51,751 --> 00:16:53,970
 它等于完全的事件
 It's equal to event outright,
 
-234
+224
 00:16:53,971 --> 00:16:55,890
 但是这个事件
 but this event here.
 
-235
+225
 00:16:59,610 --> 00:17:03,210
 它的数据字段是我们最初的回调
 Its data field is the callback that we originally.
 
-236
+226
 00:17:04,440 --> 00:17:06,390
 注册了 所以我要叫它CV
 registered so I'm going to call that CV,
 
-237
+227
 00:17:06,391 --> 00:17:08,040
 然后我就叫它
 and then I'm just going to call it.
 
-238
+228
 00:17:09,600 --> 00:17:14,760
 所以如果我现在运行这个 而不是一个断点 看看会发生什么 这样它就可以进入
 So if I run this now instead a break point here and see what happens so it can step in.
 
-239
+229
 00:17:15,690 --> 00:17:18,360
 你会发现我们进入了大满贯赛事
 And you'll see that we step into the slam to hear it.
 
-240
+230
 00:17:18,361 --> 00:17:23,520
 而登陆器呼叫连接和连接是用套接字执行的
 And the lander calls connected and connected is executed with the socket.
 
-241
+231
 00:17:24,540 --> 00:17:26,910
 请求
 And the request,
 
-242
+232
 00:17:26,911 --> 00:17:27,870
 哪个是get
 which is get?
 
-243
+233
 00:17:29,460 --> 00:17:30,990
 我们运行这个
 So we run this.
 
-244
+234
 00:17:33,300 --> 00:17:38,700
 我们将会看到 我们需要在这里做同样的转换来获得特别提款权
 We'll see that we need to do the same transformation down here for SDR receive.
 
-245
+235
 00:17:40,650 --> 00:17:41,700
 我们来做一下
 So let's do that.
 
-246
+236
 00:17:44,040 --> 00:17:45,270
 我们可以说
 And we can say.
 
-247
+237
 00:17:48,750 --> 00:17:49,710
 回调
 The callback.
 
-248
+238
 00:17:51,120 --> 00:17:52,440
 因为当套接字是可写的
 For when the socket is writable,
 
-249
+239
 00:17:52,441 --> 00:17:59,100
 我们会称它为可读 和连接需要的方式是一样的
 we're going to call it readable and the same way that connected needed to take thee.
 
-250
+240
 00:18:00,780 --> 00:18:09,330
 在以前的kolbeck中作为参数可用的变量 在本例中是可读的仍然需要套接字
 Variables that had been available in the previous kolbeck as arguments so does readable in this case still needs the socket.
 
-251
+241
 00:18:09,331 --> 00:18:11,340
 它不需要请求 我们已经完成了
 It doesn't need request we're done with that,
 
-252
+242
 00:18:11,341 --> 00:18:13,350
 但它确实需要一个块的列表
 but it does need the list of chunks.
 
-253
+243
 00:18:14,790 --> 00:18:19,050
 所以它会把这两个作为参数
 So it's going to take those two as arguments,
 
-254
+244
 00:18:19,051 --> 00:18:21,930
 当它被执行时
 and when it's executed,
 
-255
+245
 00:18:21,931 --> 00:18:25,500
 它知道s在这个时候是可读的
 it knows that s is readable by this time.
 
-256
+246
 00:18:26,580 --> 00:18:27,330
 所以它可以加
 So it can add,
 
-257
+247
 00:18:27,331 --> 00:18:31,710
 注册它的文件描述符并接收一辆卡车
 register its file descriptor and receive a truck.
 
-258
+248
 00:18:31,711 --> 00:18:33,150
 我们知道这一块
 And we know that a chunk.
 
-259
+249
 00:18:34,110 --> 00:18:34,740
 嗯
 Well,
 
-260
+250
 00:18:34,741 --> 00:18:39,720
 我们知道这不会引发异常 因为select调用
 we know that this won't raise an exception because the select call.
 
-261
+251
 00:18:40,710 --> 00:18:45,870
 下面这里说 我们在这个插座上等待的任何东西都准备好了
 Down here said that whatever we're waiting for on this socket is ready.
 
-262
+252
 00:18:46,800 --> 00:18:48,570
 所以我们不会扔掉
 So we won't throw away.
 
-263
+253
 00:18:49,680 --> 00:18:53,250
 资源不可用或任何异常
 Resource unavailable or whatever that exception was.
 
-264
+254
 00:18:54,330 --> 00:18:58,710
 数据块将包含一些内容 或者服务器已经关闭
 The chunk will either contain something or if the server has closed,
 
-265
+255
 00:18:58,711 --> 00:19:00,420
 与卡车的连接是空的
 the connection than truck is empty.
 
-266
+256
 00:19:00,421 --> 00:19:01,410
 我们知道我们已经做完了
 And we know that we're done.
 
-267
+257
 00:19:03,840 --> 00:19:06,150
 在这里
 So up here,
 
-268
+258
 00:19:06,151 --> 00:19:08,220
 这意味着我们不调用select
 that means that we don't call select,
 
-269
+259
 00:19:08,221 --> 00:19:12,300
 因为这是事件循环的工作
 because that's the event loops job,
 
-270
+260
 00:19:12,301 --> 00:19:15,150
 但我们确实需要创建回调
 but we do need to create the callback.
 
-271
+261
 00:19:16,020 --> 00:19:20,940
 所以它和我们之前创建的回叫非常相似
 So it's going to be very similar to the callback that we created before it's gotta.
 
-272
+262
 00:19:20,941 --> 00:19:24,240
 是亚特兰大的一个封闭的压力
 Be a closure stress by Atlanta,
 
-273
+263
 00:19:24,241 --> 00:19:25,650
 当我们执行它的时候
 and when we execute it.
 
-274
+264
 00:19:27,030 --> 00:19:29,730
 我们要把插座和卡车
 We're going to pass it the socket and the trucks,
 
-275
+265
 00:19:29,731 --> 00:19:31,890
 这不再是一个循环
 and this is no longer a loop.
 
-276
+266
 00:19:31,891 --> 00:19:32,940
 我们只是注册
 We just register.
 
-277
+267
 00:19:35,970 --> 00:19:37,890
 回调一次 然后我们就做完了
 The callback once and then we're done.
 
-278
+268
 00:19:40,050 --> 00:19:41,340
 这意味着
 And that means that,
 
-279
+269
 00:19:41,341 --> 00:19:42,780
 既然我们不再有一段时间了
 since we no longer have a while,
 
-280
+270
 00:19:42,781 --> 00:19:45,900
 真正的循环
 true loop that down here,
 
-281
+271
 00:19:45,901 --> 00:19:47,640
 如果我们有一块
 if we have a chunk,
 
-282
+272
 00:19:47,641 --> 00:19:51,600
 我们需要等待剩下的部分
 we need to wait for the remaining chunks,
 
-283
+273
 00:19:51,601 --> 00:19:52,950
 所以我们不能就这样离开这里
 so we can't just leave here.
 
-284
+274
 00:19:52,951 --> 00:19:53,730
 我们得走了
 We need to go.
 
-285
+275
 00:19:55,800 --> 00:19:59,190
 返回等于另一个闭包
 Call back equals yet another closure,
 
-286
+276
 00:19:59,191 --> 00:20:16,590
 这将会引起第二个调用或者是对这个可读函数的另一个调用它会再次注册一个选择器来重新注册我们在这里注册的套接字然后这个返回调用不再需要
 and that's going to cause a second call or an anther call to this readable function again and will register that again with a selector to re registered the socket that we unregistered up here and then this return calls no longer necessary.
 
-287
+277
 00:20:18,120 --> 00:20:19,440
 如果我们运行这个
 So if we run this.
 
-288
+278
 00:20:21,150 --> 00:20:22,020
 我们会看到的
 We'll see that.
 
-289
+279
 00:20:23,700 --> 00:20:26,220
 我们的两个请求现在都完成了
 Both of our requests now complete.
 
-290
+280
 00:20:26,221 --> 00:20:27,540
 这太棒了
 So that's fantastic,
 
-291
+281
 00:20:27,541 --> 00:20:29,070
 但不幸的是
 but unfortunately.
 
-292
+282
 00:20:30,120 --> 00:20:36,870
 我们看不到她的最终输出 因为我们在这个狂野的树圈里
 We don't see her final output because we're in this wild tree loop,
 
-293
+283
 00:20:36,871 --> 00:20:42,060
 所以在这个选择器上被阻塞了因为没有什么可以做的了
 so were blocked here on this selector because there's nothing left to do,
 
-294
+284
 00:20:42,061 --> 00:20:44,430
 但是我们还没有让循环完成
 but we haven't told the loop to complete,
 
-295
+285
 00:20:44,431 --> 00:20:46,440
 如果我们点击这里
 and if we hit stop here,
 
-296
+286
 00:20:46,441 --> 00:20:47,160
 我们会看到的
 we'll see that.
 
-297
+287
 00:20:49,020 --> 00:20:49,740
 这条线是
 This line is,
 
-298
+288
 00:20:49,741 --> 00:20:50,220
 事实上
 in fact,
 
-299
+289
 00:20:50,221 --> 00:20:50,910
 我们被困住了
 where we're stuck.
 
-300
+290
 00:20:53,040 --> 00:21:02,280
 所以我认为现在完成这个循环的正确方法是找出所有工作完成后 然后退出循环
 So I think that the right way to complete this loop now is to somehow figure out when all work is complete and then exit the loop.
 
-301
+291
 00:21:02,281 --> 00:21:06,540
 所以我要说的是 有一些任务
 So I'm going to say that there is some number of tasks.
 
-302
+292
 00:21:07,470 --> 00:21:08,310
 这是
 That are.
 
-303
+293
 00:21:09,300 --> 00:21:10,500
 总是在飞行中
 Always in flight.
 
-304
+294
 00:21:12,540 --> 00:21:13,890
 首先
 To begin with,
 
-305
+295
 00:21:13,891 --> 00:21:14,850
 没有
 there are none.
 
-306
+296
 00:21:16,140 --> 00:21:17,970
 无论何时我们打电话
 And whenever we call yet.
 
-307
+297
 00:21:24,450 --> 00:21:24,960
 这一切
 It all.
 
-308
+298
 00:21:28,260 --> 00:21:28,740
 增量
 Increment,
 
-309
+299
 00:21:28,741 --> 00:21:29,970
 任务的数量
 the number of tasks.
 
-310
+300
 00:21:30,990 --> 00:21:37,770
 当我们读完服务器的响应时
 And when we have finished reading a response from a server.
 
-311
+301
 00:21:40,290 --> 00:21:43,110
 那么是时候了
 Then it's time to.
 
-312
+302
 00:21:44,280 --> 00:21:45,150
 有文件记录
 Documented?
 
-313
+303
 00:21:47,250 --> 00:21:54,000
 所以当我们叫食物的时候把任务增加到一个 当我们叫被禁止的时候
 So when we call get food that increments the tasks to one and when we call get barred,
 
-314
+304
 00:21:54,001 --> 00:21:56,010
 这也增加了它
 that increments it too,
 
-315
+305
 00:21:56,011 --> 00:21:56,550
 然后
 and then,
 
-316
+306
 00:21:56,551 --> 00:21:59,520
 当回调的每一个链都运行时
 as each of the chains of callbacks runs,
 
-317
+307
 00:21:59,521 --> 00:22:00,420
 完成
 to completion,
 
-318
+308
 00:22:00,421 --> 00:22:02,010
 这是一种伤害和任务
 a detriment and tasks.
 
-319
+309
 00:22:02,011 --> 00:22:04,590
 直到这个事件循环
 Until this event loop.
 
-320
+310
 00:22:06,660 --> 00:22:07,830
 抓住牙医
 Seize the dentist,
 
-321
+311
 00:22:07,831 --> 00:22:08,910
 0和
 says Zero and.
 
-322
+312
 00:22:10,500 --> 00:22:12,150
 如果我们运行这个
 If we run this,
 
-323
+313
 00:22:12,151 --> 00:22:20,820
 然后我们会看到这两个请求都完成了 奇迹般地只花了一秒钟
 then we'll see that both of the requests complete and miraculously it's only taken one second,
 
-324
+314
 00:22:20,821 --> 00:22:22,080
 不太好
 not too.
 
-325
+315
 00:22:22,081 --> 00:22:24,300
 我们可以做到
 and we can do.
 
-326
+316
 00:22:26,040 --> 00:22:26,400
 哦
 Oops.
 
-327
+317
 00:22:29,580 --> 00:22:35,940
 更多的并发请求 它只需要一秒
 Many more of these concurrent requests and it will still only take one second.
 
-328
+318
 00:22:36,870 --> 00:22:41,700
 这样做的原因是服务器太慢了 以至于这个客户端
 And the reason for that is that the server is so slow that this client.
 
-329
+319
 00:22:42,750 --> 00:22:53,070
 与从服务器上等待下一段时间的花费相比 它不会花费大量的CP处理每一个响应
 is not spending significant CP processing each of the responses compared to how long its spending waiting for the next chunk from the server.
 
-330
+320
 00:22:53,071 --> 00:23:03,540
 服务器需要一个完整的秒才能返回几百字节的数据 而客户端所做的就是将这些数据块向上排列到一个列表中
 The server takes a full second to return just a few hundred bytes of data and all the client is doing is upending those chunks to a list.
 
-331
+321
 00:23:03,541 --> 00:23:10,920
 因此 客户花费几乎没有CP的数据绝大多数时间都在支出
 So the data that the client is spending almost no CP with spending overwhelmingly the majority of its time.
 
-332
+322
 00:23:10,921 --> 00:23:13,890
 等着我
 waiting for I am so,
 
-333
+323
 00:23:13,891 --> 00:23:18,660
 这是一个水槽为之优化的东西
 this is the sort of thing that a sink is optimized for.
 
-334
+324
 00:23:18,661 --> 00:23:28,230
 我们可以用一个简单的框架来做几十个甚至上百个并发的请求 而不是这样
 We can do probably dozens or even hundreds of simultaneous requests with a simple framework like this one and not.
 
-335
+325
 00:23:29,850 --> 00:23:33,750
 在计算上损失大量的时间
 Lose significant amounts of time on computation,
 
-336
+326
 00:23:33,751 --> 00:23:38,610
 它非常高效 因为它不需要保持空闲线程
 and it's very efficient because it doesn't have to hold open idle threads.
 
-337
+327
 00:23:38,611 --> 00:23:39,660
 为了做到这一点
 In order to do that.
 
-338
+328
 00:23:41,760 --> 00:23:43,140
 这很好
 So that's great.
 
-339
+329
 00:23:43,141 --> 00:23:44,190
 它非常高效
 It's very efficient,
 
-340
+330
 00:23:44,191 --> 00:23:52,230
 但你也会发现 与简单的初始实现相比 它是一团乱麻
 but you'll also see that it's kind of a mess compared to a very simple initial implementation of Get,
 
-341
+331
 00:23:52,231 --> 00:23:55,530
 我们现在制造了一堆乱七八糟的东西
 we've now created a whole bunch of mess.
 
-342
+332
 00:23:55,531 --> 00:23:57,480
 我们现在需要三个函数
 We now need three functions where,
 
-343
+333
 00:23:57,481 --> 00:23:58,830
 在我们只有一个之前
 before we only had one.
 
-344
+334
 00:24:00,030 --> 00:24:01,440
 这三个函数
 These three functions.
 
-345
+335
 00:24:02,760 --> 00:24:07,740
 关于它们的特别之处在于 每当一个函数退出时
 What's particularly about about them is that each time a function exits,
 
-346
+336
 00:24:07,741 --> 00:24:13,980
 它失去了所有的局部变量s和请求
 it loses all of its local variables right so s and request.
 
-347
+337
 00:24:15,480 --> 00:24:26,280
 每次回调函数中的一个都完成并注册到要执行的链中的下一个调用
 and chunks each time one of these callbacks completes and registers the next call back in the chain to be executed.
 
-348
+338
 00:24:26,281 --> 00:24:34,080
 它必须手动将它的状态复制到一个闭包中 这样就可以在链的下一个调用中使用这个状态
 It has to manually copy its state into a closure so that that state is available to the next call back in the chain.
 
-349
+339
 00:24:35,280 --> 00:24:44,460
 语言在堆栈和局部变量中提供给我们的常规设备
 The normal facilities that the language provides to us in a stack and in local variables,
 
-350
+340
 00:24:44,461 --> 00:24:47,310
 我们必须手动重新创建这些东西
 we have to manually recreate that stuff.
 
-351
+341
 00:24:47,311 --> 00:24:48,690
 在我们的赛车框架中
 In our racing framework.
 
-352
+342
 00:24:48,691 --> 00:24:56,850
 在爱荷华州的运作中 这种语言对我们来说基本上没有帮助
 The language is basically no help to us here in terms of maintaining state across Iowa operations.
 
-353
+343
 00:24:58,410 --> 00:25:01,680
 所以这个问题的解决方案是下一个阶段
 So the solution to this is the next phase.
 
-354
+344
 00:25:01,681 --> 00:25:03,270
 是窗帘
 It's curtains.
 
-355
+345
 00:25:04,440 --> 00:25:07,230
 窗帘是建立在上面的
 And curtains are built on.
 
-356
+346
 00:25:08,190 --> 00:25:08,820
 未来
 Future.
 
-357
+347
 00:25:10,410 --> 00:25:15,030
 这是我们稍后会在python生成器中看到的类
 Which is a class that we'll see in a second on python generators.
 
-358
+348
 00:25:16,710 --> 00:25:20,070
 在另一个课堂上我们将会看到一个叫做任务的课程
 And on another class that we'll see in a moment called Task.
 
-359
+349
 00:25:21,240 --> 00:25:24,570
 现在有一大堆的东西叫做co例程
 Now there are a bunch of kinds of things called co routines.
 
-360
+350
 00:25:24,571 --> 00:25:26,670
 涂料是非常古老的观念
 Coatings are very old idea.
 
-361
+351
 00:25:26,671 --> 00:25:29,580
 勇气的实现有很多种
 There are many kinds of implementations of courage.
 
-362
+352
 00:25:29,581 --> 00:25:33,390
 在很多语言中 在Python里
 teens in many languages in Python,
 
-363
+353
 00:25:33,391 --> 00:25:35,010
 三个在亚齐
 three and in Aceh,
 
-364
+354
 00:25:35,011 --> 00:25:35,340
 安哥拉
 Angola.
 
-365
+355
 00:25:35,341 --> 00:25:36,120
 哦
 Oh,
 
-366
+356
 00:25:36,121 --> 00:25:38,100
 当我们说勇气的时候
 what we mean when we say courage,
 
-367
+357
 00:25:38,101 --> 00:25:38,970
 意思是
 means is.
 
-368
+358
 00:25:39,900 --> 00:25:41,580
 基于发电机的
 Generator based.
 
-369
+359
 00:25:42,900 --> 00:25:43,680
 胡萝卜素
 Carotenes.
 
-370
+360
 00:25:45,840 --> 00:25:49,350
 格陵兰岛也被称为三点五年的常规和影响
 Greenland's are also called co routines and impact on three point five.
 
-371
+361
 00:25:49,351 --> 00:25:56,850
 现在有了新的东西 叫做本地代码例程 可以利用新的饮食和权重关键字
 There are now new things called native code routines that can take advantage of the new eating and weight keywords.
 
-372
+362
 00:25:56,851 --> 00:26:00,480
 它们本质上是在发电机上面的语法糖
 They're essentially syntactic sugar on top of generators.
 
-373
+363
 00:26:00,481 --> 00:26:04,200
 所以如果你理解他们现在将要讨论的内容
 So if you understand the discussion they were going to have right now,
 
-374
+364
 00:26:04,201 --> 00:26:06,390
 您将了解Python的三个要点
 you'll understand how the Python three point.
 
-375
+365
 00:26:06,391 --> 00:26:09,630
 5个本地代码例程也可以工作
 five native code routines work as well,
 
-376
+366
 00:26:09,631 --> 00:26:13,530
 尽管它们是内置在解释器里而不是用发电机制造的
 although they're built into the interpreter rather than built out of generators,
 
-377
+367
 00:26:13,531 --> 00:26:14,550
 这是我们现在要做的
 the way we're going to do right now.
 
-378
+368
 00:26:16,830 --> 00:26:17,250
 所以
 So.
 
-379
+369
 00:26:18,720 --> 00:26:21,930
 我们首先需要的是一个未来的课程
 The first thing that we need is a future class.
 
-380
+370
 00:26:22,830 --> 00:26:24,780
 你们会看到为什么
 And you'll see why in a little bit,
 
-381
+371
 00:26:24,781 --> 00:26:25,590
 这很有用
 this is useful,
 
-382
+372
 00:26:25,591 --> 00:26:29,760
 但是现在我要展示的是
 but for the moment I'm just going to presented,
 
-383
+373
 00:26:29,761 --> 00:26:34,350
 你只需要相信我这将会是一个有用的东西
 and you'll just have to trust me that this is going to be a useful thing,
 
-384
+374
 00:26:34,351 --> 00:26:40,260
 因此 未来代表着一些悬而未决的事件
 so a future represents some pending event.
 
-385
+375
 00:26:40,261 --> 00:26:41,160
 他们在等着
 They were waiting for.
 
-386
+376
 00:26:42,240 --> 00:26:44,730
 它有一个将被执行的回调列表
 It has a list of callbacks that will be executed.
 
-387
+377
 00:26:46,890 --> 00:26:48,900
 当这个事件发生时
 When that event occurs,
 
-388
+378
 00:26:48,901 --> 00:26:50,070
 当这个事件发生时
 and when that event occurs,
 
-389
+379
 00:26:50,071 --> 00:26:53,880
 有人会说决心 未来会
 somebody's going to call resolve and the future will.
 
-390
+380
 00:26:57,960 --> 00:27:02,160
 执行所有等待该事件的回调
 Execute all of the callbacks that were waiting for that event.
 
-391
+381
 00:27:02,161 --> 00:27:03,480
 这就是我们未来的课程
 So that's our future class.
 
-392
+382
 00:27:04,650 --> 00:27:12,360
 我们要做这个简单的变换而不是直接用选择器来注册和回调
 And we're going to do this simple transformation where instead of register and callbacks directly with the selector,
 
-393
+383
 00:27:12,361 --> 00:27:14,100
 我们要注册期货
 we're going to register futures instead.
 
-394
+384
 00:27:24,630 --> 00:27:29,190
 所以我们将回调添加到回调的列表中
 So we add the callback to the list of callbacks.
 
-395
+385
 00:27:29,191 --> 00:27:33,330
 等待这个未来的解决 而不是直接注册回调
 waiting for this future to be resolved and instead of registering the callback directly.
 
-396
+386
 00:27:34,290 --> 00:27:35,790
 我们把未来登记在册
 We register the future instead.
 
-397
+387
 00:27:37,560 --> 00:27:40,200
 我也要做同样的事情
 And I have to do the same thing.
 
-398
+388
 00:27:41,820 --> 00:27:42,210
 这里
 Here.
 
-399
+389
 00:27:45,480 --> 00:27:46,500
 最后
 And finally,
 
-400
+390
 00:27:46,501 --> 00:27:47,430
 我们必须这样做
 we have to do.
 
-401
+391
 00:27:48,390 --> 00:27:51,030
 同样艰辛的转变
 That same laborious transformation.
 
-402
+392
 00:27:53,250 --> 00:27:54,450
 在这里
 Here,
 
-403
+393
 00:27:54,451 --> 00:27:54,690
 所以
 so,
 
-404
+394
 00:27:54,691 --> 00:27:57,060
 在我们注册回调的三个地方
 in the three places where we had registered callbacks,
 
-405
+395
 00:27:57,061 --> 00:28:00,720
 我们现在加入了对期货的回调 并对未来进行了登记
 we're now adding callbacks to futures and registering the future instead.
 
-406
+396
 00:28:02,010 --> 00:28:05,280
 这意味着在我们的事件循环中
 And that means that down here in our event loop.
 
-407
+397
 00:28:06,540 --> 00:28:11,520
 数据不再是对其未来的呼唤
 The event that data is no longer a call back its future,
 
-408
+398
 00:28:11,521 --> 00:28:12,990
 所以我们不直接叫它
 and so we don't call it directly.
 
-409
+399
 00:28:12,991 --> 00:28:13,470
 相反
 Instead,
 
-410
+400
 00:28:13,471 --> 00:28:15,330
 我们说了我们的决心
 we say futured our resolve.
 
-411
+401
 00:28:16,620 --> 00:28:17,220
 所以
 So.
 
-412
+402
 00:28:18,300 --> 00:28:19,140
 你可以期待
 You can expect,
 
-413
+403
 00:28:19,141 --> 00:28:22,620
 有了这样一个简单的转变 很可能是正确的
 with such a simple transformation that had probably got it right,
 
-414
+404
 00:28:22,621 --> 00:28:26,130
 看起来我是这样做的
 and it looks like I did so.
 
-415
+405
 00:28:26,131 --> 00:28:28,290
 到目前为止 我们所做的一切都是为了她的代码
 All we've done so far as made her code.
 
-416
+406
 00:28:28,291 --> 00:28:29,340
 更糟糕的是
 even worse,
 
-417
+407
 00:28:29,341 --> 00:28:31,440
 更加混乱和漫长
 even more messy and long,
 
-418
+408
 00:28:31,441 --> 00:28:35,340
 我们得到的结果和之前的一样
 and we have simply got the same performance that we had before.
 
-419
+409
 00:28:36,570 --> 00:28:44,640
 所以下一步就是用这些期货和发电机来开始实施飓风
 So the next step is going to be to somehow use these futures with generators to start to implement hurricanes.
 
-420
+410
 00:28:46,980 --> 00:28:49,470
 所以我要快速复习一下
 So I'm going to do a quick little refresher about.
 
-421
+411
 00:28:51,060 --> 00:28:55,620
 发电机造成了一些令人困惑的事情
 Generators cause there's a few confusing things about them.
 
-422
+412
 00:28:55,621 --> 00:28:59,070
 即使是经验丰富的python程序
 Even for veteran python programs.
 
-423
+413
 00:29:00,510 --> 00:29:04,590
 生成器是用生成器创建的
 So a generator is created with a generator,
 
-424
+414
 00:29:04,591 --> 00:29:06,120
 函数和生成器
 function and a generator.
 
-425
+415
 00:29:06,121 --> 00:29:08,610
 函数是任何包含的函数
 Function is any function that contains.
 
-426
+416
 00:29:10,650 --> 00:29:12,870
 收益表
 The yield statement.
 
-427
+417
 00:29:13,980 --> 00:29:15,810
 所以这个生成器函数将会打印
 So this generator function is going to print,
 
-428
+418
 00:29:15,811 --> 00:29:16,890
 开始生产1
 start yield one.
 
-429
+419
 00:29:18,660 --> 00:29:19,200
 中间
 Middle.
 
-430
+420
 00:29:20,580 --> 00:29:21,060
 还有
 Too.
 
-431
+421
 00:29:23,370 --> 00:29:24,060
 然后就完成了
 And then it's done.
 
-432
+422
 00:29:25,920 --> 00:29:31,530
 生成器函数的有趣之处在于 当你执行它时
 And the funny thing about a generator function is that when you execute it,
 
-433
+423
 00:29:31,531 --> 00:29:32,940
 它实际上并没有运行它的代码
 it doesn't actually run its code.
 
-434
+424
 00:29:33,990 --> 00:29:34,830
 它没有打印
 It didn't print,
 
-435
+425
 00:29:34,831 --> 00:29:37,080
 从中间开始 或者做相反的事情
 start middle or done instead.
 
-436
+426
 00:29:38,280 --> 00:29:43,380
 它创建了一个生成器对象和这个生成器对象
 It created a generator object and this generator object.
 
-437
+427
 00:29:44,340 --> 00:29:50,520
 包含一个代码对象来设置表示这些东西的字节码
 Contains a code object sets the byte code that represents this stuff.
 
-438
+428
 00:29:51,450 --> 00:29:52,080
 然后呢
 And?
 
-439
+429
 00:29:53,130 --> 00:29:54,420
 它有
 It's got.
 
-440
+430
 00:29:58,110 --> 00:30:02,820
 40个字节 生成器也有一个堆栈框架
 Forty four bytes and the generator also has a stack frame.
 
-441
+431
 00:30:03,930 --> 00:30:05,610
 它有一个指令指针
 And that's got an instruction pointer,
 
-442
+432
 00:30:05,611 --> 00:30:07,890
 它开始了他的负1
 and it begins his negative one,
 
-443
+433
 00:30:07,891 --> 00:30:11,700
 也就是说它还没有执行任何指令
 meaning that it hasn't executed any instructions yet.
 
-444
+434
 00:30:12,690 --> 00:30:15,330
 这就是为什么我们没有看到这些指纹的原因
 And that's why we didn't actually see any of these prints.
 
-445
+435
 00:30:15,331 --> 00:30:16,530
 大坝正在被执行
 Dam is being executed.
 
-446
+436
 00:30:17,850 --> 00:30:19,020
 那么去哪里呢
 So the way to?
 
-447
+437
 00:30:20,190 --> 00:30:22,470
 运行一个生成器就是在它旁边调用它
 Run a generator is to call him next on it.
 
-448
+438
 00:30:23,730 --> 00:30:25,320
 如果你这样做
 And if you do that,
 
-449
+439
 00:30:25,321 --> 00:30:30,720
 然后你会看到它执行了最初的几段字节码
 then you'll see that it executes its first few bites of byte code,
 
-450
+440
 00:30:30,721 --> 00:30:42,360
 所以它打印开始 一个实际上是下一个语句的返回值因为下一个语句的返回值是下一个执行的结果
 so it prints start and one is actually the return value of the next statement because the return value of next is whichever yield his next executed.
 
-451
+441
 00:30:43,350 --> 00:30:50,340
 现在 指令指针被暂停了13次 进入了40个字节的Baker
 And the instruction pointer is now paused at thirteen bites into the forty four bytes of Baker.
 
-452
+442
 00:30:51,510 --> 00:30:54,660
 所以如果我们下次再打电话
 So if we call next again this time,
 
-453
+443
 00:30:54,661 --> 00:31:00,960
 我要在它的返回值上签名 这样你就能看到一个中间的王子
 I'm going to sign its return value so that you can see that a prince middle.
 
-454
+444
 00:31:02,640 --> 00:31:03,900
 但它又回来了
 But it returns.
 
-455
+445
 00:31:05,190 --> 00:31:05,640
 还有
 Too.
 
-456
+446
 00:31:06,600 --> 00:31:11,550
 这是传递到下一个yield语句的值
 Which was the value passed into the next yield statement.
 
-457
+447
 00:31:12,900 --> 00:31:17,040
 现在我们的堆栈指针
 And now our stack pointer.
 
-458
+448
 00:31:17,041 --> 00:31:17,400
 对不起
 Sorry,
 
-459
+449
 00:31:17,401 --> 00:31:20,340
 我们的指示指针是四十四的二十八
 our instruction pointer is at twenty eight of forty four.
 
-460
+450
 00:31:21,570 --> 00:31:24,840
 如果我们再打一次电话
 And if we call next one more time.
 
-461
+451
 00:31:25,830 --> 00:31:28,950
 然后我们将提高停止迭代异常
 Then we'll raise stop iteration exception,
 
-462
+452
 00:31:28,951 --> 00:31:30,150
 这说明了什么
 which indicates that?
 
-463
+453
 00:31:31,050 --> 00:31:38,640
 它已经完成了 最后一个指针已经被删除了
 It's done executing and the last I pointer has actually been deleted.
 
-464
+454
 00:31:40,380 --> 00:31:46,740
 这就是生成器如何在二点五版本的Python中工作的
 So that's how a generator works in all versions of Python going back two point five.
 
-465
+455
 00:31:49,020 --> 00:31:52,530
 那么我们如何用它来制作窗帘呢
 So how do we use that to create a curtain?
 
-466
+456
 00:31:54,600 --> 00:31:55,020
 嗯
 Well,
 
-467
+457
 00:31:55,021 --> 00:31:56,250
 这是我的承诺
 here's the promise.
 
-468
+458
 00:31:57,810 --> 00:31:59,670
 我们的承诺是这样的
 The promise is going to be that.
 
-469
+459
 00:32:00,870 --> 00:32:02,790
 这是函数
 This get function.
 
-470
+460
 00:32:04,950 --> 00:32:10,260
 它现在必须创建一个闭包 以捕获他的局部变量
 Which currently has to create a closure that captures his local variables.
 
-471
+461
 00:32:12,030 --> 00:32:13,920
 关闭调用的名称
 Names that closure call back.
 
-472
+462
 00:32:14,940 --> 00:32:20,580
 向未来返回的广告 然后用选择器注册未来
 Ads that call back to the future and then registers that future with the selector.
 
-473
+463
 00:32:21,930 --> 00:32:25,380
 这可以简化为不需要回电话
 This can be simplified to not require a call back at all.
 
-474
+464
 00:32:26,940 --> 00:32:29,640
 所以我要离开回调
 So I'm going to leave the callback.
 
-475
+465
 00:32:29,641 --> 00:32:31,710
 我要删除回调主体
 I'm going to delete the callbacks body.
 
-476
+466
 00:32:34,020 --> 00:32:35,520
 但我们需要
 But we need to.
 
-477
+467
 00:32:36,720 --> 00:32:37,830
 暂停
 Pause until,
 
-478
+468
 00:32:37,831 --> 00:32:48,540
 在我们未注册之前 在这里是可写的 然后依靠套接字是可读的 这样我们就可以在它上面调用发送
 as is writable somehow here before we unregistered and then rely on the socket to be readable so that we can call send on it and.
 
-479
+469
 00:32:50,040 --> 00:32:51,870
 我们的承诺是
 The promise is that somehow,
 
-480
+470
 00:32:51,871 --> 00:32:53,490
 通过F
 by yielding F,
 
-481
+471
 00:32:53,491 --> 00:32:54,960
 我们刚刚创造的未来
 the future that we just created.
 
-482
+472
 00:32:56,490 --> 00:33:05,010
 我们可以暂停这个生成器 直到我们说我们感兴趣的事件发生
 Somehow we can pause this generator until the event that we said we were interested in has occurred.
 
-483
+473
 00:33:07,950 --> 00:33:11,610
 如果我们相信这个承诺是真的
 And if we believe that this promise is true.
 
-484
+474
 00:33:12,630 --> 00:33:20,850
 然后 我们可以将两个函数合并成一个包含yield语句的单一生成函数
 Then we can combine what had been two functions into a single generative function that contains a yield statement.
 
-485
+475
 00:33:22,740 --> 00:33:23,040
 屁股
 Butt.
 
-486
+476
 00:33:24,180 --> 00:33:28,740
 这个承诺还没有实现 因为如果我运行这个
 The promise is not going to be fulfilled just yet because if I run this,
 
-487
+477
 00:33:28,741 --> 00:33:30,210
 它将花费0秒
 it's going to take zero seconds.
 
-488
+478
 00:33:30,211 --> 00:33:31,710
 它没有输出
 It has no output,
 
-489
+479
 00:33:31,711 --> 00:33:33,030
 它没有做功
 and it doesn't do any work.
 
-490
+480
 00:33:34,800 --> 00:33:35,820
 为什么呢
 So why is that?
 
-491
+481
 00:33:35,821 --> 00:33:36,660
 这里发生了什么
 What happened here?
 
-492
+482
 00:33:38,640 --> 00:33:39,210
 嗯
 Well,
 
-493
+483
 00:33:39,211 --> 00:33:42,030
 回想一下 当你执行一个生成器函数时
 recall that when you execute a generator function,
 
-494
+484
 00:33:42,031 --> 00:33:42,600
 它会返回
 it returns.
 
-495
+485
 00:33:42,601 --> 00:33:46,500
 生成器实际上并不运行它的任何代码
 A generator doesn't actually run any of its code.
 
-496
+486
 00:33:46,501 --> 00:33:49,920
 现在我在这里添加了一个yield语句
 So now that I've added a yield statement here to get,
 
-497
+487
 00:33:49,921 --> 00:33:51,810
 这意味着到达这里
 that means that get here.
 
-498
+488
 00:33:54,360 --> 00:33:55,830
 只需要返回一个生成器
 Just returns a generator.
 
-499
+489
 00:33:57,660 --> 00:33:59,670
 什么都不做
 doesn't actually do anything,
 
-500
+490
 00:33:59,671 --> 00:34:00,570
 这里也是一样
 and the same here.
 
-501
+491
 00:34:01,800 --> 00:34:04,380
 那么我们要怎么做呢
 So how are we going to?
 
-502
+492
 00:34:07,590 --> 00:34:09,090
 执行它
 Execute it?
 
-503
+493
 00:34:09,091 --> 00:34:10,650
 我们怎么称呼它呢
 How do we call next on it?
 
-504
+494
 00:34:12,660 --> 00:34:19,620
 这就是这个问题的第三个部分
 So that is the third piece of this puzzle of this co.
 
-505
+495
 00:34:19,621 --> 00:34:22,140
 基于例程的基本框架是任务
 Routine based basic framework is the task.
 
-506
+496
 00:34:23,370 --> 00:34:24,480
 测试类
 The test class.
 
-507
+497
 00:34:26,250 --> 00:34:31,200
 它负责在发电机上调用next
 It's responsible for calling next on generators.
 
-508
+498
 00:34:32,340 --> 00:34:34,980
 我们来看看它是什么样的
 So let's see what that looks like.
 
-509
+499
 00:34:34,981 --> 00:34:37,230
 在未来和任务的情况下
 And in the case of both future and task,
 
-510
+500
 00:34:37,231 --> 00:34:45,150
 这些想法非常简单 过于简单 而且不完整
 these are incredibly simple and oversimplified and buggy incomplete implementations of these ideas.
 
-511
+501
 00:34:45,151 --> 00:34:48,990
 这些想法在许多框架中得到了充分的表达
 These ideas are fully expressed in a number of frameworks,
 
-512
+502
 00:34:48,991 --> 00:34:51,990
 尤其是龙卷风和现在的情况
 notably tornado and now in.
 
-513
+503
 00:34:53,160 --> 00:34:56,670
 我在python里踱步
 Pacing I owe in the python.
 
-514
+504
 00:34:57,600 --> 00:35:00,210
 标准库的3点
 Three point for the standard library.
 
-515
+505
 00:35:01,590 --> 00:35:08,100
 所以我的任务类的哑版本会是这样的
 So my dumb version of the task class is going to look like.
 
-516
+506
 00:35:09,540 --> 00:35:12,900
 我们将用生成器初始化它
 We're going to initialize it with a generator.
 
-517
+507
 00:35:14,610 --> 00:35:15,600
 我将保存它
 I will save that.
 
-518
+508
 00:35:17,280 --> 00:35:20,790
 然后我们会有一个叫做Step的函数
 And then we'll have a function called Step,
 
-519
+509
 00:35:20,791 --> 00:35:24,360
 这个术语是从桑丘那里借来的
 and this terminology is borrowed from a Sancho.
 
-520
+510
 00:35:24,361 --> 00:35:28,320
 他下一步在发电机上的呼叫是什么
 What step does his calls next on the generator?
 
-521
+511
 00:35:30,180 --> 00:35:32,940
 从发电机开始
 And since the generator,
 
-522
+512
 00:35:32,941 --> 00:35:35,100
 它将会产生一个未来
 it's going to yield a future.
 
-523
+513
 00:35:36,870 --> 00:35:40,770
 这就变成了下一个的返回值
 So that's going to become the return value of next.
 
-524
+514
 00:35:40,771 --> 00:35:43,710
 我们来捕获它
 So let's capture that.
 
-525
+515
 00:35:46,020 --> 00:35:46,680
 然后
 And then.
 
-526
+516
 00:35:48,330 --> 00:35:51,000
 当这个未来得到解决时 我们想要发生什么
 What do we want to happen when this future is resolved?
 
-527
+517
 00:35:51,930 --> 00:35:56,790
 我们需要给未来增加一些电话
 We need to add some kind of call back to the future,
 
-528
+518
 00:35:56,791 --> 00:36:00,570
 这是我们想要在未来做好的事情
 something that we want to happen once the future is ready and.
 
-529
+519
 00:36:02,700 --> 00:36:07,470
 让我们把self step作为回调
 Let's just pass self dot step in as the callback.
 
-530
+520
 00:36:07,471 --> 00:36:09,900
 所以一旦这个未来得到解决
 So once this future is resolved,
 
-531
+521
 00:36:09,901 --> 00:36:13,470
 就会回到这里 然后再来 自我怀疑再次出现
 will just come right back into here and will come next and self doubt turn again.
 
-532
+522
 00:36:15,000 --> 00:36:18,330
 我们会再打电话给自己
 Will we call next and self de Jean again,
 
-533
+523
 00:36:18,331 --> 00:36:20,760
 这将在这里继续
 that's going to resume here.
 
-534
+524
 00:36:24,420 --> 00:36:28,650
 因此我们知道我们可以注册套接字文件号
 And therefore we know that we can and register the sockets file number,
 
-535
+525
 00:36:28,651 --> 00:36:30,000
 而现在的情况是可信的
 and that s is now credible.
 
-536
+526
 00:36:31,350 --> 00:36:35,520
 所以如果我们运行它 它仍然不会起作用
 So if we run this still not going to work.
 
-537
+527
 00:36:37,110 --> 00:36:38,730
 这样做的原因是
 The reason for that is.
 
-538
+528
 00:36:41,160 --> 00:36:45,060
 我们需要做一个初始的调用自我那一步
 That we need to make an initial call the self that step,
 
-539
+529
 00:36:45,061 --> 00:36:45,390
 说
 said,
 
-540
+530
 00:36:45,391 --> 00:36:46,590
 爸爸
 Dad,
 
-541
+531
 00:36:46,591 --> 00:36:54,090
 我们给self做了一个初始的调用 这样我们就得到了启动函数
 we make an initial call to self that Jen so that we get the get function started,
 
-542
+532
 00:36:54,091 --> 00:36:55,950
 它会连接套接字 等等
 and it will connect the socket and so on.
 
-543
+533
 00:36:55,951 --> 00:36:58,830
 我们在这里做一下
 So let's just do that right here.
 
-544
+534
 00:36:58,831 --> 00:36:59,640
 在构造函数中
 In the constructor.
 
-545
+535
 00:37:02,490 --> 00:37:03,720
 然后是最后一步
 And then the final step.
 
-546
+536
 00:37:05,520 --> 00:37:09,870
 这个转换将会在下面
 Of this conversion is going to be down here,
 
-547
+537
 00:37:09,871 --> 00:37:11,520
 我们需要包装的地方
 where we need to wrap.
 
-548
+538
 00:37:13,020 --> 00:37:17,010
 在一个任务中 每一个调用 当返回一个生成器时
 Each of these calls in a task so when get returns a generator,
 
-549
+539
 00:37:17,011 --> 00:37:17,550
 任务
 the task,
 
-550
+540
 00:37:17,551 --> 00:37:18,150
 拉普说
 Rapp said.
 
-551
+541
 00:37:19,740 --> 00:37:33,360
 香肠的标志 叫self step 我将会调用它 它实际上会开始这个东西直到第一个产量
 Signs of sausage and calls self dot step and I will call next in that will actually begin this thing executing up until the first yield.
 
-552
+542
 00:37:33,361 --> 00:37:34,500
 斯蒂芬
 Stephen.
 
-553
+543
 00:37:34,501 --> 00:37:35,700
 如果我运行这个
 So if I run this.
 
-554
+544
 00:37:38,340 --> 00:37:39,120
 在某种程度上
 In a way,
 
-555
+545
 00:37:39,121 --> 00:37:41,190
 你会看到我们取得进步的方式
 you will see the way we make progress.
 
-556
+546
 00:37:42,150 --> 00:37:45,570
 因为我们在这里提出了一个停止迭代异常
 Because we raise a stop iteration exception here.
 
-557
+547
 00:37:47,190 --> 00:37:49,380
 所以这确实是个好消息
 So that that actually that's good news,
 
-558
+548
 00:37:49,381 --> 00:37:55,800
 因为这意味着这个get生成器实际上已经运行到完成了
 because it means that this get generator has actually been run to completion.
 
-559
+549
 00:37:55,801 --> 00:37:59,700
 它完成了它所要做的工作
 It's done the work that it set out to do.
 
-560
+550
 00:37:59,701 --> 00:38:01,410
 所以
 so.
 
-561
+551
 00:38:01,411 --> 00:38:02,370
 如果我们
 if we.
 
-562
+552
 00:38:04,080 --> 00:38:04,980
 抓住它
 Catch that.
 
-563
+553
 00:38:05,940 --> 00:38:07,140
 我们想在这里做什么
 What do we want to do here?
 
-564
+554
 00:38:07,141 --> 00:38:07,470
 嗯
 Well,
 
-565
+555
 00:38:07,471 --> 00:38:08,430
 任务完成了
 the task is done.
 
-566
+556
 00:38:08,431 --> 00:38:10,110
 让我们返回
 So let's just return.
 
-567
+557
 00:38:11,340 --> 00:38:12,930
 如果我们执行这个版本
 And if we execute this version.
 
-568
+558
 00:38:14,370 --> 00:38:15,540
 它实际上完成了
 It actually completes.
 
-569
+559
 00:38:16,530 --> 00:38:22,800
 这太棒了 我们还有一些零散的回调
 So this is fantastic now we've still got a few stray callbacks.
 
-570
+560
 00:38:23,670 --> 00:38:24,630
 所以
 So.
 
-571
+561
 00:38:25,620 --> 00:38:28,980
 我们可以消去这些和我们在这里做的变换
 We can get rid of those the same transformation that we did here.
 
-572
+562
 00:38:30,330 --> 00:38:32,430
 所以我们也要把它写下来
 So we're just going to do it down here again as well,
 
-573
+563
 00:38:32,431 --> 00:38:33,330
 所以我们要
 so we're going to.
 
-574
+564
 00:38:33,331 --> 00:38:34,950
 我们再也不需要这个电话了
 We don't need this call back any more.
 
-575
+565
 00:38:35,940 --> 00:38:37,500
 你不需要把它加到未来
 You don't need to add it to the future.
 
-576
+566
 00:38:38,460 --> 00:38:46,680
 我们仍然需要说出我们感兴趣的事件并注册未来当事件发生时
 We do still need to say what event we're interested in and register the future to be resolved when that event occurs,
 
-577
+567
 00:38:46,681 --> 00:38:50,010
 但是我们可以删除回调定义
 but we can delete the callback definition.
 
-578
+568
 00:38:51,060 --> 00:38:55,710
 因为我们的函数和之前的一样
 Since we're still in the same function as we were in before,
 
-579
+569
 00:38:55,711 --> 00:38:59,010
 我们不需要一个冗余的全局声明
 we don't need a redundant global statement.
 
-580
+570
 00:39:00,270 --> 00:39:06,480
 如果我们简单地创造出我们创造的新未来
 And if we simply yield this new future that we created,
 
-581
+571
 00:39:06,481 --> 00:39:07,440
 这意味着
 that means that.
 
-582
+572
 00:39:08,760 --> 00:39:09,420
 到目前为止
 By now,
 
-583
+573
 00:39:09,421 --> 00:39:13,710
 当任务解决的时候
 by the time the task resolve resumes us,
 
-584
+574
 00:39:13,711 --> 00:39:14,880
 这个套接字现在是可读的
 the socket is now readable.
 
-585
+575
 00:39:17,970 --> 00:39:21,570
 这是最后一个回调
 And here we've got our last of the callback.
 
-586
+576
 00:39:21,571 --> 00:39:22,800
 我们可以把它删掉
 so we can delete that.
 
-587
+577
 00:39:24,000 --> 00:39:29,460
 我们可以实现我们的未来 而不是注册一个回调
 And we can yield our future instead of registering a callback.
 
-588
+578
 00:39:31,470 --> 00:39:33,510
 啊
 And ah.
 
-589
+579
 00:39:36,720 --> 00:39:42,180
 当我们收到下一个查克时 我们想做什么
 What do we want to do once we have received the next Chuck?
 
-590
+580
 00:39:42,181 --> 00:39:42,780
 换句话说
 In other words,
 
-591
+581
 00:39:42,781 --> 00:39:45,390
 一旦套接字再次被写出来
 once the socket is writable again?
 
-592
+582
 00:39:46,380 --> 00:39:46,680
 嗯
 Well,
 
-593
+583
 00:39:46,681 --> 00:39:50,460
 我们想要得到下一个杰克
 we want to receive the next jack right,
 
-594
+584
 00:39:50,461 --> 00:40:01,020
 所以我们最后要做的是 我们最终会复制原来在d里的真实循环
 so what we're going to end up doing is we're going to end up reproducing the same while true loop that we originally had in d.
 
-595
+585
 00:40:02,610 --> 00:40:05,130
 在演讲开始的时候
 Olden days at the beginning of this talk,
 
-596
+586
 00:40:05,131 --> 00:40:08,100
 当我们写一个简单的阻塞时
 when we were writing a simple blocking yet.
 
-597
+587
 00:40:09,060 --> 00:40:10,830
 所以它看起来是这样的
 So that's going to look something like.
 
-598
+588
 00:40:14,070 --> 00:40:15,330
 我们要
 We're going to.
 
-599
+589
 00:40:16,800 --> 00:40:18,180
 把这个放在循环中
 Put this within the loop.
 
-600
+590
 00:40:19,650 --> 00:40:22,680
 每次通过循环 我们会说
 And each time through the loop we say,
 
-601
+591
 00:40:22,681 --> 00:40:25,890
 我想从插座上读取数据
 I want to read from the socket,
 
-602
+592
 00:40:25,891 --> 00:40:28,140
 所以等待这个未来的解决
 so wait for this future to be resolved.
 
-603
+593
 00:40:29,130 --> 00:40:32,370
 然后从选择器中取消套接字
 And then unregistered the socket from the selector.
 
-604
+594
 00:40:32,371 --> 00:40:33,120
 得到那块
 get the chunk.
 
-605
+595
 00:40:34,050 --> 00:40:40,860
 如果有任何东西被添加到列表中 这个东西现在是额外的
 And if there is any then added to the list and this stuff is now extra.
 
-606
+596
 00:40:42,690 --> 00:40:46,110
 这个循环会重复 在这里重复做这些
 The loop will just repeat and do that stuff again up here,
 
-607
+597
 00:40:46,111 --> 00:40:47,520
 如果没有查克
 and if there's no chuck.
 
-608
+598
 00:40:47,521 --> 00:40:48,420
 这意味着
 That means that.
 
-609
+599
 00:40:50,070 --> 00:40:51,960
 我们已经阅读了服务器响应
 We're done reading the server response,
 
-610
+600
 00:40:51,961 --> 00:40:53,640
 所以我们可以
 and so we can.
 
-611
+601
 00:40:55,260 --> 00:40:56,460
 把身体连接起来
 Join the body up,
 
-612
+602
 00:40:56,461 --> 00:40:59,850
 打印第一行 减少任务数
 print the first line decrement the tasks count,
 
-613
+603
 00:40:59,851 --> 00:41:02,940
 从现在开始 我们又回到了一个无限循环
 and since now we're in an infinite loop again.
 
-614
+604
 00:41:02,941 --> 00:41:05,370
 在这里 我们需要尽快返回
 here we need to return as soon as we're done.
 
-615
+605
 00:41:07,740 --> 00:41:08,160
 现在
 Now,
 
-616
+606
 00:41:08,161 --> 00:41:10,290
 如果一切顺利 我运行这个
 if all goes well and I run this,
 
-617
+607
 00:41:10,291 --> 00:41:14,340
 然后它仍然需要一秒
 then it still takes one second.
 
-618
+608
 00:41:14,341 --> 00:41:16,590
 它仍然在做所有的工作
 it still does all the work that it was.
 
-619
+609
 00:41:17,850 --> 00:41:26,250
 当被要求做的时候 我们仍然可以把它扩展到大量的任务而不损失任何性能
 Asked to do and we can still scale this out to a large number of tasks without any loss of performance,
 
-620
+610
 00:41:26,251 --> 00:41:32,160
 因为发射10个15个窗帘实在是太便宜了
 because launching ten fifteen curtains is incredibly cheap,
 
-621
+611
 00:41:32,161 --> 00:41:34,080
 它的价格大概和
 it's roughly as cheap as.
 
-622
+612
 00:41:35,160 --> 00:41:36,360
 一堆回叫
 A bunch of callbacks.
 
-623
+613
 00:41:37,440 --> 00:41:46,140
 所以很酷的例程是两个世界中最好的 他最便宜的回调比我的系统上的线程要便宜得多
 So cool routines are kind of the best of both worlds there about his cheapest callbacks are much cheaper than threads on my system,
 
-624
+614
 00:41:46,141 --> 00:41:50,580
 我测量了一个co例程
 I measured that a co routine takes.
 
-625
+615
 00:41:51,540 --> 00:41:57,150
 大约6K的内存和30个线程的内存
 About six K of memory versus about thirty cave memory for a thread,
 
-626
+616
 00:41:57,151 --> 00:42:04,740
 此外 我做了一个小实验 发现我有能力启动超过十万个常规程序
 and furthermore I did a little experiment and found that I was capable of launching over a hundred thousand co routines.
 
-627
+617
 00:42:04,741 --> 00:42:12,030
 它们的限制仅仅是允许Python进程分配的ram数量
 Their limited only by the amount of ram that the Python process is allowed to allocate.
 
-628
+618
 00:42:12,930 --> 00:42:14,100
 丝丝太太
 Mrs Threads,
 
-629
+619
 00:42:14,101 --> 00:42:18,030
 除了简单的内存限制之外 它还受到其他限制
 which are subject to other limits beside simply memory limits.
 
-630
+620
 00:42:18,031 --> 00:42:24,630
 有各种用户和操作系统限制了进程被允许开始的线程数量
 There are various user and operating system limits on the number of threads that a process is allowed to start with.
 
-631
+621
 00:42:24,631 --> 00:42:24,960
 她
 Her.
 
-632
+622
 00:42:26,490 --> 00:42:29,670
 在不同的工作方式下
 Difficult in various ways to work around,
 
-633
+623
 00:42:29,671 --> 00:42:39,030
 它们占用了空间和操作系统数据结构和操作系统调度器 最终导致它们的开销变得非常重要
 and they take up space and operating system data structures and the operating system scheduler that eventually causes their overhead to become quite significant.
 
-634
+624
 00:42:40,350 --> 00:42:55,020
 他们所做的一切都是在等待爱荷华州的一些缓慢的行动它们实际上需要非常多的sepia所以与这种应用的煤例程相比
 All they're doing is waiting around for some sort of slow Iowa operations that are actually going to require very much sepia so compared to coal routines for a application like this,
 
-635
+625
 00:42:55,021 --> 00:43:08,010
 这将花费很少的时间进行计算 并且绝大多数时间都花在等待一个缓慢的服务器或者在套接字的另一端的慢客户机上
 that's going to spend very little time doing computation and overwhelmingly spending its time waiting for a slow server or a slow client at the other end of the socket.
 
-636
+626
 00:43:08,011 --> 00:43:11,580
 在这种情况下 Co例程更有效率
 Co routines are much more efficient for this kind of thing,
 
-637
+627
 00:43:11,581 --> 00:43:16,290
 但是和回叫相比 它们的简单得多 因为
 but compared to call backs their lot simpler because.
 
-638
+628
 00:43:17,460 --> 00:43:23,250
 你可以把所有的代码放在一个函数里
 You can put all of the code for a coating in one function,
 
-639
+629
 00:43:23,251 --> 00:43:29,250
 所以你不需要声明并注册整个回调函数链
 so you don't have to declare and register a whole chain of callbacks.
 
-640
+630
 00:43:29,251 --> 00:43:34,170
 你可以重复使用你的局部变量 就像你经常遇到的麻烦一样
 And you can just reuse your local variables the same way that trouble you have always done.
 
-641
+631
 00:43:36,270 --> 00:43:42,870
 这就是龙卷风的开始或者是水槽的开始
 So that's the beginning of Tornado style or a sink.
 
-642
+632
 00:43:42,871 --> 00:43:47,130
 基于Ios风格的同步框架
 Ios Style Co routine based a sync framework.
 
-643
+633
 00:43:50,130 --> 00:43:52,710
 如果你想了解更多
 So if you want to know more about this,
 
-644
+634
 00:43:52,711 --> 00:44:03,090
 去斜杠的co例程为你创建了一个登陆页面它会把你链接到我刚才写的代码的一个版本
 go to bitterly slash co routines have created a landing page for you there that'll link you out to a version of the code that I wrote just now,
 
-645
+635
 00:44:03,091 --> 00:44:12,840
 我和吉多范罗斯姆一起写了一章 这一章将会出现在开源应用程序架构的下一本书中
 as well as link you to a chapter that I wrote with Guido van Rossum that will appear in the next book in the architecture of Open source Application Serious.
 
-646
+636
 00:44:12,841 --> 00:44:22,710
 这一章更详细地介绍了如何在水槽中实现基于发电机的涂层
 and that chapter goes into far more detail about how generator based coatings are implemented in a sink.
 
-647
+637
 00:44:22,711 --> 00:44:25,500
 我在一个标准的图书馆里养了一只宠物
 I owned a pet on three point for a standard library,
 
-648
+638
 00:44:25,501 --> 00:44:29,250
 特别是它涉及到如何
 and especially it goes into how.
 
-649
+639
 00:44:30,270 --> 00:44:32,430
 Co例程利用了
 Co routines take advantage of.
 
-650
+640
 00:44:33,450 --> 00:44:43,560
 特定于python3的生成器特性以及在任何场景中包含的同步队列类
 Generator features that are specific to python three and how a synchronous queue class that's included in any scenario,
 
-651
+641
 00:44:43,561 --> 00:44:52,350
 可以用一种对习惯使用线程的人非常熟悉的方式来协调日常工作
 can be used to coordinate co routines in a way that's very familiar to people who are used to using threads.
 
-652
+642
 00:44:53,580 --> 00:44:55,530
 作为一个提醒
 And as a reminder,
 
-653
+643
 00:44:55,531 --> 00:45:00,210
 如果你想和我这样的人在一家opensource公司工作
 if you want to work with people like me at a opensource company,
 
-654
+644
 00:45:00,211 --> 00:45:05,400
 这是非常温暖的 多样性有真正的实现和技术挑战的工作
 that's very warm and diversity has really fulfilling and technically challenging jobs.
 
-655
+645
 00:45:05,401 --> 00:45:07,080
 Mongodb正在招聘
 Mongo db is hiring.
 
-656
+646
 00:45:07,081 --> 00:45:11,070
 我们在纽约的帕罗奥图和世界各地都设有办事处
 We have offices in New York in Palo Alto and worldwide.
 
-657
+647
 00:45:11,071 --> 00:45:14,160
 去bewdley 砍去商店
 Go to bewdley slash mongo dashed shops.
 
-658
+648
 00:45:14,161 --> 00:45:15,090
 我很想和你一起工作
 I would love to work with you.
