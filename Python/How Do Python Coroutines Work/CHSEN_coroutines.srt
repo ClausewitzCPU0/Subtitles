@@ -25,7 +25,7 @@ Yes, we are hiring and I highly recommend working for MongoDB.
 
 6
 00:00:32,101 --> 00:00:40,440
-访问Mongo-jobs（https://www.mongodb.com/careers）了解所有的工作机会
+访问bit.ly/mongo-jobs了解所有的工作机会
 You can go to Mongo-jobs to see all of the jobs that we've got open.
 
 7
@@ -2556,12 +2556,12 @@ So.
 
 512
 00:38:25,620 --> 00:38:28,980
-我们可以消去这些和我们在这里做的变换
+*我们可以消去这些和我们在这里做的变换
 We can get rid of those the same transformation that we did here.
 
 513
 00:38:30,330 --> 00:38:32,430
-所以我们也要把它写下来
+所以在这里做同样的操作
 So we're just going to do it down here again as well,
 
 514
@@ -2576,12 +2576,12 @@ We don't need this call back any more.
 
 516
 00:38:35,940 --> 00:38:37,500
-你不需要把它加到future
+你不需要把它加到future中
 You don't need to add it to the future.
 
 517
 00:38:38,460 --> 00:38:46,680
-我们仍然需要说出我们感兴趣的事件并注册future当事件发生时
+我们仍然需要说明我们关注的事件，并注册future对象
 We do still need to say what event we're interested in and register the future to be resolved when that event occurs,
 
 518
@@ -2591,7 +2591,7 @@ but we can delete the callback definition.
 
 519
 00:38:51,060 --> 00:38:55,710
-因为我们的函数和之前的一样
+因为我们在之前的同一个函数中
 Since we're still in the same function as we were in before,
 
 520
@@ -2616,8 +2616,8 @@ By now,
 
 524
 00:39:09,421 --> 00:39:13,710
-当任务解决的时候
-by the time the task resolve resumes us,
+当task恢复的时候
+by the time the task resolve.. resumes us,
 
 525
 00:39:13,711 --> 00:39:14,880
@@ -2636,361 +2636,351 @@ so we can delete that.
 
 528
 00:39:24,000 --> 00:39:29,460
-我们可以实现我们的future 而不是注册一个回调
+我们可以yield我们的future 而不是注册一个回调
 And we can yield our future instead of registering a callback.
 
 529
-00:39:31,470 --> 00:39:33,510
-啊
-And ah.
+00:39:36,720 --> 00:39:42,180
+当我们收到下一个分块时 我们要做什么
+What do we want to do once we have received the next chunk?
 
 530
-00:39:36,720 --> 00:39:42,180
-当我们收到下一个查克时 我们想做什么
-What do we want to do once we have received the next Chuck?
-
-531
 00:39:42,181 --> 00:39:42,780
 换句话说
 In other words,
 
-532
+531
 00:39:42,781 --> 00:39:45,390
-一旦socket再次被写出来
-once the socket is writable again?
+当socket再次处于可读状态
+once the socket is readable again?
+
+532
+00:39:46,681 --> 00:39:50,460
+我们想要得到下一个分块，对吧？
+we want to receive the next chunk right？
 
 533
-00:39:46,380 --> 00:39:46,680
-嗯
-Well,
+00:39:50,460 --> 00:39:54,120
+所以我们最后要做的是
+so what we're going to end up doing is
 
 534
-00:39:46,681 --> 00:39:50,460
-我们想要得到下一个杰克
-we want to receive the next jack right,
+00:39:54,240 --> 00:40:05,130
+复制在教程刚开始的时候写下的死循环
+we're going to end up reproducing the same while true loop that we originally had in the olden days at the beginning of this talk,
 
 535
-00:39:50,461 --> 00:40:01,020
-所以我们最后要做的是 我们最终会复制原来在d里的真实循环
-so what we're going to end up doing is we're going to end up reproducing the same while true loop that we originally had in d.
-
-536
-00:40:02,610 --> 00:40:05,130
-在演讲开始的时候
-Olden days at the beginning of this talk,
-
-537
 00:40:05,131 --> 00:40:08,100
-当我们写一个简单的阻塞时
+那时我们还写一个简单的阻塞（框架）
 when we were writing a simple blocking yet.
 
-538
+536
 00:40:09,060 --> 00:40:10,830
 所以它看起来是这样的
 So that's going to look something like.
 
-539
-00:40:14,070 --> 00:40:15,330
-我们要
-We're going to.
+537
+00:40:14,070 --> 00:40:18,180
+我们要把这个放在循环中
+We're going to put this within the loop.
 
-540
-00:40:16,800 --> 00:40:18,180
-把这个放在循环中
-Put this within the loop.
-
-541
+538
 00:40:19,650 --> 00:40:22,680
-每次通过循环 我们会说
+每次执行循环时
 And each time through the loop we say,
 
-542
+539
 00:40:22,681 --> 00:40:25,890
-我想从插座上读取数据
+我想从socket上读取数据
 I want to read from the socket,
 
-543
+540
 00:40:25,891 --> 00:40:28,140
-所以等待这个future的解决
+所以等待这个future执行完毕
 so wait for this future to be resolved.
 
-544
+541
 00:40:29,130 --> 00:40:32,370
-然后从选择器中取消socket
+然后从selector中注销socket
 And then unregistered the socket from the selector.
 
-545
+542
 00:40:32,371 --> 00:40:33,120
-得到那块
+得到当前的分块
 get the chunk.
 
-546
+543
 00:40:34,050 --> 00:40:40,860
-如果有任何东西被添加到列表中 这个东西现在是额外的
+如果有分块，那就加入到列表中 这个部分是多余的
 And if there is any then added to the list and this stuff is now extra.
 
-547
+544
 00:40:42,690 --> 00:40:46,110
 这个循环会重复 在这里重复做这些
 The loop will just repeat and do that stuff again up here,
 
-548
+545
 00:40:46,111 --> 00:40:47,520
-如果没有查克
-and if there's no chuck.
+如果没有分块
+and if there's no chunk.
 
-549
+546
 00:40:47,521 --> 00:40:48,420
 这意味着
 That means that.
 
-550
+547
 00:40:50,070 --> 00:40:51,960
-我们已经阅读了服务器响应
+我们已经接收完服务器响应
 We're done reading the server response,
 
-551
+548
 00:40:51,961 --> 00:40:53,640
 所以我们可以
 and so we can.
 
-552
+549
 00:40:55,260 --> 00:40:56,460
-把身体连接起来
+连接各个分块
 Join the body up,
 
-553
+550
 00:40:56,461 --> 00:40:59,850
-打印第一行 减少任务数
+打印第一行 减去任务数
 print the first line decrement the tasks count,
 
-554
+551
 00:40:59,851 --> 00:41:02,940
 从现在开始 我们又回到了一个无限循环
 and since now we're in an infinite loop again.
 
-555
+552
 00:41:02,941 --> 00:41:05,370
-在这里 我们需要尽快返回
+在这里 我们需要立即返回
 here we need to return as soon as we're done.
 
-556
+553
 00:41:07,740 --> 00:41:08,160
 现在
 Now,
 
-557
+554
 00:41:08,161 --> 00:41:10,290
 如果一切顺利 我运行这个
 if all goes well and I run this,
 
-558
+555
 00:41:10,291 --> 00:41:14,340
-然后它仍然需要一秒
+它仍然运行了一秒
 then it still takes one second.
 
+556
+00:41:14,341 --> 00:41:19,440
+它还是做了所有的工作
+it still does all the work that it was asked to do
+
+557
+00:41:19,800 --> 00:41:26,250
+我们仍然可以把它扩展到执行大量的任务而不损失任何性能
+and we can still scale this out to a large number of tasks without any loss of performance,
+
+558
+00:41:26,251 --> 00:41:32,160
+因为发起10个或15个协程的资源消耗实在是太低廉了
+because launching ten fifteen coroutines is incredibly cheap,
+
 559
-00:41:14,341 --> 00:41:16,590
-它仍然在做所有的工作
-it still does all the work that it was.
+00:41:32,161 --> 00:41:36,360
+大概只和一堆回调差不多
+it's roughly as cheap as a bunch of callbacks.
 
 560
-00:41:17,850 --> 00:41:26,250
-当被要求做的时候 我们仍然可以把它扩展到大量的任务而不损失任何性能
-Asked to do and we can still scale this out to a large number of tasks without any loss of performance,
+00:41:37,440 --> 00:41:40,520
+*所以协程差不多是几种办法中最好的 
+So coroutines are kind of the best of both *worlds.
 
 561
-00:41:26,251 --> 00:41:32,160
-因为发射10个15个窗帘实在是太便宜了
-because launching ten fifteen curtains is incredibly cheap,
+00:41:40,660 --> 00:41:44,980
+资源消耗和回调一样少，比线程更是不知道少到哪里去了
+they're about as cheap as callbacks they're much cheaper than threads
 
 562
-00:41:32,161 --> 00:41:34,080
-它的价格大概和
-it's roughly as cheap as.
+00:41:45,240 --> 00:41:50,580
+我在我的系统上测量了一个协程
+on my system, I measured that a coroutine takes...
 
 563
-00:41:35,160 --> 00:41:36,360
-一堆回叫
-A bunch of callbacks.
+00:41:51,540 --> 00:41:57,150
+大约6K的内存，而线程需要30K
+About six K of memory versus about thirty K of memory for a thread,
 
 564
-00:41:37,440 --> 00:41:46,140
-所以很酷的例程是两个世界中最好的 他最便宜的回调比我的系统上的线程要便宜得多
-So cool routines are kind of the best of both worlds there about his cheapest callbacks are much cheaper than threads on my system,
-
-565
-00:41:46,141 --> 00:41:50,580
-我测量了一个co例程
-I measured that a co routine takes.
-
-566
-00:41:51,540 --> 00:41:57,150
-大约6K的内存和30个线程的内存
-About six K of memory versus about thirty cave memory for a thread,
-
-567
 00:41:57,151 --> 00:42:04,740
-此外 我做了一个小实验 发现我有能力启动超过十万个常规程序
+此外 我做了一个小实验：我有可以启动超过十万个协程
 and furthermore I did a little experiment and found that I was capable of launching over a hundred thousand co routines.
 
-568
+565
 00:42:04,741 --> 00:42:12,030
-它们的限制仅仅是允许Python进程分配的ram数量
+它们的限制仅仅是Python进程允许分配的内存总量
 Their limited only by the amount of ram that the Python process is allowed to allocate.
 
-569
+566
 00:42:12,930 --> 00:42:14,100
-丝丝太太
-Mrs Threads,
+对比线程
+versus Threads,
 
-570
+567
 00:42:14,101 --> 00:42:18,030
 除了简单的内存限制之外 它还受到其他限制
 which are subject to other limits beside simply memory limits.
 
-571
+568
 00:42:18,031 --> 00:42:24,630
-有各种用户和操作系统限制了进程被允许开始的线程数量
-There are various user and operating system limits on the number of threads that a process is allowed to start with.
+各种用户和操作系统限制了一个进程被允许启动线程数量
+There are various user and operating system limits on the number of threads that a *process is allowed to start with.
+
+569
+00:42:24,631 --> 00:42:29,670
+在不同的工作方式下限制程度也不同
+which are difficult in various ways to work around,
+
+570
+00:42:29,670 --> 00:42:34,900
+线程占用空间和操作系统的数据结构，以及操作系统调度器 
+and they take up space and operating system data structures and the operating system scheduler
+
+571
+00:42:35,020 --> 00:42:39,180
+最终导致它们的开销变得非常大
+that eventually causes their overhead to become quite significant.
 
 572
-00:42:24,631 --> 00:42:24,960
-她
-Her.
+00:42:40,350 --> 00:42:49,240
+他们所做的一切只是在等待一些缓慢的I/O操作。这实际上不需要非常多的CPU资源
+All they're doing is waiting around for some sort of slow IO operations that aren't actually going to require very much CPU。
 
 573
-00:42:26,490 --> 00:42:29,670
-在不同的工作方式下
-Difficult in various ways to work around,
+00:42:49,300 --> 00:42:55,020
+相较于协程在这个程序中的应用
+so compared to coroutines for a application like this,
 
 574
-00:42:29,671 --> 00:42:39,030
-它们占用了空间和操作系统数据结构和操作系统调度器 最终导致它们的开销变得非常重要
-and they take up space and operating system data structures and the operating system scheduler that eventually causes their overhead to become quite significant.
+00:42:55,020 --> 00:42:59,380
+这将花费很少的时间用于CPU计算 
+that's going to spend very little time doing computation 
 
 575
-00:42:40,350 --> 00:42:55,020
-他们所做的一切都是在等待爱荷华州的一些缓慢的行动它们实际上需要非常多的sepia所以与这种应用的煤例程相比
-All they're doing is waiting around for some sort of slow Iowa operations that are actually going to require very much sepia so compared to coal routines for a application like this,
+00:42:59,540 --> 00:43:08,010
+并且绝大多数时间都花在等待一个缓慢的服务器或者 客户端的缓慢的socket上
+and overwhelmingly spending its time waiting for a slow server or a slow client at the other end of the socket.
 
 576
-00:42:55,021 --> 00:43:08,010
-这将花费很少的时间进行计算 并且绝大多数时间都花在等待一个缓慢的服务器或者在socket的另一端的慢客户机上
-that's going to spend very little time doing computation and overwhelmingly spending its time waiting for a slow server or a slow client at the other end of the socket.
+00:43:08,011 --> 00:43:11,580
+在这种情况下协程有效率的多
+Coroutines are much more efficient for this kind of thing,
 
 577
-00:43:08,011 --> 00:43:11,580
-在这种情况下 Co例程更有效率
-Co routines are much more efficient for this kind of thing,
-
-578
 00:43:11,581 --> 00:43:16,290
-但是和回叫相比 它们的简单得多 因为
+但是和回调相比 它们的简单得多 因为
 but compared to call backs their lot simpler because.
 
-579
+578
 00:43:17,460 --> 00:43:23,250
-你可以把所有的代码放在一个函数里
-You can put all of the code for a coating in one function,
+你可以把协程的所有的代码放在一个函数里
+You can put all of the code for a coroutine in one function,
 
-580
+579
 00:43:23,251 --> 00:43:29,250
-所以你不需要声明并注册整个回调函数链
+所以你不需要声明并注册整个调用链
 so you don't have to declare and register a whole chain of callbacks.
 
-581
+580
 00:43:29,251 --> 00:43:34,170
-你可以重复使用你的局部变量 就像你经常遇到的麻烦一样
-And you can just reuse your local variables the same way that trouble you have always done.
+你可以重复使用你的局部变量 就像你原来的习惯
+And you can just reuse your local variables the same way that  you have always done.
+
+581
+00:43:36,270 --> 00:43:47,130
+这就是Tornado或asyncio风格，这些基于协程的异步框架的开端。 
+So that's the beginning of Tornado style or async i/o style coroutine based async framework.
 
 582
-00:43:36,270 --> 00:43:42,870
-这就是龙卷风的开始或者是水槽的开始
-So that's the beginning of Tornado style or a sink.
-
-583
-00:43:42,871 --> 00:43:47,130
-基于Ios风格的同步框架
-Ios Style Co routine based a sync framework.
-
-584
 00:43:50,130 --> 00:43:52,710
 如果你想了解更多
 So if you want to know more about this,
 
+583
+00:43:52,710 --> 00:43:57,840
+去bit.ly/coroutines 我给你创建了一个页面
+go to bit.ly/coroutines so I've have created a landing page for you there
+
+584
+00:43:57,980 --> 00:44:03,090
+你可以在那里看到我刚才写的代码
+that'll link you out to a version of the code that I wrote just now,
+
 585
-00:43:52,711 --> 00:44:03,090
-去斜杠的co例程为你创建了一个登陆页面它会把你链接到我刚才写的代码的一个版本
-go to bitterly slash co routines have created a landing page for you there that'll link you out to a version of the code that I wrote just now,
+00:44:03,090 --> 00:44:07,740
+那里也可以看到我和Guido(Python之父)合写的一章 
+as well as link you to a chapter that I wrote with Guido van Rossum
 
 586
-00:44:03,091 --> 00:44:12,840
-我和吉多范罗斯姆一起写了一章 这一章将会出现在开源应用程序架构的下一本书中
-as well as link you to a chapter that I wrote with Guido van Rossum that will appear in the next book in the architecture of Open source Application Serious.
+00:44:07,780 --> 00:44:12,840
+这章将会出现在开源应用程序架构系列的下一本书中
+that will appear in the next book in the architecture of Open source Application series.
 
 587
-00:44:12,841 --> 00:44:22,710
-这一章更详细地介绍了如何在水槽中实现基于生成器的涂层
-and that chapter goes into far more detail about how generator based coatings are implemented in a sink.
+00:44:12,841 --> 00:44:25,500
+这一章深入地介绍了在Python3.4的标准库中，基于生成器的协程的实现细节
+and that chapter goes into far more detail about how generator based coroutines are implemented in asyncio on Python3.4 standard library,
 
 588
-00:44:22,711 --> 00:44:25,500
-我在一个标准的图书馆里养了一只宠物
-I owned a pet on three point for a standard library,
+00:44:25,501 --> 00:44:36,820
+特别是它详细描述协程如何利用基于python3的生成器特性
+and especially it goes into how coroutines take advantage of generator features that are specific to python3
 
 589
-00:44:25,501 --> 00:44:29,250
-特别是它涉及到如何
-and especially it goes into how.
+00:44:37,380 --> 00:44:43,560
+以及asyncio库中如何运用异步队列类
+and how a asynchronous queue class that's included in asyncio,
 
 590
-00:44:30,270 --> 00:44:32,430
-Co例程利用了
-Co routines take advantage of.
+00:44:43,561 --> 00:44:52,350
+以一种惯用线程的工作者非常熟悉的方式来使用协程
+can be used to coordinate coroutines in a way that's very familiar to people who are used to using threads.
 
 591
-00:44:33,450 --> 00:44:43,560
-特定于python3的生成器特性以及在任何场景中包含的同步队列类
-Generator features that are specific to python three and how a synchronous queue class that's included in any scenario,
-
-592
-00:44:43,561 --> 00:44:52,350
-可以用一种对习惯使用线程的人非常熟悉的方式来协调日常工作
-can be used to coordinate co routines in a way that's very familiar to people who are used to using threads.
-
-593
 00:44:53,580 --> 00:44:55,530
-作为一个提醒
+提醒一下
 And as a reminder,
 
-594
+592
 00:44:55,531 --> 00:45:00,210
-如果你想和我这样的人在一家opensource公司工作
+如果你想和我这样的人在一家开源公司工作
 if you want to work with people like me at a opensource company,
 
-595
+593
 00:45:00,211 --> 00:45:05,400
-这是非常温暖的 多样性有真正的实现和技术挑战的工作
+非常热情、多元、充实以及有技术挑战的工作
 that's very warm and diversity has really fulfilling and technically challenging jobs.
 
-596
+594
 00:45:05,401 --> 00:45:07,080
 Mongodb正在招聘
 Mongo db is hiring.
 
-597
+595
 00:45:07,081 --> 00:45:11,070
 我们在纽约的帕罗奥图和世界各地都设有办事处
 We have offices in New York in Palo Alto and worldwide.
 
-598
+596
 00:45:11,071 --> 00:45:14,160
-去bewdley 砍去商店
-Go to bewdley slash mongo dashed shops.
+访问bit.ly/mongo-jobs
+Go to bit.ly/mongo-jobs.
 
-599
+597
 00:45:14,161 --> 00:45:15,090
-我很想和你一起工作
+我将很荣幸与你共事
 I would love to work with you.
 
