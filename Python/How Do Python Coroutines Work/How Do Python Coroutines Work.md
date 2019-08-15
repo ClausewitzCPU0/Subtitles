@@ -1,10 +1,18 @@
 # How Do Python Coroutines Work
 
+![1565868916786](assets/1565868916786.png)
+
 Source: https://www.youtube.com/watch?v=7sCu4gEjH5I
 
 By:  [A. Jesse Jiryu Davis](https://www.youtube.com/channel/UC5MSR011tHgM7cL3LL83DUQ)
 
 Code: https://github.com/ajdavis/coroutines-demo
+
+
+
+Cover made by: [PolestarX](https://github.com/ClausewitzCPU0)
+
+Picture(free for commercial use): https://www.pexels.com/photo/black-and-white-roller-coaster-106155/
 
 
 
