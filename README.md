@@ -6,7 +6,7 @@
 
    source： https://www.youtube.com/watch?v=7sCu4gEjH5I
 
-   completion time：2019.8.13
+   completion time：2019.8.15
 
    folder：[Python/How Do Python Coroutines Work](https://github.com/ClausewitzCPU0/Subtitles/tree/master/Python/How%20Do%20Python%20Coroutines%20Work)
 
