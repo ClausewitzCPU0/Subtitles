@@ -30,7 +30,7 @@ You can go to Mongo-jobs to see all of the jobs that we've got open.
 
 7
 00:00:41,400 --> 00:00:44,580
-如果你想了解更多关于这个视频的信息
+如果你想了解更多关于这个话题的信息
 And if you want more information about this talk,
 
 8
@@ -55,7 +55,7 @@ that I co-wrote with Guido Van Rossum that goes into far more depth and is a ver
 
 12
 00:01:17,160 --> 00:01:22,830
-这个演示的主题是
+这个示例的主题是
 So the agenda for this demo is going to be a
 
 13
@@ -125,7 +125,7 @@ It can respond to an HTTP request.
 
 26
 00:02:22,440 --> 00:02:27,510
-我为本地的python会议"PyGotham"写了这篇文章
+我为本地的python会议"PyGotham 2015"写了这篇文章
 I wrote this for a local python conference PyGotham 2015,
 
 27
@@ -135,7 +135,7 @@ so you can see that it says hello to all of the incredible people there.
 
 28
 00:02:32,731 --> 00:02:37,020
-这个框架的另一个有趣之处是它有些迟缓
+这个框架的另一个有趣之处是它有点慢
 And the other interesting thing about this framework is its kind of slow.
 
 29
@@ -145,12 +145,12 @@ This web server returns very simple response,
 
 30
 00:02:42,301 --> 00:02:47,610
-但我增加了一些代码 所以服务器要花差不多一秒钟的时间响应
+但我故意增加了一些sleep代码 所以要花差不多一秒的时间响应
 but I've coded it so that it takes almost a second to reply.
 
 31
 00:02:47,611 --> 00:02:50,550
-*这非常重要
+这么做的重要性将会在后面体现
 And so that's going to end up being very important,
 
 32
@@ -160,7 +160,7 @@ because that's the sort of thing that async is optimized for.
 
 33
 00:02:54,391 --> 00:03:00,450
-与速度太慢的服务器或者客户端有效率地通信
+与速度较慢的服务器或者客户端进行有效率的通信
 Is for talking too slow servers or slow clients efficiently.
 
 34
@@ -255,7 +255,7 @@ will append it to the list and if we get an empty chunk,
 
 52
 00:04:44,071 --> 00:04:46,320
-我们就知道服务器把我们挂起了
+我们就知道服务器断开了
 then we know that the server is hung up on us.
 
 53
@@ -265,7 +265,7 @@ so our reception is complete,
 
 54
 00:04:49,861 --> 00:04:52,920
-所以消息体(body)将会是
+所以响应内容将会是
 and so the body is going to be....
 
 55
@@ -285,7 +285,7 @@ The utf-8 by default.
 
 58
 00:05:08,490 --> 00:05:17,280
-然后我们把消息体的第一行打印出来
+然后我们把响应内容的第一行打印出来
 And then let's just prints the first line of the body.
 
 59
@@ -610,7 +610,7 @@ and the specific event that we're interested in is we want to know when the sock
 
 123
 00:09:52,720 --> 00:09:57,040
-pycharm可以自动为我们导入那个常量
+pycharm可以自动为我们导入那个常量(win: Alt+Enter)
 and pycharm can auto import that constant for us.
 
 124
@@ -695,7 +695,7 @@ and this time we're not interested in write ability we're interested in readabil
 
 140
 00:11:04,321 --> 00:11:08,580
-这里可以用pycharm的自动补全（win: Alt + Enter）
+这里可以用pycharm的自动导入（win: Alt + Enter）
 So we have the pycharm auto inputs that
 
 141
@@ -725,7 +725,7 @@ so if I run this code now it completes,
 
 146
 00:11:25,171 --> 00:11:29,640
-但我们还没有得到真正想要的效果，程序还是运行了两秒
+但我们还没有得到真正想要的效果，还是需要两秒
 but we haven't really won anything right still took two seconds.
 
 147
@@ -735,7 +735,7 @@ We just kind of made a small mess in our code.
 
 148
 00:11:33,061 --> 00:11:37,590
-但我们还没有获得任何efficiency提升
+但我们还没有获得任何效率的提升
 But we haven't gained any efficiency improvements yet.
 
 149
@@ -815,7 +815,7 @@ This is going to execute.
 
 164
 00:12:50,190 --> 00:12:54,810
-一旦套socket已连接，它就会执行下一步
+一旦socket已连接，它就会执行下一步
 Once the socket is connected and it's going to do the next step.
 
 165
@@ -880,7 +880,7 @@ Well selector.register,
 
 177
 00:13:54,061 --> 00:14:00,870
-它有特别的隐藏参数，有点像*b-side(非主打歌，这些歌通常不会出现在乐队的LP中)
+它有特别的隐藏参数，有点像*b-side(唱片的B面，指没被选入专辑的歌)
 it has this special hidden argument sort of a b-side,
 
 178
@@ -1425,7 +1425,7 @@ This line is, in fact,where we're stuck.
 
 286
 00:20:53,040 --> 00:21:02,280
-所以我认为结束这个循环的正确方法是 搞清楚工作何时完成，然后退出循环
+所以我认为结束这个循环的正确方法是 搞清楚任务何时完成，然后退出循环
 So I think that the right way to complete this loop now is to somehow figure out when all work is complete and then exit the loop.
 
 287
@@ -1435,8 +1435,8 @@ So I'm going to say that there is some number of tasks.
 
 288
 00:21:07,470 --> 00:21:10,500
-*总是在执行过程中
-That are always in flight.
+这个变量贯穿整个执行过程
+*That are always in flight.
 
 289
 00:21:12,540 --> 00:21:13,890
@@ -1570,7 +1570,7 @@ We can do probably dozens or even hundreds of simultaneous requests with a simpl
 
 315
 00:23:26,780 --> 00:23:33,750
-而不用在计算上损失大量的时间
+而不用在运算上损失大量的时间
 and not lose significant amounts of time on computation,
 
 316
@@ -1635,7 +1635,7 @@ It has to manually copy its state into a closure so that that state is available
 
 328
 00:24:35,280 --> 00:24:44,460
-语言提供给我们的基础功能，比如堆栈和局部变量
+语言提供给我们的基础设施，比如堆栈和局部变量
 The normal facilities that the language provides to us in a stack and in local variables,
 
 329
@@ -1665,7 +1665,7 @@ And coroutines are built on Future.
 
 334
 00:25:10,410 --> 00:25:15,030
-这是我们稍后会在python生成器中看到的类
+这是我们稍后在介绍python生成器时看到的类
 Which is a class that we'll see in a second on python generators.
 
 335
@@ -1685,7 +1685,7 @@ coroutines are very old idea.
 
 338
 00:25:26,671 --> 00:25:31,540
-协程的实现在不同的语言中有不同的实现
+协程在不同的语言中有不同的实现
 There are many kinds of implementations of coroutines in many languages
 
 339
@@ -1700,7 +1700,7 @@ what we mean when we say coroutines is,
 
 341
 00:25:39,900 --> 00:25:43,680
-基于生成器的协程
+指的是基于生成器的协程
 Generator based coroutines.
 
 342
@@ -1725,7 +1725,7 @@ So if you understand the discussion they were going to have right now,
 
 346
 00:26:04,201 --> 00:26:09,630
-就能同时掌握Python3.5的原生协程
+就能同时了解Python3.5中原生协程的工作方式
 you'll understand how the Python3.5 native coroutines work as well,
 
 347
@@ -1755,12 +1755,12 @@ And you'll see why in a little bit this is useful
 
 352
 00:26:25,591 --> 00:26:29,760
-但目前我先把它写出来
+我先把它写出来
 but for the moment I'm just going to present it,
 
 353
 00:26:29,761 --> 00:26:34,350
-你只需要相信我这将会是一个有用的东西
+你现在只需要相信这将会是一个有用的东西
 and you'll just have to trust me that this is going to be a useful thing,
 
 354
@@ -1860,7 +1860,7 @@ Instead,we say future.resolve.
 
 373
 00:28:16,620 --> 00:28:19,140
-所以你可以期待一下
+所以你可以预测一下
 So, you can expect,
 
 374
@@ -2015,12 +2015,12 @@ so it prints start
 
 404
 00:30:32,680 --> 00:30:36,780
-1 实际上是下一个语句的返回值
+1 实际上是next语句的返回值
 and one is actually the return value of the next statement
 
 405
 00:30:36,920 --> 00:30:42,360
-*因为next的返回值是下一个yield语句执行的结果
+因为next()的返回值由next执行的yield语句决定
 because the return value of next is whichever yield is next executed.
 
 406
@@ -2045,13 +2045,13 @@ But it returns two.
 
 410
 00:31:06,600 --> 00:31:11,550
-这是传递到下一个yield语句的值
+这是下一个yield语句传递出的值
 Which was the value passed into the next yield statement.
 
 411
 00:31:12,900 --> 00:31:17,040
-现在我们的堆栈指针
-And now our stack pointer.
+现在我们的堆栈指针(口误)
+And now our stack pointer....
 
 412
 00:31:17,041 --> 00:31:17,400
@@ -2100,12 +2100,12 @@ Well,
 
 421
 00:31:55,021 --> 00:31:56,250
-先做一个规定
+先做一个设想
 here's the promise.
 
 422
 00:31:57,810 --> 00:31:59,670
-我们的规定是这样的
+我们的想法是这样的
 The promise is going to be that.
 
 423
@@ -2120,8 +2120,8 @@ Which currently has to create a closure that captures his local variables.
 
 425
 00:32:12,030 --> 00:32:13,920
-*关闭调用的名称
-Names that closure call back.
+将其命名为callback
+Names that closure callback.
 
 426
 00:32:14,940 --> 00:32:20,580
@@ -2140,7 +2140,7 @@ So I'm going to delete the callback.
 
 429
 00:32:29,641 --> 00:32:31,710
-我要删除回调主体
+删除回调主体
 I'm going to delete the callbacks body.
 
 430
@@ -2155,7 +2155,7 @@ somehow here before we unregistered it and then rely on the socket to be writabl
 
 432
 00:32:47,760 --> 00:32:51,870
-我们的规定是
+我们的想法是
 and the promise is that somehow,
 
 433
@@ -2170,12 +2170,12 @@ the future that we just created.
 
 435
 00:32:56,490 --> 00:33:05,010
-我们可以暂停这个生成器 直到我们感兴趣的事件发生
+我们可以用某种方式暂停这个生成器 直到我们感兴趣的事件发生
 Somehow we can pause this generator until the event that we said we were interested in has occurred.
 
 436
 00:33:07,950 --> 00:33:11,610
-如果我们相信这个约定可行
+如果我们认为这个设想可行
 And if we believe that this promise is true.
 
 437
@@ -2185,7 +2185,7 @@ Then we can combine what had been two functions into a single generator function
 
 438
 00:33:22,740 --> 00:33:28,740
-但这个承诺还没有实现,因为如果我运行这个
+但这个设想还没有实现,因为如果我运行这个
 But the promise is not going to be fulfilled just yet because if I run this,
 
 439
@@ -2285,7 +2285,7 @@ So let's see what that looks like.
 
 458
 00:34:34,981 --> 00:34:37,230
-在future和task类共存的情况下
+同时使用future和task类时
 And in the case of both future and task,
 
 459
@@ -2305,7 +2305,7 @@ notably tornado and now in asyncio in the python3.4 standard library.
 
 462
 00:35:01,590 --> 00:35:08,100
-所以我的丐版Task类实现会是这样的
+所以我的丐版Task类的实现如下：
 So my dumb version of the task class is going to look like.
 
 463
@@ -2447,7 +2447,7 @@ And then the final step of this conversion is going to be down here,
 490
 00:37:09,871 --> 00:37:14,900
 我们需要用task把这些get调用包起来
-where we need to wrap each of these calls in a task 
+where we need to wrap each of these calls in a task
 
 491
 00:37:15,000 --> 00:37:18,150
@@ -2556,7 +2556,7 @@ So.
 
 512
 00:38:25,620 --> 00:38:28,980
-*我们可以消去这些和我们在这里做的变换
+我们可以删去这些，在这里做同样的修改
 We can get rid of those the same transformation that we did here.
 
 513
@@ -2601,7 +2601,7 @@ we don't need a redundant global statement.
 
 521
 00:39:00,270 --> 00:39:06,480
-如果我们简单地创造出我们创造的新future
+如果我们简单地yield我们新定义的future
 And if we simply yield this new future that we created,
 
 522
@@ -2666,13 +2666,13 @@ so what we're going to end up doing is
 
 534
 00:39:54,240 --> 00:40:05,130
-复制在教程刚开始的时候写下的死循环
+借鉴在教程刚开始的时候写的死循环
 we're going to end up reproducing the same while true loop that we originally had in the olden days at the beginning of this talk,
 
 535
 00:40:05,131 --> 00:40:08,100
-那时我们还写一个简单的阻塞（框架）
-when we were writing a simple blocking yet.
+那时我们只写了一个简单的阻塞get函数
+when we were writing a simple blocking get.
 
 536
 00:40:09,060 --> 00:40:10,830
@@ -2771,7 +2771,7 @@ if all goes well and I run this,
 
 555
 00:41:10,291 --> 00:41:14,340
-它仍然运行了一秒
+它仍然只花了一秒
 then it still takes one second.
 
 556
@@ -2781,7 +2781,7 @@ it still does all the work that it was asked to do
 
 557
 00:41:19,800 --> 00:41:26,250
-我们仍然可以把它扩展到执行大量的任务而不损失任何性能
+我们可以把它扩展到能够执行大量的任务而不损失任何性能
 and we can still scale this out to a large number of tasks without any loss of performance,
 
 558
@@ -2796,7 +2796,7 @@ it's roughly as cheap as a bunch of callbacks.
 
 560
 00:41:37,440 --> 00:41:40,520
-*所以协程差不多是几种办法中最好的 
+所以协程差不多是几种办法中最好的
 So coroutines are kind of the best of both *worlds.
 
 561
@@ -2806,18 +2806,18 @@ they're about as cheap as callbacks they're much cheaper than threads
 
 562
 00:41:45,240 --> 00:41:50,580
-我在我的系统上测量了一个协程
+我在我的系统上测量了一个协程..
 on my system, I measured that a coroutine takes...
 
 563
 00:41:51,540 --> 00:41:57,150
-大约6K的内存，而线程需要30K
+大约需要6K的内存，而线程需要30K
 About six K of memory versus about thirty K of memory for a thread,
 
 564
 00:41:57,151 --> 00:42:04,740
 此外 我做了一个小实验：我有可以启动超过十万个协程
-and furthermore I did a little experiment and found that I was capable of launching over a hundred thousand co routines.
+and furthermore I did a little experiment and found that I was capable of launching over a hundred thousand coroutines.
 
 565
 00:42:04,741 --> 00:42:12,030
@@ -2831,7 +2831,7 @@ versus Threads,
 
 567
 00:42:14,101 --> 00:42:18,030
-除了简单的内存限制之外 它还受到其他限制
+除了简单的内存限制之外 线程还受到其他限制
 which are subject to other limits beside simply memory limits.
 
 568
@@ -2841,12 +2841,12 @@ There are various user and operating system limits on the number of threads that
 
 569
 00:42:24,631 --> 00:42:29,670
-在不同的工作方式下限制程度也不同
+这个问题在很多情况下都很难解决
 which are difficult in various ways to work around,
 
 570
 00:42:29,670 --> 00:42:34,900
-线程占用空间和操作系统的数据结构，以及操作系统调度器 
+线程占用空间和操作系统的数据结构，以及操作系统调度器
 and they take up space and operating system data structures and the operating system scheduler
 
 571
@@ -2866,12 +2866,12 @@ so compared to coroutines for a application like this,
 
 574
 00:42:55,020 --> 00:42:59,380
-这将花费很少的时间用于CPU计算 
-that's going to spend very little time doing computation 
+这将花费很少的时间用于CPU计算
+that's going to spend very little time doing computation
 
 575
 00:42:59,540 --> 00:43:08,010
-并且绝大多数时间都花在等待一个缓慢的服务器或者 客户端的缓慢的socket上
+并且绝大多数时间都花在等待一个缓慢的服务器或者 客户端的缓慢socket上
 and overwhelmingly spending its time waiting for a slow server or a slow client at the other end of the socket.
 
 576
@@ -2901,7 +2901,7 @@ And you can just reuse your local variables the same way that  you have always d
 
 581
 00:43:36,270 --> 00:43:47,130
-这就是Tornado或asyncio风格，这些基于协程的异步框架的开端。 
+这就是Tornado或asyncio风格，这些基于协程的异步框架的开端。
 So that's the beginning of Tornado style or async i/o style coroutine based async framework.
 
 582
@@ -2911,7 +2911,7 @@ So if you want to know more about this,
 
 583
 00:43:52,710 --> 00:43:57,840
-去bit.ly/coroutines 我给你创建了一个页面
+访问bit.ly/coroutines 我创建了一个页面
 go to bit.ly/coroutines so I've have created a landing page for you there
 
 584
@@ -2921,7 +2921,7 @@ that'll link you out to a version of the code that I wrote just now,
 
 585
 00:44:03,090 --> 00:44:07,740
-那里也可以看到我和Guido(Python之父)合写的一章 
+那里也可以看到我和Guido(Python之父)合写的一章
 as well as link you to a chapter that I wrote with Guido van Rossum
 
 586
@@ -2971,7 +2971,7 @@ Mongo db is hiring.
 
 595
 00:45:07,081 --> 00:45:11,070
-我们在纽约的帕罗奥图和世界各地都设有办事处
+我们在纽约的帕罗奥多和世界各地都设有办事处
 We have offices in New York in Palo Alto and worldwide.
 
 596
