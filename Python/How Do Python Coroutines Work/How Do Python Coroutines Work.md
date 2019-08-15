@@ -6,10 +6,13 @@ By:  [A. Jesse Jiryu Davis](https://www.youtube.com/channel/UC5MSR011tHgM7cL3LL8
 
 Code: https://github.com/ajdavis/coroutines-demo
 
+
+
 ## Index
 
 | Time  | Contents                                          |
 | ----- | ------------------------------------------------- |
+| 0:00  | abstract                                          |
 | 3:06  | basic blocking framework                          |
 | 6:50  | async framework                                   |
 | 12:42 | callbacks                                         |
@@ -19,3 +22,11 @@ Code: https://github.com/ajdavis/coroutines-demo
 | 28:46 | Future class & little refresher about generators. |
 | 34:12 | Task class                                        |
 
+
+### 关于作者
+
+A. Jesse Jiryu Davis 是纽约 MongoDB 的工程师。他编写了异步 MongoDB Python 驱动程序 Motor，也是 MongoDB C 驱动程序的开发领袖和 PyMongo 团队成员。 他也为 asyncio 和 Tornado 做了贡献，在 [http://emptysqua.re](http://emptysqua.re/) 上写作。
+
+作者和Python之父Guido van Rossum 合作过一篇关于协程的文章，中文翻译链接如下：
+
+https://linux.cn/article-8265-1.html
