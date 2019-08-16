@@ -8,13 +8,17 @@ By:  [A. Jesse Jiryu Davis](https://www.youtube.com/channel/UC5MSR011tHgM7cL3LL8
 
 Code: https://github.com/ajdavis/coroutines-demo
 
+ENG&CHN Subtitles：[How Do Python Coroutines Work.ass](https://github.com/ClausewitzCPU0/Subtitles/blob/master/Python/How%20Do%20Python%20Coroutines%20Work/How%20Do%20Python%20Coroutines%20Work.ass)
 
+ENG Subtitles：[ENG.ass](https://github.com/ClausewitzCPU0/Subtitles/blob/master/Python/How%20Do%20Python%20Coroutines%20Work/ENG.ass)
+
+CHN Subtitles：[CHN.ass](https://github.com/ClausewitzCPU0/Subtitles/blob/master/Python/How%20Do%20Python%20Coroutines%20Work/CHN.ass)
+
+------
 
 Cover made by: [PolestarX](https://github.com/ClausewitzCPU0)
 
 Picture(free for commercial use): https://www.pexels.com/photo/black-and-white-roller-coaster-106155/
-
-
 
 ## Index
 
