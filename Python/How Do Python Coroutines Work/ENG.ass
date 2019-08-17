@@ -16,8 +16,9 @@ Video File: How Do Python Coroutines Work.mp4
 Video AR Mode: 4
 Video AR Value: 1.600000
 Video Zoom Percent: 0.500000
-Active Line: 594
-Video Position: 81213
+Scroll Position: 249
+Active Line: 271
+Video Position: 35976
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -296,7 +297,7 @@ Dialogue: 0,0:19:47.64,0:19:51.60,Default,,0,0,0,,we need to wait for the remain
 Dialogue: 0,0:19:51.60,0:19:52.95,Default,,0,0,0,,so we can't just leave here.
 Dialogue: 0,0:19:52.95,0:19:53.73,Default,,0,0,0,,We need to go.
 Dialogue: 0,0:19:55.80,0:19:59.19,Default,,0,0,0,,Callback equals yet another closure,
-Dialogue: 0,0:19:59.19,0:20:06.98,Default,,0,0,0,,and that's going to cause a second call or an *another call to this readable function again
+Dialogue: 0,0:19:59.19,0:20:06.98,Default,,0,0,0,,and that's going to cause a second call or Nth call to this readable function again
 Dialogue: 0,0:20:07.12,0:20:13.58,Default,,0,0,0,,and we'll register that again with a selector to re-register the socket that we unregistered up here
 Dialogue: 0,0:20:13.58,0:20:16.59,Default,,0,0,0,,and then this return calls no longer necessary.
 Dialogue: 0,0:20:18.12,0:20:19.44,Default,,0,0,0,,So if we run this.

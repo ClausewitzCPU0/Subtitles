@@ -6,7 +6,7 @@ Source: https://www.youtube.com/watch?v=7sCu4gEjH5I
 
 By:  [A. Jesse Jiryu Davis](https://www.youtube.com/channel/UC5MSR011tHgM7cL3LL83DUQ)
 
-Code: https://github.com/ajdavis/coroutines-demo
+Code: https://github.com/ajdavis/coroutines-demo 
 
 ENG&CHN Subtitles：[How Do Python Coroutines Work.ass](https://github.com/ClausewitzCPU0/Subtitles/blob/master/Python/How%20Do%20Python%20Coroutines%20Work/How%20Do%20Python%20Coroutines%20Work.ass)
 
@@ -42,3 +42,8 @@ A. Jesse Jiryu Davis 是纽约 MongoDB 的工程师。他编写了异步 MongoDB
 作者和Python之父Guido van Rossum 合作过一篇关于协程的文章，中文翻译链接如下：
 
 https://linux.cn/article-8265-1.html
+
+https://linux.cn/article-8266-1.html
+
+https://linux.cn/article-8267-1-rel.html
+

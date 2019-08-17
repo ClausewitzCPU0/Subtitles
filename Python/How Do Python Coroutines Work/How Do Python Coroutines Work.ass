@@ -16,8 +16,8 @@ Video AR Mode: 4
 Video AR Value: 1.600000
 Video Zoom Percent: 0.375000
 Scroll Position: 545
-Active Line: 594
-Video Position: 81213
+Active Line: 562
+Video Position: 75347
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -296,7 +296,7 @@ Dialogue: 0,0:19:47.64,0:19:51.60,Default,,0,0,0,,我们需要等待剩下的部
 Dialogue: 0,0:19:51.60,0:19:52.95,Default,,0,0,0,,所以我们不能就这样离开这里\Nso we can't just leave here.
 Dialogue: 0,0:19:52.95,0:19:53.73,Default,,0,0,0,,我们还要做些工作\NWe need to go.
 Dialogue: 0,0:19:55.80,0:19:59.19,Default,,0,0,0,,给Callback赋值另一个闭包\NCallback equals yet another closure,
-Dialogue: 0,0:19:59.19,0:20:06.98,Default,,0,0,0,,这将引起对readable函数的二次调用\Nand that's going to cause a second call or an *another call to this readable function again
+Dialogue: 0,0:19:59.19,0:20:06.98,Default,,0,0,0,,这将引起对readable函数的二次或多次调用\Nand that's going to cause a second call or Nth call to this readable function again
 Dialogue: 0,0:20:07.12,0:20:13.58,Default,,0,0,0,,我们要在这里重新注册刚才注销的socket\Nand we'll register that again with a selector to re-register the socket that we unregistered up here
 Dialogue: 0,0:20:13.58,0:20:16.59,Default,,0,0,0,,这里的return就没有必要了\Nand then this return calls no longer necessary.
 Dialogue: 0,0:20:18.12,0:20:19.44,Default,,0,0,0,,如果我们运行这个\NSo if we run this.
@@ -584,7 +584,7 @@ Dialogue: 0,0:41:14.34,0:41:19.44,Default,,0,0,0,,它还是做了所有的工作
 Dialogue: 0,0:41:19.80,0:41:26.25,Default,,0,0,0,,我们可以把它扩展到能够执行大量的任务而不损失任何性能\Nand we can still scale this out to a large number of tasks without any loss of performance,
 Dialogue: 0,0:41:26.25,0:41:32.16,Default,,0,0,0,,因为发起10个或15个协程的资源消耗实在是太低廉了\Nbecause launching ten fifteen coroutines is incredibly cheap,
 Dialogue: 0,0:41:32.16,0:41:36.36,Default,,0,0,0,,大概只和一堆回调差不多\Nit's roughly as cheap as a bunch of callbacks.
-Dialogue: 0,0:41:37.44,0:41:40.52,Default,,0,0,0,,所以协程差不多是几种办法中最好的\NSo coroutines are kind of the best of both *worlds.
+Dialogue: 0,0:41:37.44,0:41:40.52,Default,,0,0,0,,所以协程同时拥有回调和线程的长处\NSo coroutines are kind of the best of both worlds.
 Dialogue: 0,0:41:40.66,0:41:44.98,Default,,0,0,0,,资源消耗和回调一样少，比线程更是不知道少到哪里去了\Nthey're about as cheap as callbacks they're much cheaper than threads
 Dialogue: 0,0:41:45.24,0:41:50.58,Default,,0,0,0,,我在我的系统上测量了一个协程..\Non my system, I measured that a coroutine takes...
 Dialogue: 0,0:41:51.54,0:41:57.15,Default,,0,0,0,,大约需要6K的内存，而线程需要30K\NAbout six K of memory versus about thirty K of memory for a thread,
