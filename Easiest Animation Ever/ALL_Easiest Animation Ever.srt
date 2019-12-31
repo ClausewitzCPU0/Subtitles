@@ -1,0 +1,770 @@
+﻿1
+00:00:00,660 --> 00:00:02,460
+大家好！我是你们的好兄弟 Jonathan Burton
+Hey guys it's me it's your best friend
+
+2
+00:00:02,461 --> 00:00:04,656
+来自Carbon Animations
+it's Jonathan Burton Carbon animations
+
+3
+00:00:04,656 --> 00:00:07,950
+我收到了很多观众对于动画教学的问题
+and I get a lot of questions about tutorial videos
+
+4
+00:00:07,950 --> 00:00:11,400
+今天我将教你们用最简单的办法做动画
+and today I'm gonna give you the simplest way to animate
+
+5
+00:00:11,580 --> 00:00:13,800
+可能这么说并不准确，但这确实是一种很好的练习
+well it's not really, but it's a good exercise,
+
+6
+00:00:13,801 --> 00:00:16,224
+有助于你理解动画制作
+and it helps you understand animation
+
+7
+00:00:16,224 --> 00:00:18,060
+所谓动画
+if you know what animation is,
+
+8
+00:00:18,061 --> 00:00:19,710
+它研究运动
+it is the study of motion.
+
+9
+00:00:19,711 --> 00:00:22,830
+它是生命的幻象(The illusion of life也是一本动画教程书籍的名字)
+It is the illusion of life,
+
+10
+00:00:22,831 --> 00:00:26,400
+有些逐帧作画的感觉
+and it is framed by frame work kinda.
+
+11
+00:00:26,401 --> 00:00:28,440
+但也不是所有的动画都需要逐帧来画
+I mean, it doesn't always have to be frame by frame.
+
+12
+00:00:29,970 --> 00:00:32,960
+今天我们将要学习绘画运动效果
+But today we're going to study the motion
+
+13
+00:00:33,020 --> 00:00:40,830
+这将有助于理解动画制作过程，以及物体如何在画布空间中移动
+and it's gonna help to understand how to animate and how things move in the space on the canvas.
+
+14
+00:00:40,831 --> 00:00:42,660
+我认为这很有用
+I think it's really helpful.
+
+15
+00:00:42,661 --> 00:00:45,150
+这就是"点动画"
+It's called Dot animation.
+
+16
+00:00:45,151 --> 00:00:49,290
+科班学习的第一课通常会让你画一个球
+So in school, usually they make you animate a ball as the first thing.
+
+17
+00:00:49,291 --> 00:00:50,430
+但我们只画一个点
+but we're going to do a dot.
+
+18
+00:00:50,431 --> 00:00:56,370
+画点更简单，因为一个球体有外形样式，而点就很简单
+It's even simpler because a ball it has it's got form *or a dot is just a dot.
+
+19
+00:00:57,511 --> 00:01:01,920
+接下来要画出一个点以及我们想让它执行的动作
+so we're going to animate a dot and a motion that we want.
+
+20
+00:01:01,921 --> 00:01:08,880
+目标是让一个角色助跑并跳过已经画好的小沟
+And so we want a character to run and jump across this this little pit here that I've already drawn,
+
+21
+00:01:08,880 --> 00:01:12,060
+想要让角色动作看起来更完美
+and so that character we want the motion to look good *though,
+
+22
+00:01:12,080 --> 00:01:16,170
+可以先用画点的方式来练习
+so we're going to practice with a dot,
+
+23
+00:01:16,171 --> 00:01:18,750
+这个点就代表着人物
+as if the dot is running and jumping,
+
+24
+00:01:18,751 --> 00:01:20,790
+在这里先画个点
+so the dot is going to be over here,
+
+25
+00:01:20,791 --> 00:01:25,740
+点的位置大概就是人物胸部的位置
+and it's gonna represent the kind of the, I guess the chest of the character.
+
+26
+00:01:25,741 --> 00:01:33,630
+这样点就画好了 我要把笔的压感关了
+OK, so there's the dots, actually I'm going to remove my pressure sensitivity,
+
+27
+00:01:33,631 --> 00:01:35,700
+这样点的大小就不会变
+so the dot doesn't change really,
+
+28
+00:01:35,701 --> 00:01:42,000
+我们要让这个点跳过小沟
+there's the dots and we're going to make the dot run and jump across this,
+
+29
+00:01:42,000 --> 00:01:48,160
+这个过程就是角色奔跑跳跃的样板
+and that's going to give us our template for our motion of a character running and jumping.
+
+30
+00:01:48,220 --> 00:01:52,530
+打开绘图纸外观模式(Alt+Shift+O),按F7创建新的帧
+Alright we're gonna have onion skin turned on press F7 to form new frame.
+
+31
+00:01:52,531 --> 00:01:57,090
+绘图纸模式可以同时显示先前帧和之后的帧
+and because the onion skin, we're going to see our previous frame and the next frame.
+
+32
+00:01:57,091 --> 00:01:57,900
+目前我们还没画下一帧
+We have no next frame,
+
+33
+00:01:57,901 --> 00:01:59,880
+但我们现在已经可以看到前一帧了
+but we're gonna see our previous frame here,
+
+34
+00:01:59,881 --> 00:02:05,160
+小点会缓慢提速
+and so the dot is gonna start to slowly build up some speed,
+
+35
+00:02:05,160 --> 00:02:08,240
+我还会让它略微弹跳一下
+and I'm even going to bounce it up and down a bit
+
+36
+00:02:08,620 --> 00:02:12,960
+因为人的奔跑动作就是这样的
+Because that's how people run.
+
+37
+00:02:22,921 --> 00:02:25,650
+弹跳的幅度不需要太大
+I'm going to bounce up and down just a little bit.
+
+38
+00:02:29,310 --> 00:02:30,090
+继续画
+More.
+
+39
+00:02:34,320 --> 00:02:38,400
+小点逐步地运动到另一边
+And we're going to start to gradually drag this across.
+
+40
+00:02:38,620 --> 00:02:45,180
+点之间的间距会越来越远
+Gradually move further and further apart with the dots,
+
+41
+00:02:45,181 --> 00:02:49,740
+因为它运动得越来越快
+because that means the character is getting faster and faster,
+
+42
+00:02:49,741 --> 00:02:54,630
+确保每次画点的时候略微增加间距
+so we gotta make sure we're moving a little bit further apart each time we do a dots.
+
+43
+00:02:57,541 --> 00:03:02,100
+这里角色略微停顿准备跳跃
+and the character is going to kind of *windup for a jump off it,
+
+44
+00:03:02,101 --> 00:03:04,410
+就要画得离地面近一些
+so I'm going to make them stay closer to the ground.
+
+45
+00:03:05,850 --> 00:03:07,710
+画出一点点减速的效果
+And even even kind of.
+
+46
+00:03:09,930 --> 00:03:13,830
+因为角色要做起跳前的准备动作
+Slow down a little bit because you wind up for that jump.
+
+47
+00:03:15,120 --> 00:03:16,230
+接下去就是跳跃动作
+So he's going to jump.
+
+48
+00:03:17,190 --> 00:03:20,490
+第一帧要远一些
+the first frame is going to be a little bit further.
+
+49
+00:03:22,230 --> 00:03:23,880
+之后角色离地
+And then, as you jump in the air,
+
+50
+00:03:23,881 --> 00:03:28,740
+在横向和纵向都会减速
+you start to slow down both in height and in distance.
+
+51
+00:03:28,741 --> 00:03:30,540
+因为速度变慢
+because the speed is starting to wear off.
+
+52
+00:03:31,980 --> 00:03:36,000
+现在它已经跳过了小沟
+it looks like he's going to completely clear this gap here.
+
+53
+00:03:42,570 --> 00:03:44,010
+接下来就是落地
+And again, the landing.
+
+54
+00:03:45,661 --> 00:03:49,020
+因为落地需要一些调整的时间
+because he's landing is going to be a bit of recovery time.
+
+55
+00:03:54,541 --> 00:03:56,310
+搞定了
+that's it OK?
+
+56
+00:03:56,311 --> 00:03:57,240
+奔跑跳跃
+So run jump.
+
+57
+00:04:00,870 --> 00:04:01,770
+是不是有内味了？
+It looks like it, okay?
+
+58
+00:04:03,480 --> 00:04:04,080
+有点像了
+Looks like it.
+
+59
+00:04:04,081 --> 00:04:05,220
+你也可以简化一下
+You can make it simpler,
+
+60
+00:04:05,221 --> 00:04:11,190
+你也可以省略弹跳的过程，其他照做就行
+you don't have to add the bouncing in just if you don't have the bouncing and you just do the exact same thing,
+
+61
+00:04:13,261 --> 00:04:18,660
+只要确保每次的间距增加就行
+you just make sure you're doing it a little bit further apart each time.
+
+62
+00:04:18,661 --> 00:04:21,270
+再画一次没有弹跳的过程
+So again, this is it. Without a bouncing.
+
+63
+00:04:23,220 --> 00:04:25,740
+增加一点点间距
+And you just do it a little bit further apart.
+
+64
+00:04:26,760 --> 00:04:30,120
+直到你觉得到达最大速度时
+Until you feel like, okay, that's Max speed okay yeah,
+
+65
+00:04:30,121 --> 00:04:31,860
+这就是最大速度下的间距
+it's going to be that far apart is Max speed.
+
+66
+00:04:32,820 --> 00:04:38,070
+接下来还是同样的步骤，画跳跃动作
+And you do the exact same thing and then you can do the jump.
+
+67
+00:04:40,260 --> 00:04:41,610
+同样的方法
+that's again similar.
+
+68
+00:04:46,590 --> 00:04:53,700
+正视错误，及时改正
+And don't be afraid to cancel it. Dots deleted.
+
+69
+00:04:56,140 --> 00:04:58,120
+这样就画好了
+there you go And this will be.
+
+70
+00:04:59,670 --> 00:05:01,980
+你可以做出同样的效果
+So you can do the exact same thing.
+
+71
+00:05:01,981 --> 00:05:09,660
+这就是跳过小沟的一个很好的动作示例
+so that is too... very, very fine motions of running and jumping over a pit,
+
+72
+00:05:09,661 --> 00:05:14,790
+现在你就可以照着我的原版来试着做了
+and now you can follow the dots when you want to only use my original one,
+
+73
+00:05:14,791 --> 00:05:16,140
+按点的轨迹来画
+you can follow that dots.
+
+74
+00:05:17,280 --> 00:05:22,230
+接下来我将帮助你做出完整的动画
+*And I'll help(hope?) you to actually do it.
+
+75
+00:05:22,230 --> 00:05:26,040
+再看一个更短更简单的例子
+Let's see the other one because it's shorter and also its simpler
+
+76
+00:05:26,380 --> 00:05:28,650
+我们希望例子尽可能简单
+and we want to keep things as simple as possible.
+
+77
+00:05:29,940 --> 00:05:32,130
+因此我把点变成了小红圈
+So I made the dot into a red the little circle.
+
+78
+00:05:32,131 --> 00:05:33,930
+只需要按一下这个按键(将所有图层显示为轮廓)
+By hitting this color code button.
+
+79
+00:05:34,800 --> 00:05:37,135
+接下来要把它变成枪兵
+And then we'll make it into a marine
+
+80
+00:05:37,135 --> 00:05:40,380
+枪兵是星际2中画的最快的单位了
+marine is the quickest thing to draw in Starcraft.
+
+81
+00:05:40,381 --> 00:05:47,400
+和之前一样，只画一个角色
+So again. We'll just uses a character,
+
+82
+00:05:47,400 --> 00:05:54,340
+然后就是相同的运动轨迹
+and then he starts to run and again we can use the exact same motion.
+
+83
+00:05:54,440 --> 00:05:56,550
+跑步循环则有些不同
+and run cycles are a little bit different,
+
+84
+00:05:56,551 --> 00:06:00,360
+跑步循环有个另外的教程
+There is a lesson on their own.
+
+85
+00:06:00,361 --> 00:06:01,680
+今天我们不涉及跑步循环的教程
+And we're not going to be run cycle today,
+
+86
+00:06:01,681 --> 00:06:05,100
+只是展示这个运动轨迹可以用作参考
+but just to show that you can use that motion as a guide.
+
+87
+00:06:07,530 --> 00:06:08,880
+运动轨迹非常有用
+And that it does work
+
+88
+00:06:09,080 --> 00:06:16,950
+当需要事先测试运动效果时，这是一种不错的方式。
+and it's a good little template you can give yourself, you want to test out the motion first and that it's a decent way to do it.
+
+89
+00:06:21,390 --> 00:06:22,710
+它跑得越来越快
+He's now getting faster,
+
+90
+00:06:22,711 --> 00:06:26,580
+红圈要在头的中间位置
+and again it's going to be like in the middle of his head here.
+
+91
+00:06:33,450 --> 00:06:36,570
+我不会花太多时间在角色细节上
+And I'm not going to spend too much time on the actual character.
+
+92
+00:06:49,620 --> 00:06:52,440
+你可以用符号来表示奔跑动画
+You can use a symbol for run animation.
+
+93
+00:06:52,500 --> 00:06:56,370
+其实我应该提前准备一个跑步动画，这样效果会好得多
+Actually I should have probably prepared one that would have been a lot nicer.
+
+94
+00:06:58,290 --> 00:06:59,310
+你明白我的意思
+Yes, you get the idea.
+
+95
+00:07:01,380 --> 00:07:04,680
+如果你有已经做好的跑步动画
+If you have a run animation already set,
+
+96
+00:07:04,681 --> 00:07:09,750
+只需要让它跟着运动点就可以了
+Then you just make it follow the dots and you're good to go.
+
+97
+00:07:10,830 --> 00:07:14,730
+如果没有的话，也可以用符号代替
+But if not, you could make a run animation symbol.
+
+98
+00:07:16,440 --> 00:07:18,000
+还是让符号跟随运动点
+And then make it follow the dot as well.
+
+99
+00:07:24,180 --> 00:07:28,470
+现在枪兵要准备跳过去
+Now he's going to start to wind up for his jump,
+
+100
+00:07:28,471 --> 00:07:34,470
+所以需要下蹲一些
+so he's going to go a little lower. Lower again,
+
+101
+00:07:35,380 --> 00:07:40,940
+我有时候会很敷衍地做这部分动画
+Sometimes I do this kind of animation episode where it's just very, very sloppy
+
+102
+00:07:41,300 --> 00:07:47,130
+还挺管用，因为我们每周都有一堆工作要做
+and you know it works because we have bunch of cartoons *to do every week,
+
+103
+00:07:47,131 --> 00:07:53,370
+当工作量远超你的能力时，就可以用这种办法来应付更多事情
+*but also it's far away if things are far away than you can, you can get away with a lot more things.
+
+104
+00:07:53,371 --> 00:07:56,096
+效果还可以
+*It doesn't look as nearly as bad
+
+105
+00:07:56,096 --> 00:07:57,630
+接着画下去
+here we are to do.
+
+106
+00:07:58,950 --> 00:08:00,060
+跳起来
+Jumping.
+
+107
+00:08:01,560 --> 00:08:03,390
+照着模板做就行
+Again, just following your template.
+
+108
+00:08:06,450 --> 00:08:07,890
+画出空中动作
+Into the air.
+
+109
+00:08:14,880 --> 00:08:16,560
+画出四肢
+His limbs,
+
+110
+00:08:16,561 --> 00:08:22,920
+四肢要略微落后于整体的运动方向
+*always dragging behind a bits of what he's doing.
+
+111
+00:08:24,030 --> 00:08:25,770
+压扁一些
+Squish that down.
+
+112
+00:08:26,720 --> 00:08:31,230
+注意身体的朝向，因为身体的指向就是运动的方向
+*where his bodies going because his body is leading the way.
+
+113
+00:08:33,750 --> 00:08:39,300
+必须保证红点在角色头部位置
+Got to make sure the red dot is where his ahead is.
+
+114
+00:08:53,010 --> 00:08:54,300
+落地
+and he lands.
+
+115
+00:08:55,921 --> 00:08:58,800
+像这样低头
+His head down like this.
+
+116
+00:09:03,060 --> 00:09:04,620
+再低一些
+It goes down a little bit more.
+
+117
+00:09:05,910 --> 00:09:08,370
+四肢也朝下
+And now his limbs come down too,
+
+118
+00:09:08,371 --> 00:09:10,470
+开始调整动作
+and I started to recover
+
+119
+00:09:10,471 --> 00:09:13,680
+缩小帧的范围，因为不需要用到之前的帧做参考了
+and take away some onion skin frames because I don't need them
+
+120
+00:09:13,681 --> 00:09:14,850
+开始站起来
+he starts to recover a bit.
+
+121
+00:09:16,650 --> 00:09:20,430
+四肢朝下，同时抬头
+And his limbs are down and he looks up.
+
+122
+00:09:27,870 --> 00:09:30,540
+这部分内容
+In this part, I mean I don't like, I mean,
+
+123
+00:09:30,541 --> 00:09:34,950
+如果你是个新手，我不要求你把这部分全画出来
+if you're new at animation I don't expect you just animate completely this part here.
+
+124
+00:09:34,951 --> 00:09:42,210
+你需要做的是画出角色的某一部分，比如主体部分
+What you want to do is animates one one piece of the character like the body, the main body,
+
+125
+00:09:42,211 --> 00:09:43,470
+之后才增加细节
+and then the details after.
+
+126
+00:09:43,471 --> 00:09:44,670
+就是这种效果
+*But this is how it looks.
+
+127
+00:09:45,870 --> 00:09:47,940
+它始终跟随着这些点移动
+And it follows the exact same animations as the dots.
+
+128
+00:09:47,941 --> 00:09:49,950
+这就是简单的练习过程
+so that's a simple exercise.
+
+129
+00:09:49,951 --> 00:10:01,350
+如果你需要掌握如何在动画软件中画出运动效果
+If you just need to to get used to how movement works in an animation program,
+
+130
+00:10:01,351 --> 00:10:06,480
+不要先画枪兵或是具体角色，而是先画点
+don't do the Marine first,the character ,do the dot.
+
+131
+00:10:07,380 --> 00:10:13,590
+点动画能帮助你理解角色如何运动
+The dot will help you understand how the motion works,
+
+132
+00:10:13,591 --> 00:10:16,350
+如何恰当地加速和减速
+how to slow things down and speed things up properly,
+
+133
+00:10:16,351 --> 00:10:17,760
+我认为这是个很好的练习
+and I think it's a good exercise,
+
+134
+00:10:17,761 --> 00:10:23,130
+这就是做动画最快的办法，也是个很好的小练习
+so it is the quickest way to animates and a nice little exercise,
+
+135
+00:10:23,131 --> 00:10:25,140
+正如我所展示的
+and it can be as I showed you,
+
+136
+00:10:25,141 --> 00:10:30,420
+一个适用于所有人物运动的教程
+a guide for your motion for a character whatever it is,
+
+137
+00:10:30,421 --> 00:10:32,010
+好了 你现在已经学会了
+OK, you figure it out.
+
+138
+00:10:32,011 --> 00:10:33,450
+点动画确实有用
+But yeah, dots can help.
+
+139
+00:10:33,451 --> 00:10:34,920
+这就是全部内容了
+So that's it guys.
+
+140
+00:10:34,921 --> 00:10:38,130
+为你们做的一个动画小教程
+a little quick little animation tutorial for you.
+
+141
+00:10:38,461 --> 00:10:43,740
+展示了点动画和这个小练习
+how dot animation or a quick little animation exercise can help you out.
+
+142
+00:10:43,741 --> 00:10:44,670
+希望你们喜欢这个视频
+hope you enjoyed this video.
+
+143
+00:10:44,670 --> 00:10:45,880
+希望你能从这里学到东西
+I hope you find it insightful
+
+144
+00:10:45,960 --> 00:10:49,140
+如果想让我做更多的动画教程
+if you'd like me to do more animation tutorials.
+
+145
+00:10:49,411 --> 00:10:51,810
+请在评论中告诉我
+let me know in the comments below,
+
+146
+00:10:51,811 --> 00:10:54,060
+让我知道你们想看的内容
+and let me know what you would like to see,
+
+147
+00:10:54,061 --> 00:10:58,038
+不管是示例还是动画
+whether it's you know, illustration, or animation, whatever it is.
+
+148
+00:10:58,038 --> 00:11:02,730
+或是教程、我们做视频的流程，总之我很乐意听到你们的声音
+or tutorials and how we make videos, whatever they would be great to know.
+
+149
+00:11:02,730 --> 00:11:05,080
+感谢收看，希望你们喜欢这个视频
+So thanks for watching guys hope you enjoyed it
+
+150
+00:11:05,180 --> 00:11:10,080
+周末还会出一期风暴英雄动画
+and we're gonna see you his weekend because it's gonna be Heroes of the Storm episode and it can be a good way.
+
+151
+00:11:10,080 --> 00:11:11,760
+我相信你们会喜欢的
+I think you guys are gonna like it 
+
+152
+00:11:12,100 --> 00:11:17,700
+它也是这集教程的一个应用示例
+It's a good little reference in this episode , this week's episode,
+
+153
+00:11:17,701 --> 00:11:19,950
+各位再见
+Alright see you guys later,
+
+154
+00:11:19,950 --> 00:11:23,980
+享受夏季 拜拜
+have fun enjoy the summer. Bye.
+

@@ -1,4 +1,4 @@
-# 字幕翻译计划/Personal Translation project
+# 字幕翻译计划/Personal Translation Project
 
 ### Python:
 
@@ -48,7 +48,15 @@
 
    folder：[RunCycle](https://github.com/ClausewitzCPU0/Subtitles/tree/master/RunCycle)
 
-5. 
+5. #### Easiest Animation Ever [Animation Tutorial]
+
+   source：https://www.youtube.com/watch?v=dRyPIZEVrVE
+   
+   completion time：2019.12.31
+   
+   folder：Easiest Animation Ever
+   
+6. 
 
     
 
