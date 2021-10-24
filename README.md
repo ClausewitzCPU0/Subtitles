@@ -64,10 +64,24 @@
 
 #### My Workflow：
 
-1. [Download](https://github.com/ytdl-org/youtube-dl)
+1. [Download](https://github.com/yt-dlp/yt-dlp)
+
+   ```shell
+   ./yt-dlp -F URL		# 查看下载文件格式列表，注意是大写 F
+   ./yt-dlp -f 137 URL # 指定下载某个格式的文件，这里的 137 表示 ID， f 为小写
+   ./yt-dlp -f 303+251 URL	# 合并下载视频文件与音频文件
+   ```
+
+   [help](https://home.gamer.com.tw/creationDetail.php?sn=5211217)
+
 2. [AutoGenerate Sub with 剪映](https://lv.ulikecam.com/)
-3. [Automatic translator](https://zh.tern.1c7.me/) （Tern-字幕组机翻小助手）
+
+3. [Automatic translator](https://zh.tern.1c7.me/) （Tern-字幕组机翻小助手 & Baidu 翻译API）
+
+   注意使用前要在 Baidu 翻译API 网页端开启服务
+
 4. Check the subtitles manually
+
 5. [Render](https://maruko.appinn.me/)
 
 ref：[Workflow](https://www.bilibili.com/read/cv10001483)
