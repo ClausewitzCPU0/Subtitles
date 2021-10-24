@@ -60,3 +60,15 @@
 
     
 
+## Workflow & Tools 
+
+#### My Workflow：
+
+1. [Download](https://github.com/ytdl-org/youtube-dl)
+2. [AutoGenerate Sub with 剪映](https://lv.ulikecam.com/)
+3. [Automatic translator](https://zh.tern.1c7.me/) （Tern-字幕组机翻小助手）
+4. Check the subtitles manually
+5. [Render](https://maruko.appinn.me/)
+
+ref：[Workflow](https://www.bilibili.com/read/cv10001483)
+
