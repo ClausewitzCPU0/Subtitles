@@ -1,0 +1,1035 @@
+﻿1
+00:00:02,780 --> 00:00:07,760
+我们开始吧。这是Apple //e(Apple 2e) 一切就绪
+Here we go. okay I see apple //e and we're ready to go
+
+2
+00:00:08,300 --> 00:00:13,440
+我想做一个非常简短的视频，大概十分钟左右
+all right so I wanted to do a very quick video maybe ten minutes or so
+
+3
+00:00:13,440 --> 00:00:16,800
+介绍一下1981年的编程方式
+talking about programming like it's 1981 
+
+4
+00:00:16,940 --> 00:00:25,480
+好像很多观众都特别想知道当时是如何在 Apple 2 上编程的
+in particular, a lot of people seem to have questions about how exactly you would have programmed the Apple 2 back in the day
+
+5
+00:00:25,480 --> 00:00:29,580
+我会先演示一下没有辅助工具之前的样子
+And I want to show you what it looked like before you had tools  
+
+6
+00:00:29,800 --> 00:00:32,560
+之后再演示一些非常基本的工具
+Then I'll show you some of the very basic tools 
+
+7
+00:00:32,700 --> 00:00:37,220
+如果有时间的话，我还会展示一下汇编程序的样子
+And then I'll show you maybe if we have time what an assembler looks like
+
+8
+00:00:37,440 --> 00:00:42,460
+这里已经启动了Apple 2e 的模拟器( Windows下可以用 AppleWin )，我将按下重置按钮
+So here we've got our Apple 2e running an emulation, I'm gonna hit the reset button 
+
+9
+00:00:42,700 --> 00:00:49,300
+因为没有挂载磁盘，我们暂时看不到DOS界面
+As if we have no no disc in the drive at all and here we are, we have no DOS
+
+10
+00:00:49,380 --> 00:00:58,440
+什么事都干不了，目前只有苹果内置的基础解释器工具
+I can't look at anything, anything about anything all we have is the Apple soft basic interpreter which was built-in tool*
+
+11
+00:00:59,600 --> 00:01:04,800
+如你所愿，我们可以写一个小的演示程序
+so we could write a small basic program just like you'd expect to see.
+
+12
+00:01:05,440 --> 00:01:10,580
+和每个人都会编写的基本程序一样，
+ The the basic program that everyone runs.
+
+13
+00:01:12,100 --> 00:01:14,490
+没啥意思
+That's not very interesting 
+
+14
+00:01:14,490 --> 00:01:18,720
+大家肯定会在 Apple 2 上玩游戏
+sooner or later what everyone did on the Apple 2 of course was play games.
+
+15
+00:01:18,880 --> 00:01:23,040
+部分游戏中有BUG，并且当游戏崩溃时
+some of those games had bugs and when the game crashed
+
+16
+00:01:23,140 --> 00:01:26,240
+如果它是BASIC游戏，有时可能会回到BASIC界面
+ you would sometimes into basic if it were basic game.
+
+17
+00:01:26,280 --> 00:01:33,930
+但是如果它是用机器语言编写的，可能会出现一个不常见的星号提示符
+but if it were written in machine language you might drop to an unfamiliar prompt and that prompt would look like an asterisk
+
+18
+00:01:33,930 --> 00:01:37,800
+实际上它长这样，显示时通常伴随着"哔"的声音。
+in fact it will looked like this typically beep 
+
+19
+00:01:38,060 --> 00:01:42,500
+这个提示符有什么用？我们可以尝试获得一些帮助，
+and what is this prompt?Well, we can try and get some help
+
+20
+00:01:42,620 --> 00:01:46,780
+发出了一个"哔"声，我们可以输入help和H
+we got a beep. We could type help,H
+
+21
+00:01:46,840 --> 00:01:49,760
+就像UNIX系统中的VI编辑器一样
+this is just like the VI editor if you're in UNIX 
+
+22
+00:01:49,940 --> 00:01:54,880
+这是Apple2 机器语言的监视器*
+what is this thing? Well,this is the Apple 2 machine language monitor.  
+
+23
+00:01:55,060 --> 00:02:06,180
+这意味着你可以查看并修改内存中的值，所以先尝试输入一个数字
+So monitor means that you can inspect and change things in memory so let's try typing a number ok
+
+24
+00:02:06,860 --> 00:02:10,700
+实际上这是内存中的第0个字节
+So that is literally the zeroeth byte in memory 
+
+25
+00:02:10,800 --> 00:02:12,140
+你也可以这么做
+You can also do that
+
+26
+00:02:12,340 --> 00:02:15,880
+可以看到它的值是4C
+And we see that it contains the value 4C
+
+27
+00:02:16,060 --> 00:02:22,520
+我们可以查看内存中的其他区域，最大地址好像是ffff
+ we can inspect other areas of memory we can go probably up to ffff.
+
+28
+00:02:22,580 --> 00:02:27,360
+*这实际上将在ROM存储器中( Apple 2e 的默认RAM是64kB)
+which would be the probably that would actually be in the ROM memory as opposed to the RAM we can expect
+
+29
+00:02:27,480 --> 00:02:35,940
+可以用.的方式来一次查看内存中的多个字节
+we can inspect multiple bytes in memory by using the *doc here, I can say show me all the memory there
+
+30
+00:02:36,220 --> 00:02:39,100
+如果你之前看过hexdump文件
+ And if you've ever seen a hex dump 
+
+31
+00:02:39,280 --> 00:02:46,460
+你可能会发现这个输出显示了第一行是第0到第7字节
+You might recognize this so this is showing us the first row is bytes 0 through 7 
+
+32
+00:02:46,540 --> 00:02:50,180
+字节0的值是4C，字节1的值是3C
+and byte0 contains 4C byte1 contains 3C
+
+33
+00:02:50,380 --> 00:02:54,460
+显示方式很好，但我们怎么操作它呢
+so you know this is *cute but what can we actually do with it?
+
+34
+00:02:54,540 --> 00:03:01,180
+我们不仅能观察内存值，以0800处的内存为例
+Well, we can't just look at memory so there I'm looking at byte 800
+
+35
+00:03:01,200 --> 00:03:03,740
+顺便说一下，这些数字在这里都是十六进制的
+And these all numbers here are hexadecimal by the way.
+
+36
+00:03:03,820 --> 00:03:12,960
+我们还能修改它。比如将0800处字节的值从0改为99
+We can change them. I could say well instead of having 0, I want 800 to have this byte 99 
+
+37
+00:03:13,020 --> 00:03:18,100
+再次查看0800，可以看到内存被修改了
+And now if I look at it again I just changed memory.
+
+38
+00:03:20,760 --> 00:03:23,800
+给640字节赋一个值
+ I'm gonna poke a value into byte 640 here.
+
+39
+00:03:30,420 --> 00:03:37,040
+这里还是把620字节的值改为55更好
+Up here, actually let me to use a better value I'm gonna poke value 55.
+
+40
+00:03:37,220 --> 00:03:42,320
+您应该会在屏幕顶部看到一个闪烁的U
+ All right, you should see a blinking U up towards the top screen
+
+41
+00:03:42,380 --> 00:03:48,540
+这是哪来的? 让我们重复一次，让我们把相同的值再次赋值给原来的位置
+Where did it come from well let's do it again let's put that value on the same byte on memory 
+
+42
+00:03:48,560 --> 00:03:49,520
+出现了另一个闪烁的U
+And there's another U 
+
+43
+00:03:49,520 --> 00:03:50,560
+发生了什么？
+so what just happened 
+
+44
+00:03:50,700 --> 00:03:56,760
+不像现在的现代计算机有所谓的"受保护的内存"
+Well unlike today's modern machines which have what's called protected memory
+
+45
+00:03:57,120 --> 00:04:03,560
+在类似Apple2 这样的8位计算机上，你有权限访问系统中的所有内存
+on an 8-bit computer  like the Apple 2 you have complete access to all the memory in the system
+
+46
+00:04:04,010 --> 00:04:08,760
+这意味着你可能会让你心态爆炸或者把系统玩崩
+which means you can really *hose yourself you could break things quite badly 
+
+47
+00:04:08,840 --> 00:04:13,380
+但大多数设备将内存映射到内存中的某个区域
+but most devices would be what's called memory mapped to some region in memory
+
+48
+00:04:13,380 --> 00:04:18,750
+所以我们在这里看到的屏幕文本实际上是从
+so the text screen which is what we're looking at here is actually mapped from I want to say values
+
+49
+00:04:18,750 --> 00:04:25,280
+可能是400到7ff的值，大概是这样
+I want to say values from say 400 to 7ff,I think something like that.
+
+50
+00:04:25,800 --> 00:04:27,860
+通常情况，你需要去查一下具体的地址值。
+normally you would look this up if you want to know
+
+51
+00:04:27,900 --> 00:04:36,700
+当我把620字节的值改为55时，那个闪烁的U就代表55这个值
+when I changed byte 620 to 55, it poked that value that flashing U is the value 55 
+
+52
+00:04:37,200 --> 00:04:44,020
+将值修改为56，现在就显示一个闪烁的V字母
+That is 56 now. It's a flashing V
+
+53
+00:04:44,020 --> 00:04:46,380
+ 如果我们修改多个字节的值
+If I say,let's do some multiple bytes.
+
+54
+00:04:46,650 --> 00:04:55,530
+如果把610字节及其之后的内存值分别改为53 54 55 56 57 58，就可以看到闪烁的STUVW
+610 53 54 55 56 57 58 and there you could see the flashing STUVW
+
+55
+00:04:55,530 --> 00:05:01,770
+我们可以查看和修改内存，你可能会觉得这没什么了不起的
+All right so we can look at memory and we can change memory so what? What's the big deal?
+
+56
+00:05:02,200 --> 00:05:06,860
+这个监视器实际上可以做一些更有趣的事情
+Well the monitor actually does some more interesting things.
+
+57
+00:05:07,060 --> 00:05:11,220
+它可以执行反汇编操作
+in particular it can disassemble code 
+
+58
+00:05:11,440 --> 00:05:18,090
+来看一下800内存地址处，这是通常是程序开始执行的入口
+So let's look memory location 800 again which is a very common location for programs to begin 
+
+59
+00:05:18,090 --> 00:05:26,660
+不要直接按回车，而是在末尾添加一个L
+and instead of just hitting return here, I'm going to add an L on the end
+
+60
+00:05:27,540 --> 00:05:37,460
+可以看到监视器试图反汇编代码中的这些字节（例如6502的机器语言）
+And now could see the monitor trying to disassemble the bytes that are in code as if they are 6502 machine language.
+
+61
+00:05:37,560 --> 00:05:41,460
+这些数据也许不一定是6502的机器代码，
+now they might not actually be 6502 machine language 
+
+62
+00:05:41,460 --> 00:05:46,860
+通常情况下可能只是普通的数据，就像我之前输入的值一样
+Usually might be data just as I poked a value into the text
+
+63
+00:05:47,020 --> 00:05:54,980
+只是因为解释器刚好能将这些数据当做6502的汇编代码来输出
+Maybe this is just some data that happened you might be able to interpret it as 6502 assembly
+
+64
+00:05:55,100 --> 00:05:57,840
+让我们实际操作一下
+but we can actually show this in action 
+
+65
+00:05:57,920 --> 00:06:02,400
+先在监视器里现场写一些汇编代码
+so let's go ahead and write some assembly code in the monitor live 
+
+66
+00:06:02,620 --> 00:06:05,160
+先把这些数据清理掉
+so first I'm going to go ahead and clear this out
+
+67
+00:06:05,280 --> 00:06:10,820
+这里一大堆的 00 都被翻译为BRK指令
+just throw a bunch of zero zeros in there which should be interpreted as the instruction break
+
+68
+00:06:10,880 --> 00:06:13,160
+有种更快的方法可以一次修改一段内存
+ there's a faster way to do a region memory 
+
+69
+00:06:13,200 --> 00:06:16,580
+老实说我有点忘了，毕竟已经过去了30年
+I'll be honest it has been 30 years I don't quite remember 
+
+70
+00:06:16,660 --> 00:06:18,880
+可以看到这段内存都被显示为了BRK
+Now I could see we got a bunch of breaks here 
+
+71
+00:06:19,840 --> 00:06:25,480
+如果没有汇编程序和其他工具，你要怎么做呢
+so what you would do before you had tools,before you had an assembler
+
+72
+00:06:25,520 --> 00:06:34,520
+你会拿到一本笔记本，还可能有一张速查卡，其中列出了6502指令集的操作码
+you get a notebook and you will probably have a quick reference card listing all of the op codes of the 6502 instruction set
+
+73
+00:06:35,040 --> 00:06:38,180
+然后使用汇编语言编写程序
+and you would write your program in assembly language
+
+74
+00:06:38,240 --> 00:06:42,260
+在一页的左侧位置上书写要实现的功能
+kind of longhand what you think you would want to do on the left side of the paper 
+
+75
+00:06:42,320 --> 00:06:48,640
+在同一页的右侧，先要查找操作码，就像在计算尺上查找对数一样
+and on the right side of the paper you would look up the opcode like you were looking up a logarithm with a slide rule
+
+76
+00:06:48,820 --> 00:06:51,820
+之后将操作码写在右侧
+and you would write the opcode on the right-hand side 
+
+77
+00:06:51,860 --> 00:06:54,600
+实际上，还有专门的帮助手册
+there are actually special pads of paper to help you do this 
+
+78
+00:06:54,600 --> 00:06:58,740
+因为当时8位计算机是非常普遍的
+because it was so such a common thing to do with 8-bit computers
+
+79
+00:06:59,820 --> 00:07:02,340
+现在来编写一个没有具体作用的程序
+I'm going to write a useless program right now 
+
+80
+00:07:02,620 --> 00:07:06,600
+只是几行没有具体功能的汇编代码
+That just a couple lines of assembly code it doesn't do anything useful 
+
+81
+00:07:06,720 --> 00:07:11,200
+我其实准备了一些后续的程序，但我不打算在这期视频中说太多
+I have some programs that I have prepared for future ones of these but they don't want to go too long 
+
+82
+00:07:11,580 --> 00:07:20,960
+写入我的内存的一个操作码是A9，代表加载累加器立即数模式（LDA）
+so let's go so the one opcode that is burned into my memory is a9 which stands for load the accumulator immediate mode
+
+83
+00:07:21,100 --> 00:07:24,340
+可以取一个值，比如55
+and you could take a value let's take 55
+
+84
+00:07:24,800 --> 00:07:29,280
+如果我们看一下反汇编这段代码的结果
+And just say that and now if we look if we disassemble this code
+
+85
+00:07:29,340 --> 00:07:37,460
+在屏幕顶端我们可以看见左侧是A9 55 右侧是 LDA #$55（十六进制）
+ we can see the top line of the screen there it says a9 55 on the left and load the accumulator pound/dollar hex 55
+
+86
+00:07:37,520 --> 00:07:39,900
+表示向累加器加载值0x55
+load the accumulator with the value 55 
+
+87
+00:07:41,180 --> 00:07:46,860
+让我们再增加一些数据 (40年后的苹果手机铃声)
+let's also then add some more 
+
+88
+00:07:47,370 --> 00:07:55,000
+记不清是8D还是85了，先试下8D
+let's try I can't remember it's 8D or 85 let's try an 8d
+
+89
+00:07:56,480 --> 00:08:02,540
+...40 06 希望这是一个有效的操作码
+40 06, I hope that's a vaild opcode,
+
+90
+00:08:02,620 --> 00:08:09,600
+我没有使用速查卡，只是随意浏览一下
+I'm actually not using quick reference card right now so I'm kind of doing this kind of surfing here
+
+91
+00:08:09,600 --> 00:08:17,680
+好了，可以看到在0x802地址中的指令已经将累加器的值存储在0x64这个内存地址中
+alright so we can see that in memory location 802 we have stored the accumulator in memory location 64
+
+92
+00:08:17,740 --> 00:08:25,660
+继续向累加器载入值，比如0x42
+so let's go ahead and do some more * load the accumulator with another value how about I don't know 42 
+
+93
+00:08:26,000 --> 00:08:30,060
+可以继续在当前行输入值
+and let's go ahead and just continue we can continue to type memory in here
+
+94
+00:08:30,100 --> 00:08:34,980
+这些值还是会写入之后的内存，我们将其存储在41 06地址中
+we just poking values of memory and we'll store that in 41 06 
+
+95
+00:08:35,380 --> 00:08:39,720
+这两个字节的先后顺序和实际值是相反的，原因是处理器的字节序（小端）
+these are byte swapped because of the endianness of the processor 
+
+96
+00:08:39,880 --> 00:08:46,380
+我们的四行汇编语言程序，再加一行BRK指令作为结尾
+all right so now we have our four line assembly language program let's make it 5 lines and just finish it up with a break 
+
+97
+00:08:47,920 --> 00:08:53,120
+然后就可以从Apple2监视器运行程序了
+and so from the Apple 2 monitor you can run the program 
+
+98
+00:08:53,280 --> 00:08:56,800
+动手运行吧
+so let's go ahead and run the program
+
+99
+00:08:56,940 --> 00:09:02,970
+聊天室里的Patrick说他现在能理解我为什么能忍受 Space Camp这种游戏了。的确如此。
+ Patrick in the chat says he now sees how I could stand to play things like Space Camp, yes exactly 
+
+100
+00:09:02,970 --> 00:09:07,660
+用G来运行程序，例如800G
+so we're gonna say G, 800 G, go
+
+101
+00:09:07,920 --> 00:09:12,840
+我们运行了刚才的程序，它没什么具体作用，只是返回了一些状态标志
+We just ran our progarm, it did't do much useful. when we ran it we got the status flags
+
+102
+00:09:13,320 --> 00:09:18,180
+展示了6502的寄存器，先说前三个
+ so this is showing us * registers of the 6502 there are three registers 
+
+103
+00:09:18,340 --> 00:09:27,480
+A是累加器，用于算术运算。X Y寄存器通常用于索引和指针操作
+the a is the accumulator the one register you can do arithmetic with, x and y are used for indexing generally for * pointer manipulating.
+
+104
+00:09:27,860 --> 00:09:30,600
+P是状态标志
+P are the status flags
+
+105
+00:09:30,680 --> 00:09:35,850
+这是一个非常复杂的话题，今天就先不深入了
+which are a really complicated topic beyond today's talk
+
+106
+00:09:35,850 --> 00:09:39,520
+下次有机会再说吧。S是堆栈指针。
+get into that next time if we get there and S is the stack pointer 
+
+107
+00:09:40,680 --> 00:09:49,700
+可以在标记为814的行上看到，00 BRK，然后是闪烁的UB字符
+You can see up here on the line labeled 814 it says 00 BRK and then a flashing u and a flashing b
+
+108
+00:09:49,960 --> 00:09:56,420
+这就是我们刚才改变的内存位置，我们给它赋了个新值
+that was the memory we just changed,we just poked the value into that memory *
+
+109
+00:09:56,720 --> 00:10:00,360
+如果查看那段内存，那些值还没有保存到内存里
+now if I were to inspect that memory now those values wouldn't there 
+
+110
+00:10:00,480 --> 00:10:08,520
+因为我将它们输入到文本域或者叫文本视图映射的内存区域
+because I poked them into the text field or or the text view the text memory map and of course
+
+111
+00:10:08,560 --> 00:10:12,060
+我们正在改变的就是映射的内存区域，所以才能看到修改
+ here we are changing it so that we could see things
+
+112
+00:10:12,180 --> 00:10:17,100
+这是就最基本的监视器功能
+so that's the monitor at its most basic
+
+113
+00:10:17,180 --> 00:10:23,320
+做得更好，并且很快苹果做了一点
+but we can do a little better and very quickly Apple
+
+114
+00:10:23,460 --> 00:10:26,820
+他们实现了一个叫 mini汇编器 的程序
+they implemented something called the mini assembler.
+
+115
+00:10:27,040 --> 00:10:31,580
+每个人都知道监视器，因为迟早会因为程序崩溃而进入监视器界面
+everyone knows about the monitor because sooner or later you crashed and ended up in it 
+
+116
+00:10:31,780 --> 00:10:34,660
+但很少人知道 mini汇编器
+fewer people know about the mini-assembler
+
+117
+00:10:36,140 --> 00:10:44,440
+mini汇编程序可以协助我们完成刚才的编程，免去查找操作码的麻烦
+a mini-assembler helps you do what we just did but without having to look up the opcodes,hopefully.
+
+118
+00:10:44,660 --> 00:10:47,020
+尝试进入mini汇编器
+you enter the mini assembler  
+
+119
+00:10:47,180 --> 00:10:51,300
+我觉得现在无法进入mini汇编器，因为我已经加载了一张磁盘
+actually I think we won't able to do it here because I do load a disk 
+
+120
+00:10:51,460 --> 00:10:54,620
+哦其实运行成功了，因为我们现在用的是Apple 2e
+Oh look at that it's actually run because this is an apple 2e 
+
+121
+00:10:54,700 --> 00:11:02,500
+如果用的是Apple 2 或者plus ,就需要加载磁盘。但我们可以直接开始
+so on an Apple 2 or plus you would have had to load a disk to do this but and we were able to do 
+
+122
+00:11:02,560 --> 00:11:08,840
+让我们输入一些内容
+so let's see what happens here if we say...
+
+123
+00:11:09,600 --> 00:11:14,740
+补充一下，我刚才输入了800：
+great, so in case you missed what happened there I typed 800 : 
+
+124
+00:11:14,820 --> 00:11:25,160
+然后是A9 99，它立即将其翻译成操作码并显示出结果
+and then a9 99 like that and it immediately translated it into the opcode and kind of displayed results.
+
+125
+00:11:25,820 --> 00:11:31,720
+我觉得如果输入冒号，就可以继续操作后续的内存。试试对不对
+so I think if I type a colon I can keep going. let's see if that's true 
+
+126
+00:11:32,260 --> 00:11:36,060
+让我们看看是否正确，让我们尝试将其存储在地址为300的内存中
+let's try and store this in memory location 300 
+
+127
+00:11:36,160 --> 00:11:38,220
+不行
+ no it doesn't like that
+
+128
+00:11:40,080 --> 00:11:41,900
+哦原来只要输入一个空格就好了
+Oh, that's just a space,okay.
+
+129
+00:11:42,020 --> 00:11:49,100
+我们将0x99存储在地址为300的内存中，之后加载值88
+so then we're storing that 99 in memory location 300 let's continue let's load value 88 
+
+130
+00:11:51,020 --> 00:11:55,580
+将a转移到X寄存器
+and let's store let's transfer a to the X register 
+
+131
+00:11:55,860 --> 00:12:03,640
+将X寄存器的值保存到地址为301的内存中，目前的操作还比较无趣
+and then let's store register in memory location 301 so I'm not that interesting you know
+
+132
+00:12:04,620 --> 00:12:10,360
+我觉得要按下“重置”按钮（模拟器中是Ctrl+F2）离开mini汇编器
+I believe we have to hit the reset button to leave the mini assembler 
+
+133
+00:12:10,540 --> 00:12:13,000
+这就是我们的程序了
+We're looking our program there it is
+
+134
+00:12:13,060 --> 00:12:18,060
+在运行之前，先看下 300和301内存
+we'll run our program first let's look at memory locations 300 and 301 
+
+135
+00:12:19,040 --> 00:12:24,200
+它们的值是FF。然后运行程序
+they contain FF let's run our program
+
+136
+00:12:24,300 --> 00:12:31,680
+再次查看内存300 301，可以看到它们的值是99和88
+And let's look at memory locations 300 301 again and you can see they contain 99 and 88 
+
+137
+00:12:33,160 --> 00:12:37,900
+mini汇编器实际上只是一个翻译程序，它可以动态翻译
+the mini-assembler is really just a translator it's translating completely on the fly
+
+138
+00:12:37,940 --> 00:12:43,400
+可以输入注释，但汇编器不会保留注释，也没有文件管理功能
+you can type comments it won't keep them there's no file management here 
+
+139
+00:12:43,590 --> 00:12:46,720
+要么写入，要么丢失
+there just stuff is in and gone forever 
+
+140
+00:12:46,820 --> 00:12:52,120
+如果需要写代码量很多的大程序
+so to write a program at significant length if you're not laws*
+
+141
+00:12:52,220 --> 00:12:59,860
+就需要一个真正的汇编器，包括支持注释的编辑器
+you really need a program a real assembler that will have a nice editor will let you add comments
+
+142
+00:12:59,960 --> 00:13:03,960
+还要能支持元数据，这样就可以编写变量。
+ have meta things so you could have variables 
+
+143
+00:13:04,000 --> 00:13:13,020
+如果你在1978年买了一台苹果电脑，就只能用这些基础功能。当时还没有为其开发的优秀软件。
+but this is the basics this is what you got if you bought an apple in 1978 before there was really any good software for it.
+
+144
+00:13:13,120 --> 00:13:15,200
+在当时，你只能这么编程
+software for it this was the type of programming you could do
+
+145
+00:13:15,300 --> 00:13:18,800
+但这已经是一次像KIM-1那样的飞跃了，因为
+this was a leap above things like the KIM-1
+
+146
+00:13:19,120 --> 00:13:23,420
+因为它可以显示出操作代码
+because you actually had a display on which you could see the op
+
+147
+00:13:25,180 --> 00:13:28,980
+这些就是我想给出的基本介绍了
+so that is the basic intro that I wanted to give 
+
+148
+00:13:29,080 --> 00:13:34,660
+很少涉及汇编语言编程，因为这方面的资源已经很多了。
+Not so much about how to programming assembly language because I think there's tons of resources about that
+
+149
+00:13:34,840 --> 00:13:41,640
+只是让大家感受一下在没有编程工具时如何编程
+just the the feel of what it was like to try to do these things before tools existed 
+
+150
+00:13:41,760 --> 00:13:50,280
+如果有下一期的话，我打算加载一个我可能用到的汇编器
+if I do another one of these I think the next step would be to load a assembler I would probably use.
+
+151
+00:13:50,380 --> 00:13:54,060
+叫做Merlin 并展示它
+Merlin and show it 
+
+152
+00:13:54,300 --> 00:13:57,740
+要我现在演示吗?还是下次再说？（作者在Youtube直播）
+should we should we save that till next time 
+
+153
+00:13:59,300 --> 00:14:03,940
+那继续吧，YouTube的直播可能会中断
+I'm gonna go ahead and I'll do it now I might break the video here for YouTube 
+
+154
+00:14:04,860 --> 00:14:08,240
+就当做直播观众的独家内容好了
+But just for the people who are watching I think
+
+155
+00:14:08,380 --> 00:14:14,340
+插入磁盘，希望能用
+let's just stick a disc in here and hopefully it will actually work.
+
+156
+00:14:14,440 --> 00:14:17,240
+我大概有八个版本的Merlin
+I've like eight versions of Merlin
+
+157
+00:14:32,180 --> 00:14:33,380
+等待加载中
+Waiting for it to load,
+
+158
+00:14:33,420 --> 00:14:41,400
+我把仿真程序的处理速度设置为Apple 2的实际速度，所以慢得离谱
+ I have the emulator set to actual speed of an Apple 2 which is hideously slow of course
+
+159
+00:14:41,680 --> 00:14:49,600
+这就是Merlin的界面了，可以看到这里有各种处理文件的选项，让我们深入一下
+so here we are in Merlin,you can see that there's various options here dealing with files let's just dive right in 
+
+160
+00:14:49,940 --> 00:14:56,560
+按e编辑文件，进入一个堪用的行编辑器
+hit e to edit file we get more or less a line editor I'm
+
+161
+00:14:57,050 --> 00:15:03,100
+按a添加一行，增加程序入口
+A to add a line okay we can tell it where we want our program to make it exactly
+
+162
+00:15:03,380 --> 00:15:07,280
+写一个和刚才功能一样的程序
+Let's make it exactly the same as the one we just did
+
+163
+00:15:07,360 --> 00:15:11,680
+输入 空格 ORG $0800
+so we'll say ORG dollar 800
+
+164
+00:15:12,020 --> 00:15:16,860
+这不是一个6502指令集的操作码，只是一个给汇编程序的提示符
+this is not a 6502 opcode that's a hint to the assembler 
+
+165
+00:15:17,880 --> 00:15:29,660
+还可以自定义一些符号，比如head等于0300 tail等于0301
+we could also define some symbols so let's say head is equal to 0300, tail is equal to 0301 
+
+166
+00:15:30,580 --> 00:15:38,920
+还能增加注释
+we can have comments this awesome program write some values
+
+167
+00:15:39,140 --> 00:15:42,680
+然后就按你自己的习惯写代码
+And then we just write our code as as we'd like to 
+
+168
+00:15:42,800 --> 00:15:52,620
+最难的部分其实是使用这样的行编辑器，这比写汇编让人烦躁
+the hardest part of doing this would actually be using a line editor like this
+
+169
+00:15:52,780 --> 00:15:55,840
+因为我们已经习惯了使用现代的全屏幕编辑器了
+full-screen editors we're all used to today 
+
+170
+00:15:56,080 --> 00:16:01,760
+我想把它保存在地址为300的内存中，所以使用自定义的符号名称
+so I want to store this in memory location 300 so I'll just use the symbolic name i defined 
+
+171
+00:16:03,020 --> 00:16:10,640
+值为88，然后转移到寄存器Y
+In fact I will say 88 whatever they say  transferred to the Y register this time
+
+172
+00:16:10,800 --> 00:16:15,980
+将寄存器Y的值存储在tail地址，然后用BRK结束这段代码。
+store Y in tail and then we'll finish up with a break
+
+173
+00:16:16,220 --> 00:16:21,636
+不是个很有趣的程序，但我喜欢探索不同的方式
+Okay not a very interesting program but I want to stick with doing the same thing in different ways
+
+174
+00:16:21,630 --> 00:16:24,860
+在空白行处换行
+hey I hit return on an empty line here.
+
+175
+00:16:24,980 --> 00:16:27,560
+这样就可以汇编代码了
+now I can assemble the program
+
+176
+00:16:28,220 --> 00:16:32,240
+因为我阅读过文档，所以我知道能这么做
+In this case I happen to know because I read the documentation 
+
+177
+00:16:32,900 --> 00:16:40,820
+顺便提一句，缺少在线帮助是早期的Apple 2程序的一致特点
+the lack of online help by the way is a consistent feature of early Apple 2 programs 
+
+178
+00:16:41,000 --> 00:16:47,240
+没有手册就无法完成任何事情
+you simplely could not get anything done without the manual
+
+179
+00:16:47,520 --> 00:16:56,300
+那时电脑上的内存非常有限，因此大多数程序都没有内置在线帮助功能
+The memory you had on the computer was so limited that the add-on online help system to most of programs
+
+180
+00:16:56,300 --> 00:16:58,460
+没有足够空间给你的程序使用
+you wouldn't have room for your program
+
+181
+00:16:58,620 --> 00:17:01,960
+执行汇编，这个问题选择“否”
+so let's go ahead and assemble it I'm answering no to that question 
+
+182
+00:17:01,980 --> 00:17:09,340
+可以看到上面有一堆操作码，展示了整个程序的样子，还显示了一些自定义符号
+You could see bunch of op codes up here it kind of shows us what it looked like it mentions that we have a few symbols 
+
+183
+00:17:10,760 --> 00:17:17,340
+现在应该退出，这样就可以保存源代码
+and then I think we want to quit so we can now save the source code.
+
+184
+00:17:17,540 --> 00:17:21,960
+文件名就叫TESTPROG
+let's just call it test program
+
+185
+00:17:23,080 --> 00:17:30,810
+这样就储存为TESTPROG.S，S代表汇编语言。接下来保存目标代码
+Is gonna save that as TESTPROG dot s s for assembly language we can then save the object code
+
+186
+00:17:30,810 --> 00:17:35,570
+这是我们将要实际运行的程序
+Which is our actual program that we're going to run 
+
+187
+00:17:35,650 --> 00:17:43,480
+但愿能跑。我要退出梅林了，让我们来看一下磁盘
+hopefully this will work I'm going to quit out of the out of Merlin let's look at our disk 
+
+188
+00:17:44,840 --> 00:17:47,320
+一堆代码
+A bunch of stuff here
+
+189
+00:17:49,850 --> 00:17:52,440
+我把它直接保存在了汇编器的磁盘上，不是很讲究
+Of course I save that right to the assembler disk which is not very cool 
+
+190
+00:17:52,860 --> 00:18:00,790
+返回监视器，确保程序不在内存中。可以看到它确实不在内存里
+let's just really quickly drop into the monitor make sure that the program is not in memory you can see it's not
+
+191
+00:18:01,580 --> 00:18:07,900
+一堆BRK语句，所以内存是空的，让我们运行程序
+bunch of breaks so memory is empty and let's run our run we'll run it all at once
+
+192
+00:18:08,040 --> 00:18:12,060
+用BRUN运行，它将一次运行所有名叫TESTPROG的程序
+just use brun we'll run it all at once what do they call it TESTPROG
+
+193
+00:18:17,440 --> 00:18:24,640
+寄存器的值看起来是正确的，我们的程序实现了预期的功能
+we can see the registers already look correct our program did what it was supposed to do 
+
+194
+00:18:30,720 --> 00:18:38,580
+这些工具的优缺点如上所述。1978年到1982年的编程工具就是这样的。
+That's the long and short of it this is kind of what the tools looked like in 1978 to 1982
+
+195
+00:18:38,640 --> 00:18:41,400
+随着时间的推移，工具越来越完善
+and they got better over time you'll see that 
+
+196
+00:18:41,520 --> 00:18:49,620
+如果你对比一张磁盘上不同版本的Merlin，就可以看到它是如何逐渐改进的。
+If you pick up versions of Merlin from one of the Apple 2 disk archives you can see how it improves overtime
+
+197
+00:18:49,740 --> 00:18:51,540
+随着时间的推移，他们得到了神族的支持，最终得到了真正的满足。
+they had a * support eventually they got a real full screen editor
+
+198
+00:18:51,620 --> 00:18:58,180
+屏幕编辑器而不是行编辑器，但这确实是一个不同的世界
+screen editor instead of a line editor but it's it's really a different world
+
+199
+00:18:58,300 --> 00:19:03,300
+如果再出一个类似的视频，我将会写一个实际的程序
+and if I do another one of these I think the next one will be writing an actual program 
+
+200
+00:19:03,480 --> 00:19:09,320
+尝试解释6502的一些变化
+and trying to one explain some of the vagaries at the 6502 
+
+201
+00:19:09,580 --> 00:19:19,500
+即使在汇编语言层面上，该CPU上的编程也不同于其他拥有更多特性的CPU
+how programming even in assembly language is different on that CPU than on a let's say more * feature CPU
+
+202
+00:19:19,700 --> 00:19:25,040
+我还会试着让你感受当时的各种困难条件
+and second I might try to motivate why would anyone put themselves through this
+
+203
+00:19:25,160 --> 00:19:31,120
+一言以蔽之 Apple 2 太慢了
+and the one sentence answer is man the Apple 2 was really really slow
+
+204
+00:19:31,260 --> 00:19:37,920
+因此，任何通过直接的汇编编程带来的速度优势都是非常有价值的
+and so any speed advantage you can get by directly an assembly language was super valuable
+
+205
+00:19:38,040 --> 00:19:40,420
+我们下次可以举一个例子来说明
+ we can go through an example * next time 
+
+206
+00:19:40,840 --> 00:19:42,900
+这就是本次全部内容了，感谢收看
+that's it. thanks for tuning in
+
+207
+00:19:42,980 --> 00:19:53,030
+和你们一起在内存受限的小路上闲逛很不错，我们下次再见！
+ and it's good taking this stroll down memory constrained lane with you, bye!
+
